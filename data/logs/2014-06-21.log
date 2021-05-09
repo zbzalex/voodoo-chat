@@ -1,4 +1,0 @@
-16:30:42	[MSG]	127.0.0.1	Robik	room 1	<font color="black"><b> <a style='text-decoration: underline' style='{cursor: pointer}' onClick="javascript:parent.Whisper('test');">test</a> входит в комнату.</b></font>
-17:16:29	[MSG]	127.0.0.1	test	room 1	<font color="maroon">фыв</font>
-17:16:32	[MSG]	127.0.0.1	test	room 1	<font color="maroon">фыв</font>
-17:17:28	[MSG]	127.0.0.1	test	room 1	<font color="maroon">test</font>

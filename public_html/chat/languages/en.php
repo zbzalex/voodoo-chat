@@ -120,8 +120,8 @@ $w_roz_remove_clan              = "Remove clan";
 $w_roz_clan_err_name    = "Name of the Clan is not defined or name has been taken by another Clan!";
 $w_roz_clan_err_email   = "E-Mail is incorrect!";
 $w_roz_clan_err_http    = "URL is incorrect!";
-$w_roz_clan_err_avatar  = "Avatar is invalid! (size no more than 18 х 14 px, <b><u>GIF only!</u></b>)";
-$w_roz_clan_err_logo    = "Logo is invalid! (size no more than 200 х 200 px, <b><u>GIF or JPG (extensions: gif, jpg and jpeg)!</u></b>)";
+$w_roz_clan_err_avatar  = "Avatar is invalid! (size no more than 18 пїЅ 14 px, <b><u>GIF only!</u></b>)";
+$w_roz_clan_err_logo    = "Logo is invalid! (size no more than 200 пїЅ 200 px, <b><u>GIF or JPG (extensions: gif, jpg and jpeg)!</u></b>)";
 $w_roz_clan_del_quest   = "Are You sure You want delete the <b>#</b> clan? (no undo!)";
 $w_roz_yes                              = "Yes";
 $w_roz_no                               = "No";
@@ -451,7 +451,7 @@ $w_try_again = "try again";
 $w_already_used = "This nick is already used in the chat!";
 
 //Robot words... ~ will be replaced with user nick
-$w_rob_name = "Robik";
+$w_rob_name = "Robot";
 $w_rob_login = "|| ~ has joined. Welcome!";
 $w_rob_hb = "~&gt; <b>HAPPY BIRTHDAY!</b>";
 $w_rob_logout = "~ has left.";
@@ -544,7 +544,7 @@ $w_times[8]["value"] = 315360002;
 $w_leave = "Thanx for using our chat!<br><br><a href=\"index.php\">Back to the chat</a>";
 
 //registration
-//in the 'top' section $w_registration = "Регистрация";
+//in the 'top' section $w_registration = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 $w_password = "Password";
 $w_reg_text = $w_login;
 $w_password_mismatch = "Password mismatch";
