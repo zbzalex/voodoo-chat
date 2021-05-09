@@ -1,9 +1,6 @@
 <?php
-
-require_once __DIR__ . "/inc_common.php";
-
+require_once("inc_common.php");
 set_variable("look_for");
-
 #to determine design:
 include($engine_path."users_get_list.php");
 $u_ids = array();
@@ -18,5 +15,5 @@ if($look_for!="") {
 	include($ld_engine_path."users_search.php");
 	if (!count($u_ids)) $info_message = "<b>".str_replace("~","&quot;<b>".htmlspecialchars($look_for)."</b>&quot;",$w_search_no_found)."</b><br>";
 }
-
 include($file_path."designes/".$design."/users.php");
+?>

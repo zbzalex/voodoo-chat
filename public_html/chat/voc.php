@@ -1,6 +1,6 @@
 <?php
-
-require_once __DIR__ . "/inc_common.php";
+require_once("inc_common.php");
+include("events.php");
 
 set_variable("user_name");
 set_variable("chat_type");
@@ -8,25 +8,21 @@ set_variable("c_user_color");
 set_variable("user_color");
 
 if ($c_user_color!="") {
-        $c_user_color = intval($c_user_color);
-        if (($c_user_color < 0) || ($c_user_color >= count($registered_colors))) {
-                $user_color = $default_color;
-        } else {
-                $user_color = $c_user_color;
-        }
+$c_user_color = intval($c_user_color);
+if (($c_user_color < 0) or ($c_user_color >= count($registered_colors))) {$user_color=$default_color;}
+else $user_color = $c_user_color;
 }
 
 $user_name = trim($user_name);
-
-if(strcasecmp($user_name, $sw_usr_all_link) == 0 ||
-   strcasecmp($user_name, $sw_usr_adm_link) == 0 ||
-   strcasecmp($user_name, $sw_usr_boys_link) == 0 ||
-   strcasecmp($user_name, $sw_usr_girls_link) == 0 ||
-   strcasecmp($user_name, $sw_usr_they_link) == 0 ||
-   strcasecmp($user_name, $sw_usr_clan_link) == 0 ||
+if(strcasecmp($user_name, $sw_usr_all_link) == 0 or
+   strcasecmp($user_name, $sw_usr_adm_link) == 0 or
+   strcasecmp($user_name, $sw_usr_boys_link) == 0 or
+   strcasecmp($user_name, $sw_usr_girls_link) == 0 or
+   strcasecmp($user_name, $sw_usr_they_link) == 0 or
+   strcasecmp($user_name, $sw_usr_clan_link) == 0 or
    strcasecmp($user_name, $sw_usr_shaman_link) == 0) {
            exit;
-}
+   }
 
 set_variable("password");
 set_variable("room_id");
@@ -158,21 +154,14 @@ if ($session != "") {
                                                                         MESG_TOID=>$is_regist,
                                                                         MESG_BODY=>"<font color=\"$def_color\">".$w_premoder_room."</font>");
                 }
-
                 include($engine_path."messages_put.php");
-
         }
-
         $room_id = $room;
         $fields_to_update[0][0] = 10;
         $fields_to_update[0][1] = $room_id;
-        
         include($engine_path."user_din_data_update.php");
-        
-        RenderCopyrights();
-        
+    RenderCopyrights();
         include($file_path."designes/".$design."/voc.php");
-        
         exit;
  }
 
@@ -269,8 +258,28 @@ if (!$registered_user) {
             //automatically create a new profile
             $new_user_name = $user_name;
             $new_user_sex  = 1;
-            include($ld_engine_path."registration_fake.php");
-            
+            if(!$impro_registration) include($ld_engine_path."registration_fake.php");
+            else {
+
+             set_variable("impro_user_code");
+             set_variable("reg_word");
+             set_variable("impro_id");
+
+             if($reg_word == "true") {
+                 include($ld_engine_path."impro.php");
+
+                 if (!impro_check($impro_id, $impro_user_code)){
+                      $error_text = $w_impro_incorrect_code."<br><a href=\"index.php?session=".$session."\">".$w_try_again."</a>";
+                      include($file_path."designes/".$design."/error_page.php");
+                      exit;
+                 }
+                 include($ld_engine_path."registration_fake.php");
+             }
+             else {
+                  header("Location: ".$chat_url."registration_cell.php?design=$design&user_name=$user_name&new_user_sex=$new_user_sex&user_color=$user_color&room=$room");
+                  exit;
+             }
+            }
       }
 }
 
@@ -296,7 +305,7 @@ if($current_user->custom_class != 0) $user_custom_class = $current_user->custom_
 
 //DD updating userinfo
 $is_regist                                = $registered_user;
-$current_user->IP                         = "";
+$current_user->IP                         = $IP;
 
 if($current_user->user_class & ADM_BAN_MODERATORS) {
         if($current_user->show_ip != "") { $REMOTE_ADDR      = $current_user->show_ip;
@@ -378,7 +387,7 @@ unset($similars);
 
 
 //events
-//riseEvent(EVENT_LOGIN, $user_name, $user_class);
+riseEvent(EVENT_LOGIN, $user_name, $user_class);
 //
 
 if($current_user->login_phrase != "") {
@@ -443,9 +452,7 @@ if ($toDay == $birthDay)
                                                                 MESG_TOSESSION=>"",
                                                                 MESG_TOID=>"",
                                                                 MESG_BODY=>"<font color=\"".$registered_colors[$highlighted_color][1]."\">".str_replace("~", $user_name, $sw_rob_hb)."</font>");
-
-        include($engine_path."messages_put.php");
-
+include($engine_path."messages_put.php");
 }
 
 if ($rooms[$room]["design"] != "")
@@ -453,18 +460,57 @@ if ($rooms[$room]["design"] != "")
 $current_design = $chat_url."designes/".$design."/";
 
 RenderCopyrights();
-
 include($file_path."designes/".$design."/voc.php");
 
-/**
- * @deprecated
- */
 function RenderCopyrights() {
-        global $file_path, $design, $w_title, $user_name;
-        $w_title = '['.$user_name.'] / '.$w_title;
-
-        if($enable_gzip) ob_start("ob_gzhandler");
-        
-        include($file_path."designes/".$design."/common_title.php");
-        include($file_path."designes/".$design."/common_browser_detect.php");
+global $file_path, $design, $w_title, $user_name;
+$w_title = '['.$user_name.'] / '.$w_title;
+if($enable_gzip) ob_start("ob_gzhandler");
+include($file_path."designes/".$design."/common_title.php");
+include($file_path."designes/".$design."/common_browser_detect.php");
+?>
+<!--
+/////////////////////////////////////////////////////
+//                                                 //
+//               Voodoo chat v. 0.90               //
+//         (c) 1999-2004 by Vlad Vostrykh          //
+//               http://vochat.com/                //
+//                                                 //
+//                QPL ver1 License                 //
+//        See voc/LICENSE file for details         //
+//                                                 //
+//          because nobody reads licenses          //
+//              I have to remind that              //
+//      you're not allowed to modify/remove        //
+//              any copyright notices              //
+//                                                 //
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+//                                                 //
+//                VOC++ v 1.0-0.95.SPC             //
+//              Business Special Edition           //
+//       (c) 2004 by DareDEVIL & EricDraven        //
+//     (c) 2004-2006 by CREATIFF Design Studio     //
+//            http://vocplus.creatiff.com.ua/      //
+//         e-mail: support@creatiff.com.ua         //
+//                                                 //
+//     original VOC engine and Voodoo Chat         //
+//       (c) 1999-2004 by Vlad Vostryk             //
+//            http://www.vochat.com/               //
+//                                                 //
+//                QPL ver1 License                 //
+//        See voc/LICENSE file for details         //
+//                                                 //
+//          because nobody reads licenses          //
+//              I have to remind that              //
+//      you're not allowed to modify/remove        //
+//              any copyright notices              //
+//                                                 //
+//     You are NOT ALLOWED to use this mod or      //
+//              it's parts for                     //
+//     ANY CHAT in Prekarpathian   region, Ukraine.//
+/////////////////////////////////////////////////////
+-->
+<?php
 }
+?>

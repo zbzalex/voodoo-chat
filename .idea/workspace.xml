@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="28b594d5-bc83-4992-a0d0-969a63b9105d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/VOC/ErrorHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/vo/Clan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/vo/Item.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/vo/userlist_Cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/engine/files/userlist_cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/engine/files/userlist_cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/2021-05-09.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mess_stat.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/mess_stat.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/messages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/messages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/similar_nicks.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/similar_nicks.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/userlist.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/0/1.user" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/0/1.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/voc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/data/voc.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/who.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/who.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/act_submit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/adm_cmd.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/LICENSE0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/admin_conf.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/admin_users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/calibrate_guardian.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/check_session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/clan_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/clans.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/clans_update_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/config_parser.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/inc_cfg_access.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/inc_cfg_daemon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/inc_cfg_engine.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/inc_cfg_features.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/inc_cfg_limits.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/inc_cfg_lookfeel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/inc_cfg_save_voc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/inc_cfg_step_1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/configure/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/conv.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/cr.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/daemon.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/daemon_admin.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/delete_cron.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/do_zerolizing.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/error_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/generate_canon_nicks.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/generate_indexes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/generate_shamans_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/generate_similar_indexes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/admin_01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/admin_02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/admin_03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/admin_04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/bg_left.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/bg_right.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_05.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_06.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_07.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_08.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_09.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2-1_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2-1_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2-1_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_girl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_logo_2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_scns.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/import.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/import_mysql.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/languages/admin-en.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/languages/admin-ru.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/languages/admin-ua.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/mess_statistic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/mod_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/moderators.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/mysql.lib.php3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/navi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/pgsql.lib.php3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/phpAdsNew.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/plugin_configure.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/plugin_info.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/plugin_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/progress.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/progress_frameset.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/register_users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/rooms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/search.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/sessions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/shamans_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/shop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/shop_cats.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/smileys.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/statistic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/sync.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/testframe.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/theme.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/theme2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/theme3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/transaction_log.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/update_statistic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/user_delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/users_reiting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/users_statistic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/welcome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/writer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/zerolize.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin_navi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin_work.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/alerter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/approve.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/board_delete.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/board_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/board_post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/board_send.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/board_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/change_password.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/clan.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/clan_navi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/clan_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/clan_work.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/clans-avatar/to_remove" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/clans-logos/to_remove" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/comments.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/comments_send.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/converts/to_remove" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/vo/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_inc/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/bg_c1_c2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/bg_c3_c5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/bg_c4_c6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/bg_c7_c8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/c1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/c2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/c3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/c4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/c5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/c6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/c7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/c8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/co1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/co2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/co3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/_pic/co4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/admin_navi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/alerter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/alerter_blank.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/array.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/board_list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/board_post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/board_send.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/board_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/browser/phpSniff.class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/browser/phpSniff.core.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/clan.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/clan_navi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/clan_view.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/comments.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/comments_send.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/common_body_end.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/common_body_start.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/common_browser_detect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/common_title.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/daemon_html_header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/error_page.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/fullinfo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/down.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/er.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/filter_on.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/gradient.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/grunge_02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/grunge_05.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/grunge_06.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/grunge_09.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/grunge_10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/grunge_11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/grunge_12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/grunge_14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/pause_on.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/grunge/up.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/bg_grad.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/hor_dot_line.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/no_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/pass_01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/pass_02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/pass_03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/pass_04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/pass_05.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/pass_06.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/photo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/pic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/pixel.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/silence.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/status_1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/status_2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/status_3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/vert_dot_line.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/webcam.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/welcome_01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/welcome_02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/welcome_03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/welcome_04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/images/welcome_05.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_blue.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_curse.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_curse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_gray.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_gray.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_orange.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_orange.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_purple.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_red.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/amul_red.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/away.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/away2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/away3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/bg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/christ.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/coffe.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/dnd.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/down_buttons_menu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/female.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/fun.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/gender_none.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/have_photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/ico_icq_club.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/male.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/rings.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/top_green_menu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/uignore.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/userlist_orange.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/img/utalk.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/inc_user_class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/no_photo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_left.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/profile_right.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/ramka_03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/ramka_04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/ramka_05.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/ramka_07.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/ramka_09.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/ramka_10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/ramka_11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/ramka_12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/vip_big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/main/vip_litle.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/menu.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/menu_private.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/menu_public.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/mess_frameset.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/messages.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/navibar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/output_page.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pass.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/Thumbs.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/avl.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/biz.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/dnd.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/n-a.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/next.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/prev.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/pri.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pics/voc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/pictures.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/profile_captcha.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/profile_content.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/profile_photo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/profile_top.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/profiler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/registration_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/registration_cell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/registration_form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/remote_rbs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/room_password_required.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/rooms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/sender.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/sender_visible.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/shop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/shop_present.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/shower.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/smileys.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/sound/sound.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/status.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/status_blank.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/tabsheets.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/tabsheets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/tooltip.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/top.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/user_info.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/user_info_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc_password_required.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc_popup.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/welcome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/who.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/CHANGES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/FAQ" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/HANDLERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/apnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/arin.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/ascio.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/atnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/aunic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/bripw.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/brnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/bulkregistercom.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/buydomains.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/chnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/cira.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/core.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/denic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/directnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/dotfm.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/dotregistrar.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/dotster.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/enom.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/esnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/example.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/generic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/generic2.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/generic3.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/gtld.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/info.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/interdomain.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/inwwcom.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/ipw.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/krnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/lacnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/lunic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/main.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/mxnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/netsol.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/neulevel.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/nicse.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/nlnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/nunames.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/opensrsnet.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/registercom.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/ripe.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/servers.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/srsplus.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/uknic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/utils.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/whois2-icon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/blizneci.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/deva.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/kozerog.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/lev.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/oven.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/rak.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/ribi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/scorpion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/strelec.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/telec.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/vesi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/zodiac/vodolei.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/edit_clan.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/events.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/fullinfo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/go.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/inc_badwords_filter.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/inc_common.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/inc_form_message.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/inc_statistic.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/inc_to_canon_nick.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/inc_user_class.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/items/to_remove" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/js_frameset.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/js_main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/js_writer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/languages/en.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/languages/help_en.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/languages/help_ru.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/languages/help_ua.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/languages/ru.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/languages/ua.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/menu_private.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/menu_public.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/messages.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/navibar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/password_reminder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/photos/no_photo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/photos/renamer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/pictures.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/plugins/gradient/config.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/plugins/gradient/plugin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/plugins/to_remove" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/prices.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/profiler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/profiler_rewrite.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/registration_activate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/registration_add.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/registration_cell.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/registration_form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/remote_rbs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/rooms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/rules.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/rules/welcome-2_01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/rules/welcome-2_02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/rules/welcome-2_03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/sender.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/shop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/shop_actions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/shop_present.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/shop_submit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/shower.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/site.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/smiles.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/static/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/tail.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/tarrifs.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/top20/to_remove" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/up/to_remove" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/user_info.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/user_info_update.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/user_status.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/user_validate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/users.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/users/to_remove" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/users_reiting.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/users_reiting_photo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/voc.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/voc_history.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/voc_o.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/voc_popup_opener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/welcome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/who.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/silex/silex" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1sIj6KeNd1YmEv35kBiOZdf9gHx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/VOC" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28b594d5-bc83-4992-a0d0-969a63b9105d" name="Default Changelist" comment="" />
+      <created>1620566830930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620566830930</updated>
+      <workItem from="1620566835097" duration="4041000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

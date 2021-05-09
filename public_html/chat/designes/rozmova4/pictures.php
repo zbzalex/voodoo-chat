@@ -1,6 +1,4 @@
-<?php
-
-if (!defined("_COMMON_")) {echo "stop";exit;}
+<?php if (!defined("_COMMON_")) {echo "stop";exit;}
 include($file_path."designes/".$design."/common_title.php");
 include($file_path."designes/".$design."/common_browser_detect.php");
 include($engine_path."users_get_list.php");

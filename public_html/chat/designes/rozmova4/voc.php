@@ -1,9 +1,5 @@
-<?php
-
-if (!defined("_COMMON_")) {echo "stop";exit;}
-
+<?php if (!defined("_COMMON_")) {echo "stop";exit;}
 ?>
-
 <bgsound name = "pvt_sound" id = "pvt_sound" src ="">
 <script language="javascript">
 <!--
@@ -799,9 +795,7 @@ function giveMeSmileys() {
     window.frames['voc_who'].document.location.href='<?php echo $chat_url."who.php?session=$session";?>';
     window.voc_sender.document.location.href='<?php echo $current_design;?>sender_visible.php?session=<?php echo $session;?>&user_color=<?php echo $user_color; ?>';
     window.frames['top_top'].document.location.href='<?php echo $current_design;?>top.php';
-
     window.frames['top_banner'].document.location.href='<?=$current_design?>remote_rbs.php';
-    
     window.frames['menu'].document.location.href='<?php echo $chat_path;?>navibar.php?session=<?php echo $session;?>';
     window.frames['menu_public'].document.location.href='<?php echo $chat_path;?>menu_public.php?session=<?php echo $session;?>';
     window.frames['menu_private'].document.location.href='<?php echo $chat_path;?>menu_private.php?session=<?php echo $session;?>';
@@ -1208,19 +1202,16 @@ function LoadMyPrivate() {
 
 //-->
 </script>
-        <link rel="stylesheet" href="/chat/static/normalize.css" />
 </head>
 
-<frameset rows="0,20,72,*,0,0" framespacing="0" scrolling="no" onLoad="giveMeChat();">
-<frame name="voc_shower_php" src="<?php echo $current_design; ?>blank.html"
-marginwidth="0" marginheight="0" scrolling="auto" frameborder="0">
+<frameset rows="0,20,72,*,0,0" framespacing="1" scrolling="no" frameborder="YES" bordercolor="#3D4976" onLoad="giveMeChat();">
+<frame name="voc_shower_php" src="<?php echo $current_design; ?>blank.html" marginwidth="0" marginheight="0" scrolling="auto" frameborder="0">
 <frame name="menu" src="<?php echo $current_design; ?>blank.html" scrolling=no frameborder="0">
  <frameset cols="444,*" framespacing="0" scrolling="no" frameborder="no" bordercolor="#3D4976" >
   <frame name="top_top" src="<?php echo $current_design; ?>blank.html" marginwidth="0" marginheight="0" scrolling="no" frameborder="0">
   <frame name="top_banner" src="<?php echo $current_design; ?>blank.html" marginwidth="0" marginheight="0" scrolling="no" frameborder="0">
  </frameset>
-        <frameset cols="*,<?php if(!$cu_array[USER_REDUCETRAFFIC]) { ?>50, <?php } ?>200,0" 
-        bordercolor="#3D4976" framespacing="0" frameborder="YES" scrolling=auto>
+        <frameset cols="*,<?php if(!$cu_array[USER_REDUCETRAFFIC]) { ?>50, <?php } ?>200,0" bordercolor="#3D4976" framespacing="1" frameborder="YES" scrolling=auto>
       <frameset rows="24,*" bordercolor="#3D4976" >
          <frame name="menu_public" src="<?php echo $current_design; ?>blank.html" scrolling=no frameborder="0">
        <?php //if this is a pre-moderated room and the current user is a moderator, then show him list of messages which have to be checked

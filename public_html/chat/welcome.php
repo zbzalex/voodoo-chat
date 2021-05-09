@@ -1,10 +1,5 @@
 <?php
-
-require_once __DIR__ . "/../../vendor/autoload.php";
-require_once __DIR__ . "/inc_common.php";
-
-$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
-
+require_once("inc_common.php");
 set_variable("design");
 set_variable("c_design");
 set_variable("c_user_name");
@@ -41,3 +36,4 @@ for ($i=0; $i<count($users); $i++) {
 }
 
 include($file_path."designes/".$design."/welcome.php");
+?>

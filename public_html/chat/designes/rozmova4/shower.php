@@ -1,11 +1,5 @@
-<?php
-
-!defined("__COMMON__") or die("stop");
-
-include($file_path."designes/".$design."/common_title.php");
-
-?>
-
+<?php if (!defined("_COMMON_")) {echo "stop";exit;}
+include($file_path."designes/".$design."/common_title.php");?>
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 function rel()
@@ -32,13 +26,10 @@ window.setTimeout('rel()',20000);
 </tr>
 
 <tr><td background="<?php echo $current_design;?>images/hor_dot_line.gif" align="left"><img src="<?php echo $current_design;?>images/hor_dot_line.gif" width="10" height="1"></td><td background="<?php echo $current_design;?>images/hor_dot_line.gif" align="left"><img src="<?php echo $current_design;?>images/hor_dot_line.gif" width="10" height="1"></td></tr>
-<tr><td><?php echo $out_messages;?></td>
-	<td><?php echo $out_users;?></td></tr>
+<tr><td><?php echo $out_messages;?></td><td><?php echo $out_users;?></td></tr>
 <tr><td colspan="5" background="<?php echo $current_design;?>images/hor_dot_line.gif" align="left"><img src="<?php echo $current_design;?>images/hor_dot_line.gif" width="10" height="1"></td></tr>
 </table>
+<small>
+<?php echo $w_copyright;?></small>
 </center>
-
-<?php
-
-include($file_path."designes/".$design."/common_body_end.php");
-
+<?php include($file_path."designes/".$design."/common_body_end.php");?>

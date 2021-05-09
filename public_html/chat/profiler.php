@@ -1,5 +1,4 @@
 <?php
-
 require_once("inc_common.php");
 set_variable("session");
 set_variable("user_to_search");
@@ -16,3 +15,4 @@ set_variable("user_to_search");
 			include($file_path."designes/".$design."/error_page.php");
 			exit;
     }
+?>

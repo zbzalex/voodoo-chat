@@ -1,10 +1,6 @@
-<?php
-
-if (!defined("_COMMON_")) {
-        echo "stop";
-        exit;
-}
-
+<?php if (!defined("_COMMON_")) {echo "stop";exit;}
+//include($file_path."designes/".$design."/common_title.php");
+//include($file_path."designes/".$design."/common_browser_detect.php");
 ?>
 <html>
 <head>
@@ -51,7 +47,7 @@ a:hover { color:white }
 <body bgcolor="#ffb900"leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="<?php echo $current_design;?>img/top_green_menu.jpg">
 <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" background="<?php echo $current_design;?>grunge/grunge_02.gif">
   <tr align="center">
-    <td width="10%"><b><a href="javascript:;" onclick="javascript:open_win('http://192.168.4.92/rules.php', 'rules');"><font color=red>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</font></a></b></td>
+    <td width="10%"><b><a href="javascript:;" onclick="javascript:open_win('http://192.168.4.92/rules.php', 'rules');"><font color=red>Правила</font></a></b></td>
     <td width="10%"><b><a href="javascript:;" onclick="javascript:open_win('shop.php?session=<?php echo $session;?>', 'shop');"><font color=white><?php echo $shop;?></font></a></b></td>
     <td width="10%"><b><a href="javascript:;" onclick="javascript:open_win('board_list.php?session=<?php echo $session;?>', 'help');"><font color=white><?php echo $w_roz_offline_pm; ?></font></a></b></td>
     <td width="10%"><b><a href="javascript:;" onclick="javascript:open_win('users.php?session=<?php echo $session;?>', 'usersinfo');"><font color=white><?php echo $w_info_about;?></font></a></b></td>
@@ -76,7 +72,7 @@ if ($current_user->clan_class > 0 and $current_user->clan_id > 0) {?>
 <?php }
 
 }?>
-<td width="10%"><b><a href="logout.php?session=<?php echo $session;?>" target="_parent"><font color=white><?php echo ucfirst(пїЅпїЅпїЅпїЅпїЅ); ?></font></a></b></td>
+<td width="10%"><b><a href="logout.php?session=<?php echo $session;?>" target="_parent"><font color=white><?php echo ucfirst(Выход); ?></font></a></b></td>
   </tr>
 </table>
 </body>

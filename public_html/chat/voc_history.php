@@ -14,8 +14,8 @@ include("user_validate.php");
 
 include($file_path."designes/".$design."/common_body_start.php");
 ?>
-<div align=center><h2>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</h2></div>
-<div align=center><h3>пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ</h3></div>
+<div align=center><h2>История</h2></div>
+<div align=center><h3>Ваше общение за текущий сеанс</h3></div>
 <font face="Verdana" size=2>
 <script language="JavaScript">
 if(opener) {
@@ -31,8 +31,6 @@ if(opener) {
    }
 </script>
 </font>
-
 <?php
-
 include($file_path."designes/".$design."/common_body_end.php");
-
+?>

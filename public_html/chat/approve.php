@@ -1,7 +1,5 @@
 <?php
-
-require_once __DIR__ . "/inc_common.php";
-
+require_once("inc_common.php");
 include($engine_path."users_get_list.php");
 include("inc_user_class.php");
 include($ld_engine_path."users_get_object.php");
@@ -11,7 +9,6 @@ if ($current_user->user_class<1) {
 	include($file_path."designes/".$design."/error_page.php");
 	exit;
 }
-
 include_once($ld_engine_path."premoderation.php");
 set_variable("op");
 set_variable("id");

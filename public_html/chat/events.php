@@ -68,8 +68,7 @@ $i = 0;
 
    for($i = 0; $i < count($eventHandlers); $i++) {
        if($eventHandlers[$i]["event"]   == $VEvent) {
-               //if(function_exists($eventHandlers[$i]["handler"]))
-               //     call_user_func($eventHandlers[$i]["handler"], $HParam, &$LParam);
+               //if(function_exists($eventHandlers[$i]["handler"])) call_user_func($eventHandlers[$i]["handler"], $HParam, &$LParam);
        }
    }
 }
@@ -105,3 +104,4 @@ if (is_dir($file_path."plugins")) {
 initPlugins();
 
 endif;
+?>

@@ -4,7 +4,6 @@
 </head>
 <body>
 <?php
-
 require_once("inc_common.php");
 error_reporting(0);
 set_variable("last_message");
@@ -56,7 +55,4 @@ function show_messages($last_id, $messages, $ignored_users) {
         }
         return array($message_id,$total_out);
 }
-
-?>
-
-</body></html>
+?></body></html>

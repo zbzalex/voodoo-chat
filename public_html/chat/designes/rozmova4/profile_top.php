@@ -1,15 +1,14 @@
 <?php
-
 require_once("../../inc_common.php");
-
+#only to determine design:
 include($engine_path."users_get_list.php");
 
 if(!$is_regist_complete) $session = "";
 
 set_variable("user_id");
-
 $user_id = intval($user_id);
 
+#fake for including files, without functions
 $is_regist = $user_id;
 if ($is_regist) {
         include($file_path."inc_user_class.php");
@@ -22,9 +21,8 @@ if ($is_regist) {
 
 include($file_path."designes/".$design."/common_title.php");
 ?>
-
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" rightmargin="0" bottommargin="0">
-  <table border="0" cellpadding="0" cellspacing="0">
+<table border="0" cellpadding="0" cellspacing="0">
         <tr>
                 <td width=50% bgcolor="#7ec63e"  height="77" valign="middle" align="center">
                   <font face="Garamond, Times New Roman, Helvetica" color=White size=6><b>
@@ -67,7 +65,6 @@ include($file_path."designes/".$design."/common_title.php");
             </table>
           </td>
         </tr>
-  </table>
+</table>
 
-</body>
-</html>
+</body></html>

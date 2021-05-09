@@ -380,12 +380,12 @@ echo ">$w_female</option>\n</select></td></tr>\n";?>
                                                         </tr>
                                                 <TR>
                                                         <td><?=$w_money_exchange?></td>
-                                                        <TD><INPUT type="button" class="input_button" value="Перейти" onClick="location.href='user_info.php?session=<?=$session?>&op=exchange';"></TD>
+                                                        <TD><INPUT type="button" class="input_button" value="пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" onClick="location.href='user_info.php?session=<?=$session?>&op=exchange';"></TD>
                                                 </TR>
                                                 <TR>
                                                         <td><?=$w_money_transfer?></td>
                                                         <TD colspan="2">
-                                                                <INPUT type="button" class="input_button" value="Перейти" onClick="location.href='user_info.php?session=<?=$session?>&op=transfer';">
+                                                                <INPUT type="button" class="input_button" value="пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" onClick="location.href='user_info.php?session=<?=$session?>&op=transfer';">
                                                         </TD>
                                                 </TR>
                                                 </table>
@@ -410,9 +410,6 @@ echo ">$w_female</option>\n</select></td></tr>\n";?>
                                                         <TR>
                                                                 <TD colspan="2"><?php
 $REMOTE_ADDR = "";
-include("get_IP.lib.php3");
-//if (isset($HTTP_SERVER_VARS['REMOTE_ADDR'])) $REMOTE_ADDR = $HTTP_SERVER_VARS['REMOTE_ADDR'];
-$REMOTE_ADDR = $SimpleIP;
 
 if(strpos($REMOTE_ADDR, "127.0.") !== false
    or strpos($REMOTE_ADDR, "192.168.") !== false) {

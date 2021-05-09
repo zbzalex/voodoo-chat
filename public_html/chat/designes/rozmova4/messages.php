@@ -1,11 +1,5 @@
-<?php
-
-
-if (!defined("_COMMON_")) {echo "stop";exit;}
-include($file_path."designes/".$design."/common_title.php");
-
-?>
-
+<?php  if (!defined("_COMMON_")) {echo "stop";exit;}
+include($file_path."designes/".$design."/common_title.php");?>
 <script language="JavaScript">
 <!--
 function rel()
@@ -29,23 +23,12 @@ function up()
 echo "<meta http-equiv=\"refresh\" content=\"20;URL=messages.php?session=$session\">\n";
 ?>
 </noscript>
-<?php
+<?php  include($file_path."designes/".$design."/common_body_start.php"); echo $rooms[$room_id]["topic"];?><hr>
 
-include($file_path."designes/".$design."/common_body_start.php");
-
-echo $rooms[$room_id]["topic"];
-
-?>
-
-<hr>
-
-<?php
-
-for ($i=0;$i<count($out_messages); $i++)
+<?php 
+for ($i=0;$i<count($out_messages);$i++)
 {
 	echo $out_messages[$i];
 }
-
-include($file_path."designes/".$design."/common_body_end.php");
-
 ?>
+<?php include($file_path."designes/".$design."/common_body_end.php");?>

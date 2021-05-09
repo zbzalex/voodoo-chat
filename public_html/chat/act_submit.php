@@ -1,7 +1,5 @@
-<?php
-
-require_once __DIR__ . "/inc_common.php";
-
+<?
+require_once("inc_common.php");
 include($engine_path."users_get_list.php");
 
 include($file_path."tarrifs.php");
@@ -39,8 +37,7 @@ $actions=array();
 $items=$current_user->items;
 @reset($items);
 $have_action='';
-print_r($item_list[$items[0]['ItemID']]);
-
+print_r($item_list[$items[0]['ItemID']]);
 while( list($id,$item)=@each($items) ){
         if($item_list[$item['ItemID']]->action!="0" && !empty($item_list[$item['ItemID']]->action)){
                 if(file_exists($engine_path."item_actions/".$item_list[$item['ItemID']]->action."/backend.php") && $item_list[$item['ItemID']]->action==$action_name && !$have_action){

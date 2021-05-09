@@ -1,11 +1,7 @@
-<?php
-
-include("../../inc_common.php");
+<?php include("../../inc_common.php");
 include($engine_path."users_get_list.php");
 include($file_path."designes/".$design."/common_title.php");
 include($file_path."designes/".$design."/common_browser_detect.php");
-
-
 	$chat_type = $user_chat_type;
 
 	if (!in_array($chat_type, $chat_types)) $chat_type = $chat_types[0];
@@ -112,10 +108,10 @@ with (document.closebox.document) {
 	write('<td width="1" background="<?php echo $current_design;?>images/vert_dot_line.gif" valign="top"><img src="<?php echo $current_design;?>images/vert_dot_line.gif" width="1" height="10"></td></tr>');
 	write('<tr><td height="1" colspan="3" background="<?php echo $current_design;?>images/hor_dot_line.gif" align="left"><img src="<?php echo $current_design;?>images/hor_dot_line.gif" width="10" height="1"></td></tr>');
 	write('</table></body></html>');
+	//close();
 }
 </script>
-	<iframe id="messages_div" name="voc_shower"
-	src="<?php echo $shower.(($priv_frame && $chat_type == "tail")?"&t=n":"");?>" frameborder="no" framespacing="0" border="1" borderwidth="0" scrolling="auto">
+<iframe id="messages_div" name="voc_shower" src="<?php echo $shower.(($priv_frame && $chat_type == "tail")?"&t=n":"");?>" frameborder="no" framespacing="0" border="1" borderwidth="0" scrolling="auto">
 </iframe>
 </body>
 </html>

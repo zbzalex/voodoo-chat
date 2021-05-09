@@ -7,9 +7,6 @@ set_variable("password");
 set_variable("room_id");
 $room_id = intval($room_id);
 $REMOTE_ADDR = "";
-include("get_IP.lib.php3");
-//if (isset($HTTP_SERVER_VARS['REMOTE_ADDR'])) $REMOTE_ADDR = $HTTP_SERVER_VARS['REMOTE_ADDR'];
-$REMOTE_ADDR = $IP;
 
 
 set_variable("design");
@@ -78,7 +75,8 @@ if ($session != "") {
 									MESG_FROMID=>0,
 									MESG_TO=>"",
 									MESG_TOSESSION=>"",
-									MESG_TOID=>"",
+									MESG_TOID=>"",
+
 									MESG_BODY=>"<font color=\"$def_color\">".str_replace("*",$rooms[$room_id]["title"],str_replace("~", $user_name, $sw_came_from_room))."</font>");
 		if($cu_array[USER_CLASS] ==0 && $ar_rooms[$room][ROOM_PREMODER]==1) {
 			//khm... i have to output it:

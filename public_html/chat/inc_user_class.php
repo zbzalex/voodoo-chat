@@ -103,3 +103,4 @@ class userlist_Cache {
     var $u_cache;
 }
 endif;
+?>

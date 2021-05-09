@@ -1,7 +1,5 @@
 <?php
-
 require_once("inc_common.php");
-
 include($engine_path."users_get_list.php");
 include($engine_path."messages_get_list.php");
 set_variable("design");
@@ -68,3 +66,4 @@ if(count($users) == 0 or $users_in_room == 0) {$out_users_header =  "$w_nobody_i
         }
 
 include($file_path."designes/".$design."/shower.php");
+?>

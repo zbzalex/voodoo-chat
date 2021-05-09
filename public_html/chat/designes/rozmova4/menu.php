@@ -2,7 +2,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
 <meta http-equiv="Content-Language" content="ru">
-  <link rel="stylesheet" href="/chat/static/normalize.css" />
 <style>
 a
 {
@@ -18,13 +17,13 @@ a
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="menuText" height="16">
   <tr align="center">
     <td width=5%>&nbsp;</td>
-    <td height=16 width=14 align=right><img height=16 width=14 src="./img/ico_rule.jpg"></td><td><b><a href=# onClick='window.open("http://www.rozmova.if.ua/rules.php");'><font color=Red>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</font></a></b></td>
+    <td height=16 width=14 align=right><img height=16 width=14 src="./img/ico_rule.jpg"></td><td><b><a href=# onClick='window.open("http://www.rozmova.if.ua/rules.php");'><font color=Red>Правила</font></a></b></td>
     <td width=5%>&nbsp;</td>
-    <td height=16 width=15 align=right valign=middle><img height=15 width=15 src="./img/ico_top_users.jpg"></td><td><b><a href="#" onClick='window.open("http://www.rozmova.if.ua/reiting.php");'>TOP 20 пїЅпїЅпїЅпїЅпїЅпїЅ</a></b></td>
+    <td height=16 width=15 align=right valign=middle><img height=15 width=15 src="./img/ico_top_users.jpg"></td><td><b><a href="#" onClick='window.open("http://www.rozmova.if.ua/reiting.php");'>TOP 20 чатлан</a></b></td>
     <td width=5%>&nbsp;</td>
-    <td height=16 width=16 align=right><img height=16 width=16 src="./img/ico_gallery.jpg"></td><td><b><a href="#" onClick='window.open("http://www.rozmova.if.ua/gallery/");'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (photo@rozmova.if.ua)</a></b></td>
+    <td height=16 width=16 align=right><img height=16 width=16 src="./img/ico_gallery.jpg"></td><td><b><a href="#" onClick='window.open("http://www.rozmova.if.ua/gallery/");'>Галерея (photo@rozmova.if.ua)</a></b></td>
     <td width=5%>&nbsp;</td>
-    <td height=16 width=16 align=right><img height=16 width=16 src="./img/ico_dating.jpg"></td><td><b><a href="#" onClick='window.open("http://www.rozmova.if.ua/dating/");'>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ</a></b></td>
+    <td height=16 width=16 align=right><img height=16 width=16 src="./img/ico_dating.jpg"></td><td><b><a href="#" onClick='window.open("http://www.rozmova.if.ua/dating/");'>Знайомства</a></b></td>
     <td width=5%>&nbsp;</td>
     <td height=16 width=16 align=right><img height=16 width=14 src="./img/ico_icq_club.jpg"><td><b><a href="#" onClick='window.open("http://www.rozmova.if.ua/icqclub.php");'>ICQ Club</a></b></td>
   </tr>

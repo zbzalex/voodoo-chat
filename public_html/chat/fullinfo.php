@@ -1,5 +1,4 @@
 <?php
-
 require_once("inc_common.php");
 #only to determine design:
 include($engine_path."users_get_list.php");
@@ -43,3 +42,4 @@ switch ($sex) {
 }
 
 include($file_path."designes/".$design."/fullinfo.php");
+?>

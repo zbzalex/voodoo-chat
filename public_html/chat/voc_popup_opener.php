@@ -6,9 +6,6 @@ set_variable("c_user_color");
 set_variable("room_id");
 $room_id = intval($room_id);
 $REMOTE_ADDR = "";
-include("get_IP.lib.php3");
-//if (isset($HTTP_SERVER_VARS['REMOTE_ADDR'])) $REMOTE_ADDR = $HTTP_SERVER_VARS['REMOTE_ADDR'];
-$REMOTE_ADDR = $IP;
 
 set_variable("design");
 if ($design == "") $design = $default_design;

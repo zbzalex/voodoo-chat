@@ -1,9 +1,7 @@
 <?php
 
-include("../../inc_common.php");
-include($engine_path."users_get_list.php");
+include("../../inc_common.php");include($engine_path."users_get_list.php");
 include("../../inc_user_class.php");
-
 include($data_path."engine/".$long_life_data_engine."/users_get_object.php");
 
 set_variable("c_trans");
@@ -102,7 +100,7 @@ function addPic(picName)
 }
 
 function underConst() {
-        alert('пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ! пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ! :-)');
+        alert('Эта штука еще в разработке! Руками не трогать! :-)');
 }
 
 
@@ -221,8 +219,8 @@ function sendPrivateMsg() {
 
 function msgdecode()
 {
-        var strTable1="qwertyuiop[]asdfghjklzxcvbnm,.QWERTYUIOP{}ASDFGHJKL:ZXCVBNM<>пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'\";пїЅпїЅпїЅ";
-        var strTable2="пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅqwertyuiop[]asdfghjklzxcvbnm,.QWERTYUIOP{}ASDFGHJKL:ZXCVBNM<>пїЅпїЅпїЅ'\";";
+        var strTable1="qwertyuiop[]asdfghjklzxcvbnm,.QWERTYUIOP{}ASDFGHJKL:ZXCVBNM<>йцукенгшщзхъфывапролдячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЯЧСМИТЬБЮ'\";эЭж";
+        var strTable2="йцукенгшщзхъфывапролдячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЯЧСМИТЬБЮqwertyuiop[]asdfghjklzxcvbnm,.QWERTYUIOP{}ASDFGHJKL:ZXCVBNM<>эЭж'\";";
         var strRet = "";
         var strSrc = document.forms[0].mesg.value;
         var cTmp, nTmp;
@@ -359,14 +357,12 @@ function msg_submit() {
         echo "<option value=\"$i\"";
         if ($i == $user_color) echo " selected";
         echo " style=\"background:".$registered_colors[$i][1]."; color:".$registered_colors[$i][1]."\">".$registered_colors[$i][0]."</option>\n";
-}
-?>
+}?>
 </select>
      </td>
      <td>&nbsp;&nbsp;</td>
-     <?php
-        if(strlen(trim($current_user->style_start)) > 0 and strlen(trim($current_user->style_end)) > 0) {
-        ?>
+     <? if(strlen(trim($current_user->style_start)) > 0 and strlen(trim($current_user->style_end)) > 0) {
+       ?>
        <td><input name="custom_style" type="checkbox" value=1><small><?php echo $w_roz_style; ?></small></td>
 <?php
         }

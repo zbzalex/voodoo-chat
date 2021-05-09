@@ -50,6 +50,12 @@ input {
 <input type="hidden" name="user_color" value="<?php echo $user_color;?>">
 <input type="hidden" name="room" value="<?php echo $room;?>">
 <input type="hidden" name="reg_word" value="true">
+<input type="hidden" name="impro_id" value="<?php echo $impro_id;?>">
+<tr><td colspan=4></td></tr>
+<tr><td><b><?=$w_impro_enter_code?>:</b></td>
+<td><img border=1 src="<?php echo $chat_url."impro.php?impro_id=".$impro_id;?>" border="0" with="80" height="33">
+</td><td><input type="text" maxlength=4 size=4 name="impro_user_code" class="input"></td>
+<td></td></tr>
 <tr><td colspan=4 align=center>(<?=$w_chat_welcome_note?>)</td></tr>
 <tr><td align="center" colspan=4><input type="submit" value="<?=$w_chat_go?>!" class="input_button"></td></tr>
 </table>

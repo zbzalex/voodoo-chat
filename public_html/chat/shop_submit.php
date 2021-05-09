@@ -1,5 +1,4 @@
-<?php
-
+<?
 require_once("inc_common.php");
 include($engine_path."users_get_list.php");
 

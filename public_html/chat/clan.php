@@ -22,5 +22,5 @@ if ($current_user->clan_class<1) {
 	exit;
 }
 include($file_path."designes/".$design."/clan.php");
-
 exit;
+?>
