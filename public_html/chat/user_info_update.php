@@ -813,7 +813,4 @@ function _ValURL($value, $options = array())
     $r = array('Result' => count($errArr) ? $errArr : EW_OK, 'Value' => $value, 'URLParts' => $url);
 
     return $r;
-
 }
-
-?>

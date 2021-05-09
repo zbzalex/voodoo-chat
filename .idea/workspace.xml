@@ -3,34 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="28b594d5-bc83-4992-a0d0-969a63b9105d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/engine/files/class_items.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/engine/files/class_items.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/logs/2021-05-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/2021-05-09.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/mess_stat.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/mess_stat.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/messages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/messages.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/similar_nicks.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/similar_nicks.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/userlist.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/users/0/1.user" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/0/1.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/voc.conf" beforeDir="false" afterPath="$PROJECT_DIR$/data/voc.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/who.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/who.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/common_body_end.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/common_body_end.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/fullinfo.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/fullinfo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/mess_frameset.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/mess_frameset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/mysql.lib.php3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/profile_top.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/profile_top.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/registration_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/registration_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/remote_rbs.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/remote_rbs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/user_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/user_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/plugins/gradient/plugin.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/plugins/gradient/plugin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/shop.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/shop.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/inc_statistic.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/inc_statistic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/inc_to_canon_nick.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/inc_to_canon_nick.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/menu_private.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/menu_private.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/menu_public.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/menu_public.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/chat/registration_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/registration_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/registration_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/registration_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/rules/welcome-2_01.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/rules/welcome-2_02.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/rules/welcome-2_03.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/tail.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/tail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/user_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/user_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/voc.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/voc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/registration_cell.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/registration_cell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/rules.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/shop_actions.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/shop_actions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/shop_submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/shop_submit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/user_info_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/user_info_update.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/chat/voc_history.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/voc_history.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/voc_o.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/voc_o.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/chat/voc_popup_opener.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/voc_popup_opener.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620566830930</updated>
-      <workItem from="1620566835097" duration="14632000" />
+      <workItem from="1620566835097" duration="15617000" />
     </task>
     <servers />
   </component>

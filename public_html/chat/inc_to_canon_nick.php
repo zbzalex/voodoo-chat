@@ -2,6 +2,7 @@
 
 if (!defined("_TO_CANON_NICK_")):
     define("_TO_CANON_NICK_", 1);
+
 //if you add your own to_canon_nick function, add the name into array
     $to_canon_funcs = array("none", "simplest", "normal", "umlauts", "rus-win1251");
 

@@ -1,5 +1,8 @@
 <?php
-require_once("inc_common.php");
+
+require_once __DIR__ . "/../../vendor/autoload.php";
+require_once __DIR__ . "/inc_common.php";
+
 set_variable("session");
 set_variable("win_id");
 set_variable("c_user_color");
@@ -80,55 +83,4 @@ function RenderCopyrights()
     if ($enable_gzip) ob_start("ob_gzhandler");
     include($file_path . "designes/" . $design . "/common_title.php");
     include($file_path . "designes/" . $design . "/common_browser_detect.php");
-    ?>
-    <!--
-    /////////////////////////////////////////////////////
-    //                                                 //
-    //               Voodoo chat v. 0.90               //
-    //         (c) 1999-2004 by Vlad Vostrykh          //
-    //               http://vochat.com/                //
-    //                                                 //
-    //                QPL ver1 License                 //
-    //        See voc/LICENSE file for details         //
-    //                                                 //
-    //          because nobody reads licenses          //
-    //              I have to remind that              //
-    //      you're not allowed to modify/remove        //
-    //              any copyright notices              //
-    //                                                 //
-    /////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////
-    //                                                 //
-    //                  VOC++ v 1.0beta-0.9            //
-    //       St. Valentine Edition (Christmas SE)      //
-    //       (c) 2004 by DareDEVIL & EricDraven        //
-    //       (c) 2004 by CREATIFF Design Studio        //
-    //            http://vocplus.creatiff.com.ua/      //
-    //         e-mail: support@creatiff.com.ua         //
-    //                                                 //
-    //     original VOC engine and Voodoo Chat         //
-    //       (c) 1999-2004 by Vlad Vostryk             //
-    //            http://www.vochat.com/               //
-    //                                                 //
-    //                QPL ver1 License                 //
-    //        See voc/LICENSE file for details         //
-    //                                                 //
-    //          because nobody reads licenses          //
-    //              I have to remind that              //
-    //      you're not allowed to modify/remove        //
-    //              any copyright notices              //
-    //                                                 //
-    //     You are NOT ALLOWED to use this mod or      //
-    //              it's parts for                     //
-    //     ANY CHAT in Ivano-Frankivsk region, Ukraine.//
-    //     Especially for:                             //
-    //       - www.karna.if.ua                         //
-    //       - www.shelter.if.ua                       //
-    //       - www.chat.if.org.ua                      //
-    //       - www.sotka.if.ua                         //
-    //       - www.ifportal.net                        //
-    //       - www.rozvaga.if.ua                       //
-    /////////////////////////////////////////////////////
-    -->
-    <?php
 }

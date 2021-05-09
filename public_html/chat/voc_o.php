@@ -1,6 +1,8 @@
 <?php
 
-require_once("inc_common.php");
+require_once __DIR__ . "/../../vendor/autoload.php";
+require_once __DIR__ . "/inc_common.php";
+
 set_variable("user_name");
 set_variable("chat_type");
 set_variable("c_user_color");
@@ -269,4 +271,5 @@ if (!$TryToBeInvisible) {
 if ($rooms[$room]["design"] != "")
     $design = $rooms[$room]["design"];
 $current_design = $chat_url . "designes/" . $design . "/";
+
 include($file_path . "designes/" . $design . "/voc.php");
