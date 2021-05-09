@@ -1183,21 +1183,44 @@
 
     <?php } ?>
 </script>
+
 </head>
 
-<frameset rows="0,20,72,*,0,0" framespacing="0" scrolling="no" frameborder="0" bordercolor="#3D4976"
+<frameset rows="0,20,72,*,0,0"
+          framespacing="0"
+          scrolling="no"
+          frameborder="0"
+          bordercolor="#3D4976"
           onLoad="giveMeChat();">
-    <frame name="voc_shower_php" src="<?php echo $current_design; ?>blank.html" marginwidth="0" marginheight="0"
-           scrolling="auto" frameborder="0">
-    <frame name="menu" src="<?php echo $current_design; ?>blank.html" scrolling=no frameborder="0">
-    <frameset cols="444,*" framespacing="0" scrolling="no" frameborder="no" bordercolor="#3D4976">
+
+    <frame name="voc_shower_php"
+           src="<?php echo $current_design; ?>blank.html"
+           marginwidth="0"
+           marginheight="0"
+           scrolling="auto"
+           frameborder="0">
+
+    <frame name="menu"
+           src="<?php echo $current_design; ?>blank.html"
+           scrolling=no
+           frameborder="0">
+
+    <frameset cols="444,*"
+              framespacing="0"
+              scrolling="no"
+              frameborder="no"
+              bordercolor="#3D4976">
+
         <frame name="top_top" src="<?php echo $current_design; ?>blank.html" marginwidth="0" marginheight="0"
                scrolling="no" frameborder="0">
         <frame name="top_banner" src="<?php echo $current_design; ?>blank.html" marginwidth="0" marginheight="0"
                scrolling="no" frameborder="0">
     </frameset>
-    <frameset cols="*,<?php if (!$cu_array[USER_REDUCETRAFFIC]) { ?>50, <?php } ?>200,0" bordercolor="#3D4976"
-              framespacing="1" frameborder="YES" scrolling=auto>
+    <frameset cols="*,<?php if (!$cu_array[USER_REDUCETRAFFIC]) { ?><?php } ?>200,0"
+              bordercolor="#3D4976"
+              framespacing="1"
+              frameborder="YES"
+              scrolling=auto>
         <frameset rows="24,*" bordercolor="#3D4976">
             <frame name="menu_public" src="<?php echo $current_design; ?>blank.html" scrolling=no frameborder="0">
             <?php //if this is a pre-moderated room and the current user is a moderator, then show him list of messages which have to be checked
@@ -1212,8 +1235,9 @@
                     <frame src="<?php echo $current_design; ?>blank.html" name="voc_sender" scrolling="no"
                            frameborder="0">
                 </frameset>
-            <?php }
-            else {
+                <?php
+            } else {
+
             if ($cu_array[USER_CLASS] > 0 or $cu_array[USER_CUSTOMCLASS] != 0) {
             ?>
             <frameset name="pvt_frameset" rows="*, 30%, 80" bordercolor="#3D4976" framespacing="3">
@@ -1235,10 +1259,6 @@
                 }
                 ?>
             </frameset>
-            <?php if (!$cu_array[USER_REDUCETRAFFIC]) { ?>
-                <frame src="<?php echo $current_design; ?>status_blank.php?session=<?php echo $session; ?>"
-                       name="voc_smileys" marginwidth="0" marginheight="0" scrolling="auto" frameborder="0">
-            <?php } ?>
             <?php if ($cu_array[USER_CLASS] > 0) { ?>
             <frameset rows="*, 85" bordercolor="#3D4976" framespacing="1" frameborder="YES" scrolling=auto>
                 <?php } else { ?>
