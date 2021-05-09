@@ -1,20 +1,20 @@
 {
-    "name": "lex/voc",
-    "authors": [
-        {
-            "name": "Sasha Broslavskiy",
-            "email": "sasha.broslavskiy@gmail.com"
-        }
-    ],
-    "require": {
-        "silex/silex": "~2.0",
-        "symfony/templating": "3.4.x-dev",
-        "doctrine/orm": "2.5.x-dev"
-    },
-    "minimum-stability": "dev",
-    "autoload": {
-        "psr-4": {
-            "": "src/"
-        }
+  "name": "lex/voc",
+  "authors": [
+    {
+      "name": "Sasha Broslavskiy",
+      "email": "sasha.broslavskiy@gmail.com"
     }
+  ],
+  "require": {
+    "silex/silex": "~2.0",
+    "symfony/templating": "3.4.x-dev",
+    "ext-pdo": "*"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  }
 }

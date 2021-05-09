@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28b594d5-bc83-4992-a0d0-969a63b9105d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/VOC/entity/Ban.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/entity/Room.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/entity/ShopProduct.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/repository/BanRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/serviceprovider/DoctrineOrmServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/dao/BanDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/providerhelper/PDOProviderHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/vo/Ban.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/logs/2021-05-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/2021-05-10.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/messages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/messages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/userlist.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/who.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/who.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VOC/repository/MessageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/repository/MessageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/entity/Ban.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/entity/Room.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/entity/ShopProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/entity/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/repository/BanRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/repository/BanRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/serviceprovider/DoctrineOrmServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/serviceprovider/DatabaseServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/vo/Clan.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/vo/Clan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/vo/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/vo/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +27,9 @@
   </component>
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer_2.phar" interpreterId="c4e83fb6-af25-448f-90ee-9e4cd3f2f8a2" />
+    </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,7 +108,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620566830930</updated>
-      <workItem from="1620566835097" duration="24798000" />
+      <workItem from="1620566835097" duration="27214000" />
     </task>
     <servers />
   </component>

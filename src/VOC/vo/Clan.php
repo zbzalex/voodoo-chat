@@ -17,4 +17,13 @@ class Clan
     var $goodbye = "";
     var $credits = 0;
     var $money_log = array();
+
+    public function __construct()
+    {
+    }
+
+    public static function fromState(array $data)
+    {
+
+    }
 }

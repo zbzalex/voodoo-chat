@@ -5,6 +5,8 @@ namespace VOC\vo;
 
 class User
 {
+    private $id;
+
     var $quiz = 0;
     var $quiz_fastest_answer = 0;
     var $quiz_points = 0;
@@ -86,4 +88,14 @@ class User
     //pass-check
     var $allow_pass_check = false;
     var $last_pass_check = 0;
+
+    public function __construct()
+    {
+
+    }
+
+    public static function fromState(array $data)
+    {
+
+    }
 }
