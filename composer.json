@@ -6,8 +6,9 @@
             "email": "sasha.broslavskiy@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "symfony/routing": "1.0"
-    }
+        "symfony/symfony": "3.0.2",
+        "silex/silex": "~2.0"
+    },
+    "minimum-stability": "dev"
 }

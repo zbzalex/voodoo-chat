@@ -36,4 +36,3 @@ for ($i=0; $i<count($users); $i++) {
 }
 
 include($file_path."designes/".$design."/welcome.php");
-?>
