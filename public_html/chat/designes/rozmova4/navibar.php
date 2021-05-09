@@ -24,18 +24,13 @@
        background="<?php echo $current_design; ?>grunge/grunge_02.gif">
     <tr align="center">
         <td width="10%">
-            <a href="/chat/rules.php" target="_blank">
-                Правила
-            </a>
-        </td>
-        <td width="10%">
             <a href="/chat/shop.php?session=<?php echo $session; ?>" target="_blank">
                 Магазин
             </a>
         </td>
         <td width="10%">
             <a href="/chat/board_list.php?session=<?php echo $session; ?>" target="_blank">
-                Offline PM
+                Почта
             </a>
         </td>
         <td width="10%">
@@ -63,8 +58,8 @@
 
         <?php if (!$is_regist_complete) { ?>
             <td width="10%">
-                <a href="/chat/registration_form.php?session=<?php echo $session; ?>">
-                    Регистраци
+                <a href="/chat/registration_form.php?session=<?php echo $session; ?>" target="_parent">
+                    Регистрация
                 </a>
             </td>
         <?php } else { ?>
@@ -102,7 +97,7 @@
 
         } ?>
         <td width="10%">
-            <a href="/chat/logout/logout.php?session=<?php echo $session; ?>" target="_parent">
+            <a href="/chat/logout.php?session=<?php echo $session; ?>" target="_parent">
                 Выйти
             </a>
         </td>

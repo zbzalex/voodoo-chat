@@ -71,7 +71,6 @@ if ($session != "") {
         exit;
     }
 
-    include_once("inc_user_class.php");
     include($engine_path . "users_get_object.php");
     if ($current_user->user_class & ADM_BAN_MODERATORS) {
         if ($current_user->show_ip != "") {
@@ -138,7 +137,6 @@ if ($session != "") {
             MESG_FROMWOTAGS => $w_rob_name,
             MESG_FROMSESSION => "",
             MESG_FROMID => 0,
-
             MESG_TO => "",
             MESG_TOSESSION => "",
             MESG_TOID => "",
@@ -177,9 +175,6 @@ if (strlen($user_name) > 0) {
         $TryToBeInvisible = true;
     }
 }
-
-include("inc_user_class.php");
-//end DD
 
 setCookie("c_user_name", $user_name, time() + 2678400);
 setCookie("c_chat_type", $chat_type, time() + 2678400);
@@ -242,11 +237,6 @@ if (check_ban(array("un|" . to_canon_nick($user_name), "ip|" . $REMOTE_ADDR, "ch
 }
 
 
-#???????????
-/*
-if($c_user_color== "" and $user_color == "") {$user_color=$default_color;}
-else if($c_user_color!="") $user_color = $c_user_color;
-*/
 $registered_user = 0;
 $users = array();
 $htmlnick = "";
@@ -463,8 +453,8 @@ include($file_path . "designes/" . $design . "/voc.php");
 function RenderCopyrights()
 {
     global $file_path, $design, $w_title, $user_name;
-    $w_title = '[' . $user_name . '] / ' . $w_title;
-    if ($enable_gzip) ob_start("ob_gzhandler");
+    $w_title = sprintf("[ %s ] / Amore-Chat.Net", $user_name);
+
     include($file_path . "designes/" . $design . "/common_title.php");
-    include($file_path . "designes/" . $design . "/common_browser_detect.php");
+
 }
