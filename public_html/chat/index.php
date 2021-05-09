@@ -3,18 +3,17 @@
 require_once __DIR__ . "/../../vendor/autoload.php";
 require_once __DIR__ . "/inc_common.php";
 
-set_variable("c_design");
-set_variable("c_user_name");
-$design = "";
-set_variable("design");
-if ($c_design!="" and $design=="") $design = $c_design;
-if (!in_array($design, $designes)) $design = $default_design;
+?>
 
-set_variable("user_lang");
-set_variable("c_ulang");
-if ($c_ulang != "" && $user_lang == "") $user_lang = $c_ulang;
-if (!in_array($user_lang, $allowed_langs)) $user_lang = $language;
-//here it can fails, i don't care. will be used default system language
-else include_once($file_path."languages/".$language.".php");
-
-require_once __DIR__ . "/designes/" . $design . "/index.php";
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Amore-Chat.Net - Молодёжный чат</title>
+</head>
+<frameset rows="200,*" frameborder=no framespacing=0 border=0 borderwidth=0>
+    <frame src="/chat/welcome.php" noresize scrolling="no"
+           marginwidth=2 marginheight=2>
+    <frame src="/chat/shower.php" noresize marginwidth=2
+           marginheight=2 name="voc_shower">
+</frameset>
+</html>

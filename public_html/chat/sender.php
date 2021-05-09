@@ -30,10 +30,6 @@ define("SHAMAN_PRIVATE", $sw_usr_shaman_link);
 define("CLAN_PRIVATE", $sw_usr_clan_link);
 
 $messages_to_show = array();
-//anti-bot fix: trying to stop automatic submission
-
-if (!$browser_hash) exit();
-
 
 // \076 \074 fix
 $mesg = trim(str_replace("**n", "", $mesg));
@@ -192,8 +188,7 @@ if ($is_regist and (strlen($whisper) == 0 or $custom_style == 1)) {
             $MsgToPass = str_replace("~", date("d.m.Y H:i:s", intval($current_user->plugin_info["chaos_start"]) + intval($current_user->plugin_info["chaos_time"])), $MsgToPass);
 
             ?>
-            <script language="JavaScript"
-                    type="text/javascript"> alert('<?php echo htmlspecialchars($MsgToPass);?>');</script>
+            <script> alert('<?php echo htmlspecialchars($MsgToPass);?>');</script>
             <?php
             exit;
         }

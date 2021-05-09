@@ -1,10 +1,13 @@
 <?php
 
+define("ROOT_DIR", dirname(dirname(__DIR__)));
+define("THEME", "rozmova4");
+
+$data_path = "/home/lex/proj/voc/data/";
+
 if (!defined("_COMMON_")) {
     define("_COMMON_", 1);
 
-    
-    $data_path = "/home/lex/proj/voc/data/";
 
     $phpAdsNew_path = "";
 
@@ -74,6 +77,7 @@ if (!defined("_COMMON_")) {
     }
 
     set_error_handler("my_err_h");
+
 
 #loading parameters from config file
     if (!($conf_content = implode("", file($data_path . "voc.conf")))) {
@@ -158,6 +162,7 @@ if (!defined("_COMMON_")) {
 #setting necessary variables
     $daemon_url = $daemon_host . ":" . $daemon_port . "/";
     $engine_path = $data_path . "engine/" . $engine . "/";
+
     $ld_engine_path = $data_path . "engine/" . $long_life_data_engine . "/";
 
     $user_data_file = $data_path . "users.dat";
@@ -491,5 +496,4 @@ if (!defined("_COMMON_")) {
         }
         return implode(" ", $rez_arr);
     }
-
 }

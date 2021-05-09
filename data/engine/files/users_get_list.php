@@ -1,7 +1,12 @@
 <?php
 
-if (!isset($session)) $session = "0";
-if (!is_string($session)) $session = "0";
+if (!isset($session)) {
+    $session = "0";
+}
+
+if (!is_string($session)) {
+    $session = "0";
+}
 
 if (!defined("_CMP_")):
     define("_CMP_", 1);
@@ -10,6 +15,8 @@ if (!defined("_CMP_")):
         return strcmp(strtoupper($a), strtoupper($b));
     }
 endif;
+
+
 if (!isset($rooms)) {
     include($ld_engine_path . "rooms_get_list.php");
 }
