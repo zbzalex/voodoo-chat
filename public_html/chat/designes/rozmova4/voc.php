@@ -480,17 +480,11 @@
             write('</head><body bgcolor="#f1f1f1" text="#000000" LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>\n');
             write('<style>td { font-family: Verdana, Arial; font-size: 11px;}</style>\n');
             <?php if($cu_array[USER_REDUCETRAFFIC]) { ?> write('<style>.text_traff { font-family: Verdana, Arial; font-size: 11px;}</style>\n'); <?php } ?>
-            writeln('<script>\n<!--\nfunction info(u_name)\n{');
-            <?php
-            if ($browser == "msie" && $chat_type != "reload") {
-            ?>
-            writeln('with(window.voc_mess_frameset.message_box.document)\n        {\n                open(\'text/html\',\'replace\');\n                close();\n        }');
-            writeln('window.parent.voc_mess_frameset.message_box.document.location.href = \'<?php echo $chat_url;?>fullinfo.php?session=<?php echo $session;?>&user_id=\'+u_name;');
-            writeln('window.parent.voc_mess_frameset.show_box();');
-            <?php }else{ ?>
+            writeln('<script>function info(u_name)\n{');
+
             writeln('window.open(\'<?php echo $chat_url;?>fullinfo.php?session=<?php echo $session;?>&user_id=\'+u_name, \'Info\', \'resizable=yes,width=600,height=350,toolbar=no,scrollbars=yes,location=no,menubar=no,status=no\');');
-            <?php } ?>
-            writeln('}\n//-->\n<' + '/script>');
+
+            writeln('}<' + '/script>');
 
             <?php
             echo "write('";
