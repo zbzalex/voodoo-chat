@@ -283,7 +283,6 @@ if (!defined("_COMMON_")) {
     define("ROOM_ALLOWPICS", 7);//to send pics.
     define("ROOM_PREMODER", 8);//message must be approved by moderator
     define("ROOM_LASTACTION", 9);
-// VOC++ BE
     define("ROOM_CLUBONLY", 10);
     define("ROOM_PASSWORD", 11);
     define("ROOM_JAIL", 12);

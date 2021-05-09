@@ -7,11 +7,20 @@ namespace VOC\controller;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use VOC\dao\RoomDao;
+use VOC\repository\RoomRepository;
 
 class MainController
 {
     public function index(Application $app, Request $request)
     {
+        $roomRepository = new RoomRepository(
+            new RoomDao($app['pdo'])
+        );
+
+        
+
+
         return new Response(
             $app['templating.engine']->render('index.html.php')
         );

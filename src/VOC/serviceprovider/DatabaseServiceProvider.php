@@ -13,7 +13,7 @@ class DatabaseServiceProvider implements ServiceProviderInterface
     public function register(Container $app)
     {
         try {
-            $app['db'] = new PDOProviderHelper(
+            $app['pdo'] = new PDOProviderHelper(
                 $app['db.config']['driver'] . ":"
                 . "host=" . $app['db.config']['host']
                 . ";dbname=" . $app['db.config']['dbname'],
