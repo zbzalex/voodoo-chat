@@ -2,7 +2,6 @@
 include("inc_common.php");
 
 include($engine_path."users_get_list.php");
-include($file_path."events.php");
 
 set_variable("message");
 set_variable("subject");
@@ -64,9 +63,6 @@ $subject = str_replace("\t"," ",$subject);
 $subject = htmlspecialchars($subject);
 
 if(strlen($subject) > 100) $subject = substr($subject, 0, 100);
-
-riseEvent(EVENT_POST_OFFLINEPM, $user_name, $message);
-riseEvent(EVENT_POST_OFFLINEPM, $user_name, $subject);
 
 if (function_exists('preg_replace')){
         $message = preg_replace("/[0-9a-f]{32}/", "1234", $message);
