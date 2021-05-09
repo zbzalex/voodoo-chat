@@ -1,5 +1,10 @@
 <?php
-require_once("inc_common.php");
+
+require_once __DIR__ . "/../../vendor/autoload.php";
+require_once __DIR__ . "/inc_common.php";
+
+$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
 set_variable("design");
 set_variable("c_design");
 set_variable("c_user_name");

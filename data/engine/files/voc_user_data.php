@@ -13,7 +13,11 @@ while ($data = fgets($fp, 4096)) {
         $user = trim($data);
         if (strlen($user)<5) continue;
         if (substr_count($user,"\t")<4) continue;
-        list($t_id, $t_nickname, $t_password, $t_class, $t_canon, $t_mail) = explode("\t",$user, 6);
+
+        $t_mail = "";
+
+        list($t_id, $t_nickname, $t_password, $t_class, $t_canon) = explode("\t", $user);
+
         if ($canon_view == $t_canon) {
             $user_name = trim($t_nickname);
                 $registered_user = $t_id;

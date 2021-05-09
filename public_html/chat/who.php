@@ -1,6 +1,7 @@
 <?php
+
 require_once("inc_common.php");
-include("events.php");
+
 set_variable("photoss");
 set_variable("add_to_ignor");
 set_variable("remove_from_ignor");
@@ -9,7 +10,6 @@ set_variable("add_to_ignor_enc");
 set_variable("remove_from_ignor_enc");
 set_variable("update_invis");
 
-//if($enable_gzip) ob_start("ob_gzhandler");
 
 include($engine_path."users_get_list.php");
 
@@ -303,9 +303,6 @@ for ($i=0;$i<count($users);$i++) {
         }
 }
 
-riseEvent(EVENT_RENDER_USERLIST, $user_name, $room_id);
-
 $total_users = count($out_users);
 
 include($file_path."designes/".$design."/who.php");
-?>

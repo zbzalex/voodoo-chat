@@ -39,7 +39,6 @@ if ($c_hash == "") {
 }
 
 $REMOTE_ADDR = "";
-$REMOTE_ADDR = $IP;
 
 
 set_variable("design");
@@ -297,7 +296,7 @@ if($current_user->custom_class != 0) $user_custom_class = $current_user->custom_
 
 //DD updating userinfo
 $is_regist                                = $registered_user;
-$current_user->IP                         = $IP;
+$current_user->IP                         = "";
 
 if($current_user->user_class & ADM_BAN_MODERATORS) {
         if($current_user->show_ip != "") { $REMOTE_ADDR      = $current_user->show_ip;

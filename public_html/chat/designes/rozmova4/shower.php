@@ -36,11 +36,9 @@ window.setTimeout('rel()',20000);
 	<td><?php echo $out_users;?></td></tr>
 <tr><td colspan="5" background="<?php echo $current_design;?>images/hor_dot_line.gif" align="left"><img src="<?php echo $current_design;?>images/hor_dot_line.gif" width="10" height="1"></td></tr>
 </table>
-
 </center>
 
 <?php
 
 include($file_path."designes/".$design."/common_body_end.php");
 
-?>
