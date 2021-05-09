@@ -1,8 +1,5 @@
 <?php
 
-use VOC\repository\UserRepository;
-use VOC\repository\RoomRepository;
-
 require_once __DIR__ . "/../../vendor/autoload.php";
 require_once __DIR__ . "/inc_common.php";
 

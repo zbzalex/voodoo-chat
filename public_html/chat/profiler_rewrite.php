@@ -13,7 +13,7 @@ if (ereg("[^" . $nick_available_chars . "]", $user_to_search) or strlen($user_to
     $user_to_search = urldecode($orig_str);
     $user_to_search = htmlspecialchars(trim($user_to_search));
     if (ereg("[^" . $nick_available_chars . "]", $user_to_search)) {
-        $error_text = "$w_incorrect_nick (" . $user_to_search . ")<br><a href=\"index.php\">$w_try_again</a>";
+        $error_text = "$w_incorrect_nick (" . $user_to_search . ">$w_try_again</a>";
         include($file_path . "designes/" . $design . "/error_page.php");
         exit;
     }

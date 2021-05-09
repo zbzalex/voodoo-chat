@@ -493,12 +493,20 @@
             ?>
 
             write('<table width="100%" border="0" cellspacing="0" cellpadding="0">\n');
-            write('<tr><td height=20 bgcolor="#7EC63E"> <div align="center"><b><a href="javascript:;" onClick="parent.Whisper(\'<?php echo $sw_usr_all_link; ?>\');"><font color="#FFFFFF"><?php echo $w_usr_all; ?></a> (');
-            write(arrAdminsSize + arrClanSize + arrBoysSize + arrGirlsSize + arrHimSize);
-            write(')</b></font>');
-            if (IsNewPM) write('&nbsp;<a href="#" onClick="javascript:parent.window.frames[\'menu\'].open_win(\'<?php echo $chat_url . "board_list.php?session=$session"; ?>\',\'help\');"><img src="<?php echo $current_design; ?>img/newpm.gif" width=22 heigh=10 border=0></a>');
+            write(
+                '<tr>' +
+                '<td height=20 bgcolor="#7EC63E">' +
+                '<div align="center">' +
+                '<a href="javascript:;" onClick="parent.Whisper(\'Всем\');"> <font color="#FFFFFF">' +
+                '<b>Все</b>' +
+                '</a> (' + (arrAdminsSize + arrClanSize + arrBoysSize + arrGirlsSize + arrHimSize) + ')'
+            );
+
+            //if (IsNewPM) write('&nbsp;<a href="#" onClick="javascript:parent.window.frames[\'menu\'].open_win(\'<?php echo $chat_url . "board_list.php?session=$session"; ?>\',\'help\');"><img src="<?php echo $current_design; ?>img/newpm.gif" width=22 heigh=10 border=0></a>');
+
             write('</div>\n');
             write('</td></tr>\n');
+
             if (arrAdminsSize || voc_powers == 1) {
                 write('<tr><td bgcolor="#FB400D" height=20><div align="center"><b>\n');
                 write('<a href="javascript:;" onClick="parent.Whisper(\'<?php echo $sw_usr_adm_link;?>\');"><font color="#FFFFFF"><?php echo $w_usr_adm; ?></a> (');
@@ -657,44 +665,11 @@
     }
 
     // End of userlist manipulation
-
-    <?php
-    if ($browser == "msie" && $chat_type != "reload")
-    {
-    ?>
-    var inited = 0;
-
-    function rel() {
-        var pho_word = 'no';
-        window.frames['voc_who'].document.location.href = '<?php echo $chat_url . "who.php?session=$session";?>&photoss=' + pho_word;
-        window.setTimeout('rel()', 120000);
-    }
-
-    window.setTimeout('rel()', 120000);
-
-    function st_ini() {
-        try {
-            window.voc_status_op.st_ini();
-            inited = 1;
-        } catch (e) {
-            inited = 0;
-        }
-    }
-
-    function st_update() {
-        if (inited == 1) {
-            window.voc_status_op.st_update();
-        } else {
-            st_ini();
-        }
-    }
-    <?php } else {?>
     function st_ini() {
     }
 
     function st_update() {
     }
-    <?php }?>
 
     function RunSysCmd(cmdLine, cType, cTime) {
 
@@ -1210,7 +1185,7 @@
         <frame name="top_banner" src="<?php echo $current_design; ?>blank.html" marginwidth="0" marginheight="0"
                scrolling="no" frameborder="0">
     </frameset>
-    <frameset cols="*,<?php if (!$cu_array[USER_REDUCETRAFFIC]) { ?><?php } ?>200,0"
+    <frameset cols="*,<?php if (!$cu_array[USER_REDUCETRAFFIC]) { ?><?php } ?>300,0"
               bordercolor="#3D4976"
               framespacing="1"
               frameborder="YES"

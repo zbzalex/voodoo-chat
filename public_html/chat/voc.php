@@ -81,7 +81,7 @@ if ($session != "") {
 
     if (intval($ar_rooms[$room][ROOM_CLUBONLY]) == 1) {
         if (!$current_user->is_member) {
-            $error_text = "$w_roz_not_allowed<br><a href=\"index.php\">$w_try_again</a>";
+            $error_text = ">$w_try_again</a>";
             include($file_path . "designes/" . $design . "/error_page.php");
             exit;
         }
@@ -187,17 +187,17 @@ include("inc_to_canon_nick.php");
 #check for nickname;
 
 if ((strlen($user_name) < $nick_min_length) or (strlen($user_name) > $nick_max_length)) {
-    $error_text = "$w_incorrect_nick<br><a href=\"index.php\">$w_try_again</a>";
+    $error_text = ">$w_try_again</a>";
     include($file_path . "designes/" . $design . "/error_page.php");
     exit;
 }
 if (ereg("[^" . $nick_available_chars . "]", $user_name)) {
-    $error_text = "$w_incorrect_nick<br><a href=\"index.php\">$w_try_again</a>";
+    $error_text = ">$w_try_again</a>";
     include($file_path . "designes/" . $design . "/error_page.php");
     exit;
 }
 if (strtolower($user_name) == strtolower(strip_tags($w_rob_name))) {
-    $error_text = "$w_incorrect_nick<br><a href=\"index.php\">$w_try_again</a>";
+    $error_text = ">$w_try_again</a>";
     include($file_path . "designes/" . $design . "/error_page.php");
     exit;
 }

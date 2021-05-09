@@ -10,7 +10,7 @@ set_variable("user_name");
 $user_name = htmlspecialchars(trim($user_name));
 
 if (ereg("[^" . $nick_available_chars . "]", $user_name)) {
-    $error_text = "$w_incorrect_nick (" . $user_name . ")<br><a href=\"index.php\">$w_try_again</a>";
+    $error_text = "$w_incorrect_nick (" . $user_name . ">$w_try_again</a>";
     include($file_path . "designes/" . $design . "/error_page.php");
     exit;
 }

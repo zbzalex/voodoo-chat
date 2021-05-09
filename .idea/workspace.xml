@@ -2,12 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28b594d5-bc83-4992-a0d0-969a63b9105d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public_html/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/controllerprovider/MainControllerProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/serviceprovider/TemplatingEngineServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-09-private.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/2021-05-09-private.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/logs/2021-05-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/2021-05-09.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mess_stat.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/mess_stat.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/messages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/messages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/similar_nicks.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/similar_nicks.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/userlist.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/0/1.user" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/0/1.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/0/2.user" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/0/2.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/guardian.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/guardian.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/users-backup.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/users-backup.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/users.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/wal.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/wal.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/who.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/who.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/sound/sound.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/CHANGES" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/FAQ" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/HANDLERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/apnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/arin.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/ascio.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/atnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/aunic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/bripw.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/brnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/bulkregistercom.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/buydomains.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/chnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/cira.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/core.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/denic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/directnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/dotfm.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/dotregistrar.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/dotster.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/enom.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/esnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/example.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/generic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/generic2.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/generic3.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/gtld.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/info.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/interdomain.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/inwwcom.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/ipw.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/krnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/lacnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/lunic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/main.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/mxnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/netsol.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/neulevel.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/nicse.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/nlnic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/nunames.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/opensrsnet.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/registercom.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/ripe.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/servers.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/srsplus.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/uknic.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/utils.whois" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/whois/whois2-icon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/resources/views/signUp.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/profiler_rewrite.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/profiler_rewrite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/registration_cell.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/registration_cell.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/voc.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/voc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/ChatApp.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/resources/views/index.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/resources/views/index.html.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,13 +139,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/VOC/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/VOC/resources/views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public_html" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/VOC" />
     </key>
@@ -90,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620566830930</updated>
-      <workItem from="1620566835097" duration="19059000" />
+      <workItem from="1620566835097" duration="23318000" />
     </task>
     <servers />
   </component>
