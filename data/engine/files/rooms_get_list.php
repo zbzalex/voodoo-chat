@@ -2,6 +2,7 @@
 
 if (!defined("_ROOMS_")):
     define("_ROOMS_", 1);
+
     $rooms_file = file($rooms_list_file);
     unset($rooms);
     unset($room_ids);

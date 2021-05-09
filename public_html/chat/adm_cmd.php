@@ -31,7 +31,6 @@ include($ld_engine_path."users_get_object.php");
 include_once($data_path."engine/files/user_log.php");
 
 $check_type = "admin_command";
-include("user_validate.php");
 
 if(intval($current_user->show_for_moders) == 0 and $current_user->user_class & ADM_VIEW_PRIVATE) $IsSilentMode = true;
 else $IsSilentMode = false;
@@ -203,7 +202,7 @@ switch ($banType) {
                    $oldClanCrd = $current_clan->credits;
                    $current_clan->credits -= $tarrifs["dam_crd_clan"];
 
-                   //пишем клану в лог
+                   //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ
                    $MsgToPass = $sw_adm_clan_penalty;
                    $MsgToPass = str_replace("#", $tarrifs["dam_crd_clan"], $MsgToPass);
                    $MsgToPass = str_replace("~", $current_user->nickname, $MsgToPass);
@@ -241,7 +240,7 @@ switch ($banType) {
             $oldClanCrd = $current_clan->credits;
             $current_clan->credits -= $tarrifs["ban_crd_clan"];
 
-            //пишем клану в лог
+            //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ
             $MsgToPass = $sw_adm_clan_penalty;
             $MsgToPass = str_replace("#", $tarrifs["ban_crd_clan"], $MsgToPass);
             $MsgToPass = str_replace("~", $current_user->nickname, $MsgToPass);
@@ -392,7 +391,8 @@ switch ($banType) {
                 if($current_user->clan_id > 0) {
                    $current_clan = new Clan;
 
-                   $is_regist_clan = intval($current_user->clan_id);
+                   $is_regist_clan = intval($current_user->clan_id);
+
                    include($ld_engine_path."clan_get_object.php");
 
                    $oldClanCrd = $current_clan->credits;
@@ -513,7 +513,7 @@ switch ($banType) {
                                $oldClanCrd = $current_clan->credits;
                                $current_clan->credits -= $tarrifs["jail_crd_clan"];
 
-                               //пишем клану в лог
+                               //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ
                                $MsgToPass = $sw_adm_clan_penalty;
                                $MsgToPass = str_replace("#", $tarrifs["jail_crd_clan"], $MsgToPass);
                                $MsgToPass = str_replace("~", $current_user->nickname, $MsgToPass);
@@ -653,7 +653,8 @@ switch ($banType) {
     }
     break;
     case "do_alert":
-        if (!($current_user->user_class & ADM_BAN) and !($current_user->custom_class & CST_PRIEST)) {
+        if (!($current_user->user_class & ADM_BAN) and !($current_user->custom_class & CST_PRIEST)) {
+
          ?>
             <script language="JavaScript" type="text/javascript"> alert('<?php echo $w_no_admin_rights;?>!');</script>
             <?php
@@ -789,7 +790,7 @@ switch ($banType) {
                                $oldClanCrd = $current_clan->credits;
                                $current_clan->credits -= $tarrifs["sln_crd_clan"];
 
-                               //пишем клану в лог
+                               //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ
                                $MsgToPass = $sw_adm_clan_penalty;
                                $MsgToPass = str_replace("#", $tarrifs["sln_crd_clan"], $MsgToPass);
                                $MsgToPass = str_replace("~", $current_user->nickname, $MsgToPass);
@@ -891,7 +892,7 @@ switch ($banType) {
                                $oldClanCrd = $current_clan->credits;
                                $current_clan->credits -= $tarrifs["chaos_crd_clan"];
 
-                               //пишем клану в лог
+                               //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ
                                $MsgToPass = $sw_adm_clan_penalty;
                                $MsgToPass = str_replace("#", $tarrifs["chaos_crd_clan"], $MsgToPass);
                                $MsgToPass = str_replace("~", $current_user->nickname, $MsgToPass);
@@ -946,7 +947,8 @@ switch ($banType) {
                                        MESG_BODY=>"<span class=ha><font color=\"$def_color\">".$MsgToPass."</font></span>");
 
                         $MsgToPass = $w_adm_chaos_adm;
-                        $MsgToPass = str_replace("~", $whisper, $MsgToPass);
+                        $MsgToPass = str_replace("~", $whisper, $MsgToPass);
+
                         $MsgToPass = str_replace("#", intval($mesg), $MsgToPass);
                         $MsgToPass = str_replace("*", $current_user->nickname, $MsgToPass);
                         $MsgToPass = $MsgToPass." [<b>".trim($cause)."</b>]";
@@ -1107,7 +1109,7 @@ switch ($banType) {
                                $oldClanCrd = $current_clan->credits;
                                $current_clan->credits -= $tarrifs["ban_crd_clan"];
 
-                               //пишем клану в лог
+                               //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ
                                $MsgToPass = $sw_adm_clan_penalty;
                                $MsgToPass = str_replace("#", $tarrifs["ban_crd_clan"], $MsgToPass);
                                $MsgToPass = str_replace("~", $current_user->nickname, $MsgToPass);

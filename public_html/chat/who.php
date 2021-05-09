@@ -11,20 +11,18 @@ set_variable("add_to_ignor_enc");
 set_variable("remove_from_ignor_enc");
 set_variable("update_invis");
 
-//if($enable_gzip) ob_start("ob_gzhandler");
-
 include($engine_path . "users_get_list.php");
 
 if (!$exists) {
-    $error_text = "$w_no_user";
-    include($file_path . "designes/" . $design . "/error_page.php");
     exit;
 }
 
 if ($photoss == "") {
     $photoss = "no";
 }
+
 if ($add_to_ignor_enc != "") $add_to_ignor = urldecode($add_to_ignor_enc);
+
 if ($add_to_ignor != "") {
     include($engine_path . "ignor_add.php");
     Header("Location: who.php?session=$session&photoss=$photoss&" . time());
@@ -32,6 +30,7 @@ if ($add_to_ignor != "") {
 }
 
 if ($remove_from_ignor_enc != "") $remove_from_ignor = urldecode($remove_from_ignor_enc);
+
 if ($remove_from_ignor != "") {
     include($engine_path . "ignor_remove.php");
     Header("Location: who.php?session=$session&photoss=$photoss&" . time());
@@ -53,7 +52,6 @@ $IsModer = 0;
 $IsAdmin = 0;
 $show_for_moders = 1;
 $my_id = 0;
-
 
 if ($is_regist) {
     $my_id = $is_regist;

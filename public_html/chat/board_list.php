@@ -15,9 +15,7 @@ if(!$is_regist_complete) {
 }
 include("inc_user_class.php");
 include($ld_engine_path."users_get_object.php");
-include("user_validate.php");
 
 include($ld_engine_path."hidden_board_get_messages.php");
 
 include($file_path."designes/".$design."/board_list.php");
-?>

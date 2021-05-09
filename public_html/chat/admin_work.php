@@ -49,7 +49,6 @@ include("inc_user_class.php");
 include($ld_engine_path . "users_get_object.php");
 
 $check_type = "admin_work";
-include("user_validate.php");
 
 set_variable("op");
 if (strlen(trim($op)) == 0) $op = "ban";

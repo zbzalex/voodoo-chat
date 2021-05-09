@@ -26,8 +26,6 @@ else $IsMyProfile = false;
 include($file_path . "inc_user_class.php");
 include($ld_engine_path . "users_get_object.php");
 
-if ($is_regist) include($file_path . "user_validate.php");
-
 $userPoints = $current_user->points;
 
 if ($current_user->registered) {

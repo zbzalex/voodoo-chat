@@ -120,7 +120,6 @@ include($ld_engine_path . "users_get_object.php");
 //Patch for not valid user if session was not his =)
 //added for Christmas Edition SE
 $check_type = "user_info_update";
-include("user_validate.php");
 
 $info_message = "";
 $passwd1 = str_replace("\t", "", $passwd1);

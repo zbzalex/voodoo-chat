@@ -20,10 +20,8 @@ if(!$is_regist_complete) {
 }
 include("inc_user_class.php");
 include($ld_engine_path."users_get_object.php");
-include("user_validate.php");
 
 $board_operation = "view";
 include($ld_engine_path."hidden_board_process_message.php");
 
 include($file_path."designes/".$design."/board_view.php");
-?>

@@ -179,8 +179,6 @@ if ($is_regist and (strlen($whisper) == 0 or $custom_style == 1)) {
     include($ld_engine_path . "users_get_object.php");
 
     $check_type = "common_message";
-    include("user_validate.php");
-
     if (strlen($whisper) == 0 and strlen(trim($mesg)) > 0) {
 
         if (intval($current_user->plugin_info["chaos_start"]) + intval($current_user->plugin_info["chaos_time"]) > my_time()) {
@@ -548,7 +546,6 @@ if ($mesg != "") {
     }
     $numOfImgPhrases = count($SmTbl);
 
-    require_once "smiles.php";
     usort($SmTbl, "cmpLen");
 
     //now it's in inc_common.php

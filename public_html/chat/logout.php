@@ -17,7 +17,6 @@ if ($exists) {
     $check_type = "logout";
     include("inc_user_class.php");
     include($ld_engine_path . "users_get_object.php");
-    include("user_validate.php");
 }
 
 include($engine_path . "logout.php");

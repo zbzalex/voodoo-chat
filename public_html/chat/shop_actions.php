@@ -18,7 +18,6 @@ if(!$is_regist_complete) {
 include("inc_user_class.php");
 include($ld_engine_path."users_get_object.php");
 
-include($file_path."user_validate.php");
 include($engine_path."users_get_list.php");
 
 include($engine_path."class_items.php");
