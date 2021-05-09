@@ -1,0 +1,63 @@
+howto update:
+
+there are two ways to update chat.
+a) long-way
+	1. make backup
+	2. stop the daemon
+	3. move the chat/ and data/ directories somewhere (i.e.  chat_old and data_old)
+	4. install, configure, and run the new chat
+	5. copy files and subdirectories from 
+		chat/photos/*
+		data/users/*
+		data/board/*
+		data/statuses/*
+		data/users.dat
+	6. copy your design if any
+	7. read RELEASE_NOTES, probably you need to update something else
+	
+b) short way
+	1. make backup
+	2. run the shell-script:
+#-----------------------start of update.sh------------------
+#!/bin/sh
+#put here the path to new version
+NEW_TOP=/home/voodoo/new_chat_dist/voc/
+
+#put here the path to current chat and to current data directories
+CURRENT=/home/voodoo/www/chat/
+CUR_DATA=/home/voodoo/voc-data/
+
+rm -rf $CURRENT/*.php
+cp $NEW_TOP/chat/*.php $CURRENT/
+
+rm -rf $CURRENT/designes/sky
+rm -rf $CURRENT/designes/default
+rm -rf $CURRENT/designes/hi-tech
+cp -r $NEW_TOP/chat/designes $CURRENT
+
+
+cp $CURRENT/admin/admin_users.php $NEW_TOP/chat/admin/admin_users.php
+rm -rf $CURRENT/admin
+cp -r $NEW_TOP/chat/admin $CURRENT
+
+rm -rf $CURRENT/languages/ru.php
+rm -rf $CURRENT/languages/en.php
+rm -rf $CURRENT/languages/help_ru.php
+rm -rf $CURRENT/languages/help_en.php
+cp $NEW_TOP/chat/languages/*.php $CURRENT/languages/
+
+rm -rf $CUR_DATA/engine
+cp -r $NEW_TOP/data/engine $CUR_DATA/
+
+rm -rf $CUR_DATA/daemon/daemon.pl
+cp $NEW_TOP/data/daemon/daemon.pl $CUR_DATA/daemon/
+
+cd $CUR_DATA/daemon/
+kill `cat daemon.pid`
+chmod a+x daemon.pl
+./daemon.pl
+
+echo "finished"
+#-----------------------end of update.sh------------------
+	3. run admin/configure.php script (there could be new settings you have to define)
+	4. read RELEASE_NOTES

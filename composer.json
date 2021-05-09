@@ -1,0 +1,13 @@
+{
+    "name": "lex/voc",
+    "authors": [
+        {
+            "name": "Sasha Broslavskiy",
+            "email": "sasha.broslavskiy@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/routing": "1.0"
+    }
+}

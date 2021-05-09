@@ -1,0 +1,64 @@
+RELEASE NOTES FOR 1.0 RC1
+1.You have to update your lang-file.
+The function "w_people()" must be renamed to "w_people_lang" where "lang" is file-name without .php.
+i.e. in en.php it's called w_people_en()
+
+2. To use use user-selected language in your skins, you have do modify
+index.php (includes &user_lang=<?php echo $user_lang;?> in frameset)
+welcome.php (includes <input type="hidden" name="user_lang" value="<?php echo $user_lang;?>"> 
+	and some interface to select language, i.e. flags)
+
+
+
+
+RELEASE NOTES FOR 0.20.3x
+if you're using your custom skin:
+1. check chat/designes/hi-tech/registration_form.php file
+	there is two new fields -- 
+		new_user_mail (it's for 'activation code' which chat sends to user)
+		and image code
+2. check chat/designe/hi-tech/welcome.php
+	If the chat works in club mode, I'm showing 'registration' link at the welcome-page.
+
+
+RELEASE NOTES FOR 0.16.xx
+1. because the admin-functionality was changed, 
+	you need to set admin-rights again for all your moderators
+2/ look for three files in the designes:
+admin.php
+admin_navi.php
+output_page.php
+this files are needed for new 'admin-permissions' features.
+
+
+
+RELEASE NOTES FOR 0.14.10
+If you have previous version of voc installed and already have registered users,
+you have to update your users data-files.
+
+Install new version, go through configure.php script's step
+then just copy the file voc/update_to_0_14_xx.php to your chat/ directory
+and then call it from your web-browser
+Delete that update_to_0_14_xx.php file from your server and
+finally call '(re) generate caonical nicks' from your admin zone.
+
+
+
+RELEASE NOTES for 0.09.20
+
+
+You need to read this only if you're using already Voc-engine (previous version) with your own design-files.
+
+Some changes in the designes: 
+DESIGN/index.php -- now it contains name-attribute for the second frame (voc_shower) 
+DESIGN/welcome.php contains drop-down menu for the room 
+DESIGN/who.php contains the form to change the room
+
+DESIGN/daemon_html_header.html 
+It should contain Javascript function up(). 
+Just copy the script from 'sky' or 'default' scheme. 
+I've introduced this to reduce the traffic (<script>up()</script> is shorter than <script>scroll(1,1000000)</script>) and this function also can be used to monitor status (if there are no calling of this function for long time, we can let user know that he is disconnected. I will include such code later) 
+
+DESIGN/daemon_html_header.html 
+also contains special directive [TOPIC] which will be replaced with current room's topic in output.
+
