@@ -252,7 +252,7 @@ if ($is_regist and (strlen($whisper) == 0 or $custom_style == 1)) {
         $oldMoney = $current_user->credits;
         $current_user->credits += $tarrifs["ref_bounty"];
 
-        include_once($data_path . "engine/files/user_log.php");
+        include_once($ld_engine_path . "/user_log.php");
 
         $MsgToPass = $sw_adm_reffered_payment;
         $MsgToPass = str_replace("#", $tarrifs["ref_bounty"], $MsgToPass);

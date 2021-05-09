@@ -3,6 +3,7 @@
 $registered_user = 0;
 $canon_view = to_canon_nick($user_name);
 $fp = fopen($user_data_file, "rb");
+
 if (!$fp) exit;
 
 flock($fp, LOCK_EX);
@@ -65,5 +66,3 @@ if ($registered_user) {
     flock($fp, LOCK_UN);
     fclose($fp);
 }
-
-?>

@@ -30,9 +30,11 @@ $flood_protection = 1;
 $users = array();
 
 $fp = fopen($who_in_chat_file, "r+b");
+
 if (!$fp) trigger_error("Could not open who.dat for writing. Please, check permissions", E_USER_ERROR);
 if (!flock($fp, LOCK_EX))
     trigger_error("Could not LOCK who.dat. Do you use Win 95/98/Me?", E_USER_WARNING);
+
 $exists = 0;
 $is_regist = 0;
 $user_name = "";

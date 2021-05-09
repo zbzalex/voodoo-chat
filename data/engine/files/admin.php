@@ -1,6 +1,7 @@
 <?php
 
 unset($users);
+
 $users = array();
 $fp = fopen($banlist_file, "r+b");
 if (!$fp) trigger_error("Could not open banlist file. Please, check permissions", E_USER_ERROR);
