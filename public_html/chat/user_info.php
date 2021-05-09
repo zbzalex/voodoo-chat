@@ -1,5 +1,8 @@
 <?php
-require_once("inc_common.php");
+
+require_once __DIR__ . "/../../vendor/autoload.php";
+require_once __DIR__ . "/inc_common.php";
+
 include($engine_path . "users_get_list.php");
 
 include($file_path . "tarrifs.php");
@@ -384,4 +387,3 @@ $small_picture = $pic_name;
 $w_big_photo = str_replace("~", $max_photo_size, str_replace("*", $max_photo_width, str_replace("#", $max_photo_height, $w_big_photo)));
 
 include($file_path . "designes/" . $design . "/user_info.php");
-?>

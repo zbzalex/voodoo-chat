@@ -1,7 +1,9 @@
 <?php
-require_once("inc_common.php");
-#for determining design and user_name
-include($engine_path."users_get_list.php");
+
+require_once __DIR__ . "/../../vendor/autoload.php";
+require_once __DIR__ . "/inc_common.php";
+
+include($engine_path . "users_get_list.php");
 
 set_variable("user_name");
 set_variable("new_user_sex");
@@ -14,39 +16,12 @@ $room = intval($room);
 set_variable("ref_id");
 $ref_id = intval($ref_id);
 
-if($ref_id < 0) $ref_id = 0;
+if ($ref_id < 0) $ref_id = 0;
 
-$impro_id = 0;
-$impro_code = -1;
-
-if ($impro_registration) {
-        include($ld_engine_path."impro.php");
-        list($usec, $sec) = explode(' ', microtime());
-        srand( (float) $sec + ((float) $usec * 100000));
-
-        $impro_id = md5(uniqid(rand()));
-        $impro_code = rand(1000,9999);
-        impro_save($impro_id, $impro_code);
+if (!intval($open_chat)) {
+    $error_text = $w_roz_chat_closed;
+    include($file_path . "designes/" . $design . "/error_page.php");
+    exit;
 }
 
-if(!intval($open_chat)) {
-    $error_text=$w_roz_chat_closed;
-        include($file_path."designes/".$design."/error_page.php");
-        exit;
-}
-
-if(disk_free_space($data_path) < 10*1024*1024 and is_file($data_path."engine/files/guardian.php") and intval($vocplus_useguardian)) {
-   if($vocplus_guardian_dellogs) {
-           include_once($data_path."engine/files/guardian.php");
-              cleanUpOldLogs();
-   }
-}
-
-if(disk_free_space($data_path) < 10*1024*1024) {
-        $error_text=$w_roz_chat_closed."<br><b>".$w_roz_out_of_space." ($admin_mail)</b>";
-        include($file_path."designes/".$design."/error_page.php");
-        exit;
-}
-
-include($file_path."designes/".$design."/registration_form.php");
-?>
+include($file_path . "designes/" . $design . "/registration_form.php");

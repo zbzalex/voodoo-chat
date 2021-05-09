@@ -98,5 +98,3 @@ function show_messages($last_id, $messages, $ignored_users, $start_at = 0)
     }
     return array($message_id, $total_out);
 }
-
-?>

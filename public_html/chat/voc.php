@@ -437,7 +437,7 @@ if (!$TryToBeInvisible) {
 
     $toDay = date("j-n");
     $birthDay = $bDay . "-" . $bMon;
-#$birthDay = date("jn",mktime(0,0,0,$bDay , $bMon, date("Y")));
+
     if ($toDay == $birthDay)
         $messages_to_show[] = array(MESG_TIME => my_time(),
             MESG_ROOM => $room_id,
@@ -457,6 +457,7 @@ if ($rooms[$room]["design"] != "")
 $current_design = $chat_url . "designes/" . $design . "/";
 
 RenderCopyrights();
+
 include($file_path . "designes/" . $design . "/voc.php");
 
 function RenderCopyrights()
@@ -466,50 +467,4 @@ function RenderCopyrights()
     if ($enable_gzip) ob_start("ob_gzhandler");
     include($file_path . "designes/" . $design . "/common_title.php");
     include($file_path . "designes/" . $design . "/common_browser_detect.php");
-    ?>
-    <!--
-    /////////////////////////////////////////////////////
-    //                                                 //
-    //               Voodoo chat v. 0.90               //
-    //         (c) 1999-2004 by Vlad Vostrykh          //
-    //               http://vochat.com/                //
-    //                                                 //
-    //                QPL ver1 License                 //
-    //        See voc/LICENSE file for details         //
-    //                                                 //
-    //          because nobody reads licenses          //
-    //              I have to remind that              //
-    //      you're not allowed to modify/remove        //
-    //              any copyright notices              //
-    //                                                 //
-    /////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////
-    //                                                 //
-    //                VOC++ v 1.0-0.95.SPC             //
-    //              Business Special Edition           //
-    //       (c) 2004 by DareDEVIL & EricDraven        //
-    //     (c) 2004-2006 by CREATIFF Design Studio     //
-    //            http://vocplus.creatiff.com.ua/      //
-    //         e-mail: support@creatiff.com.ua         //
-    //                                                 //
-    //     original VOC engine and Voodoo Chat         //
-    //       (c) 1999-2004 by Vlad Vostryk             //
-    //            http://www.vochat.com/               //
-    //                                                 //
-    //                QPL ver1 License                 //
-    //        See voc/LICENSE file for details         //
-    //                                                 //
-    //          because nobody reads licenses          //
-    //              I have to remind that              //
-    //      you're not allowed to modify/remove        //
-    //              any copyright notices              //
-    //                                                 //
-    //     You are NOT ALLOWED to use this mod or      //
-    //              it's parts for                     //
-    //     ANY CHAT in Prekarpathian   region, Ukraine.//
-    /////////////////////////////////////////////////////
-    -->
-    <?php
 }
-
-?>
