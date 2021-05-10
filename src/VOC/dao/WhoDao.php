@@ -73,10 +73,11 @@ class WhoDao extends Dao
             }
 
             $fd = @fopen(ROOT_DIR . "/data/who.dat", "rw+");
-            fseek($fd, 0);
-            fwrite($fd, implode("\n", $tmp));
-            fclose($fd);
-
+            if ($fd !== false) {
+                fseek($fd, 0);
+                fwrite($fd, implode("\n", $tmp));
+                fclose($fd);
+            }
         }
 
         return null;
