@@ -28,9 +28,7 @@ $app->mount("/api", new \VOC\controllerprovider\ApiControllerProvider())
     ->before(
         function (\Symfony\Component\HttpFoundation\Request $request, \Silex\Application $app) {
             if (strtolower(substr($request->getPathInfo(), 0, 4)) === "/api") {
-
                 $apiKey = $request->query->get("api_key");
-
                 $hostHeaders = $request->headers->get('host', null, false);
                 $host = $hostHeaders !== null && count($hostHeaders) > 0
                     ? (($pos = strpos($hostHeaders[0], ":")) !== -1
@@ -44,7 +42,9 @@ $app->mount("/api", new \VOC\controllerprovider\ApiControllerProvider())
 
                 $apiUserRepository =
                     new \VOC\repository\ApiUserRepository($app['pdo']->getDao(\VOC\dao\ApiUserDao::class));
-                if ($apiUserRepository->getByApiKeyAndHost($apiKey, $host) == 0) {
+                if ($apiKey === null
+                    || !\VOC\repository\ApiUserRepository::isValidApiKey($apiKey)
+                    || $apiUserRepository->getByApiKeyAndHost($apiKey, $host) == 0) {
                     return new Response(new Error("Access denied"));
                 }
 

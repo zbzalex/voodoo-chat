@@ -19,4 +19,8 @@ class ApiUserRepository
     {
         return $this->apiUserDao->getByApiKeyAndHost($apiKey, $host);
     }
+
+    public static function isValidApiKey($apiKey) {
+        return is_string($apiKey) && preg_match('/^[0-9a-z_]+$/i', $apiKey);
+    }
 }
