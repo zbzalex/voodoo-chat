@@ -101,7 +101,7 @@
                                                 1
                                             </td>
                                             <td style="width: 170px;">
-                                                <a href="/profile/<?php echo $item->getCanonNick(); ?>/?ref=main">
+                                                <a href="/profile/<?php echo $item->getCanonNick(); ?>">
                                                     <?php echo $item->getNickname(); ?>
                                                 </a>
                                             </td>
