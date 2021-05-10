@@ -2,18 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db5ca34b-9304-4606-9ec4-b6c2bd1342c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ChatApp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/util/URL.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/files/registration_add.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/engine/files/registration_add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/files/registration_fake.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/engine/files/registration_fake.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/shamans_list.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/shamans_list.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/userlist.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/who.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/who.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/delete_cron.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/admin/delete_cron.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/generate_indexes.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/admin/generate_indexes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/navi.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/admin/navi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/progress.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/admin/progress.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/user_delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/admin/user_delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/registration_cell.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/registration_cell.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/voc.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/voc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/calibrate_guardian.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/check_session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/admin_01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/admin_02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/admin_03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/admin_04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/bg_left.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/bg_right.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_01.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_02.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_03.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_04.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_05.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_06.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_07.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_08.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_09.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/index_22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2-1_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2-1_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2-1_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_content.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_girl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_logo_2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/images/voc_pro2_scns.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/admin/languages/admin-ua.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620645818917</updated>
-      <workItem from="1620645822017" duration="25050000" />
+      <workItem from="1620645822017" duration="25677000" />
     </task>
     <servers />
   </component>
