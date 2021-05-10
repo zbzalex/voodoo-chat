@@ -1,20 +1,20 @@
 <script>
-    var arrBoys = new Array;
-    var arrGirls = new Array;
-    var arrHim = new Array;
-    var arrAdmins = new Array;
-    var arrClan = new Array;
-    var arrExCmd = new Array;
-    var arrBoysSize = 0;
-    var arrGirlsSize = 0;
-    var arrHimSize = 0;
-    var arrAdminsSize = 0;
-    var arrClanSize = 0;
-    var arrExCmdSize = 0;
+    var arrBoys = []
+    var arrGirls = []
+    var arrHim = []
+    var arrAdmins = []
+    var arrClan = []
+    var arrExCmd = []
+    var arrBoysSize = 0
+    var arrGirlsSize = 0
+    var arrHimSize = 0
+    var arrAdminsSize = 0
+    var arrClanSize = 0
+    var arrExCmdSize = 0
 
-    var room_ids = new Array;
-    var room_names = new Array;
-    var room_users = new Array;
+    var room_ids = []
+    var room_names = []
+    var room_users = []
     var user_status;
     var inChat;
     var user_status;
@@ -45,21 +45,6 @@
 
     function ping() {
         nChannelTimeout = 1;
-    }
-
-    function openPrivatePopup(Nick, NickID) {
-        var i = 0;
-
-        for (i = 0; i < arrPopupsSize; i++) {
-            if (arrPopups[i].Nick == Nick) return;
-        }
-
-        arrPopups[arrPopupsSize] = {Nick: Nick, Name: NickID, Loaded: false, Handle: -1};
-        arrPopups[arrPopupsSize].Handle = window.open('<?php echo $chat_url; ?>voc_popup_opener.php?session=<?php echo $session; ?>&win_id=' + NickID, NickID);
-
-        if (arrPopups[arrPopupsSize].Handle.opener == null) arrPopups[arrPopupsSize].Handle.opener = self;
-
-        arrPopupsSize++;
     }
 
     function whoAmIPopup(NickID) {
@@ -100,11 +85,6 @@
             arrPopups[i] = arrPopups[i + 1];
         }
         arrPopupsSize--;
-    }
-
-    ////////////////////////////////
-
-    function checkNavigator() {
     }
 
     function mringdrop() {
@@ -743,18 +723,20 @@
     function giveMeSmileys() {
 
         if (!smFrameOk) {
+
             smFrameOk = 1;
+
             window.frames['voc_who'].document.location.href = '<?php echo $chat_url . "who.php?session=$session";?>';
             window.voc_sender.document.location.href = '<?php echo $current_design;?>sender_visible.php?session=<?php echo $session;?>&user_color=<?php echo $user_color; ?>';
             window.frames['top_top'].document.location.href = '<?php echo $current_design;?>top.php';
             window.frames['top_banner'].document.location.href = '<?=$current_design?>remote_rbs.php';
-            window.frames['menu'].document.location.href = '<?php echo $chat_path;?>navibar.php?session=<?php echo $session;?>';
-            window.frames['menu_public'].document.location.href = '<?php echo $chat_path;?>menu_public.php?session=<?php echo $session;?>';
-            window.frames['menu_private'].document.location.href = '<?php echo $chat_path;?>menu_private.php?session=<?php echo $session;?>';
+            window.frames['menu'].document.location.href = '<?php echo $chat_url;?>navibar.php?session=<?php echo $session;?>';
+            window.frames['menu_public'].document.location.href = '<?php echo $chat_url;?>menu_public.php?session=<?php echo $session;?>';
+            window.frames['menu_private'].document.location.href = '<?php echo $chat_url;?>menu_private.php?session=<?php echo $session;?>';
             window.frames['voc_alerter'].document.location.href = '<?php echo $chat_url;?>alerter.php?session=<?php echo $session; ?>';
 
             <?php if(!$cu_array[USER_REDUCETRAFFIC]) { ?>
-            window.voc_smileys.document.location.href = '<?php echo $current_design;?>smileys.php?session=<?php echo $session;?>';
+            //window.voc_smileys.document.location.href = '<?php echo $current_design;?>smileys.php?session=<?php echo $session;?>';
             <?php } ?>
 
             window.setTimeout("checkConnection()", 120000);
@@ -763,31 +745,16 @@
 
 
     function giveMeChat() {
-
         if (voc_channels_ok == 0) {
 
             window.setTimeout("giveMeSmileys()", 3000);
 
-            checkNavigator();
-
-
-            <?php if ($chat_type == "tail") {
-            ?>
-            if (!isIECompatible) {
-                window.voc_shower.document.location.href = '<?php echo $shower;?>&t=n';
-                window.voc_shower_priv.document.location.href = '<?php echo $shower;?>&t=p';
-            } else {
-                window.voc_shower_php.document.location.href = '<?php echo $shower;?>';
-                OpenFrame('voc_shower_priv');
-                OpenFrame('voc_shower');
-                LoadMyPrivate();
-            }
-            <?php } else {?>
             window.voc_shower_php.document.location.href = '<?php echo $shower;?>';
-            OpenFrame('voc_shower_priv');
-            OpenFrame('voc_shower');
-            LoadMyPrivate();
-            <?php } ?>
+            OpenFrame('voc_shower_priv')
+            OpenFrame('voc_shower')
+
+            LoadMyPrivate()
+
             voc_channels_ok = 1;
         }
     }
@@ -1121,30 +1088,18 @@
         if (nNav == 2) CloseFrame(frameName);
     }
 
+
     function LoadMyPrivate() {
         <?php
+
         include($data_path . "engine/files/user_private_get_messages.php");
+
         ksort($priv_messages, SORT_NUMERIC);
         reset($priv_messages);
-
-        if($current_user->play_sound == 1) {
-        ?>
-        bPlaySound = 0;
-        <?php
-        }
 
         for ($i = 0; $i < count($priv_messages); $i++) {
             list($time1, $message) = each($priv_messages);
             echo $priv_messages[$time1] . "\n";
-        }
-
-        if($current_user->play_sound == 1) {
-        ?>
-        bPlaySound = 1;
-        <?php if(count($priv_messages)) { ?>
-        pvt_sound.src = '<?=$current_design?>sound/sound.wav';
-        <?php
-        }
         }
 
         ?>

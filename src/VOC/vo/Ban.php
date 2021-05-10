@@ -6,14 +6,28 @@ namespace VOC\vo;
 
 class Ban
 {
+    /** @var int */
     private $id;
+
+    /** @var string */
     private $who;
+
+    /** @var string */
     private $moder;
+
+    /** @var string */
     private $cause;
+
+    /** @var int */
     private $until;
 
-    public function __construct()
+    public function __construct($id, $who, $moder, $cause, $until)
     {
+        $this->id = $id;
+        $this->who = $who;
+        $this->moder = $moder;
+        $this->cause = $cause;
+        $this->until = $until;
     }
 
     public static function fromState(array $data)
@@ -44,7 +58,7 @@ class Ban
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getWho()
     {
@@ -52,7 +66,7 @@ class Ban
     }
 
     /**
-     * @param mixed $who
+     * @param string $who
      */
     public function setWho($who)
     {

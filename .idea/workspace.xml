@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28b594d5-bc83-4992-a0d0-969a63b9105d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/dao/ShopProductDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/db/DaoRegistry.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/db/IDB.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VOC/repository/ShopProductRepository.php" afterDir="false" />
+    <list default="true" id="db5ca34b-9304-4606-9ec4-b6c2bd1342c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/VOC/api/ApiResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/api/Error.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/api/Ok.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/controller/ApiController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/controllerprovider/ApiControllerProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/vo/ShopProductType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/vo/userlist_Cache.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/files/users_get_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/engine/files/users_get_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/files/users_similar.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/engine/files/users_similar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/logs/2021-05-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/2021-05-10.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/mess_stat.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/mess_stat.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/messages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/messages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/userlist.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/users/0/2.user" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/0/2.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/who.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/who.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/designes/rozmova4/voc.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VOC/controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/controller/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VOC/dao/BanDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/dao/BanDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VOC/dao/RoomDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/dao/RoomDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VOC/providerhelper/PDOProviderHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/providerhelper/PDOProviderHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VOC/vo/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/vo/ShopProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VOC/vo/userlist_Cache.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/vo/Ban.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/vo/Ban.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start_server" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <phar pharPath="$PROJECT_DIR$/composer_2.phar" interpreterId="c4e83fb6-af25-448f-90ee-9e4cd3f2f8a2" />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,36 +46,27 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/silex/silex" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
-      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1sIj6KeNd1YmEv35kBiOZdf9gHx" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="1sLJDXWy4suz4PK70aLsKqxQU0G" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -85,46 +74,27 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/VOC/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/VOC/controllerprovider" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/VOC/resources/views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/VOC/vo" />
-      <recent name="$PROJECT_DIR$/public_html" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/VOC" />
+      <recent name="$PROJECT_DIR$/src/VOC/controllerprovider" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="28b594d5-bc83-4992-a0d0-969a63b9105d" name="Default Changelist" comment="" />
-      <created>1620566830930</created>
+      <changelist id="db5ca34b-9304-4606-9ec4-b6c2bd1342c8" name="Default Changelist" comment="" />
+      <created>1620645818917</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1620566830930</updated>
-      <workItem from="1620566835097" duration="31430000" />
-      <workItem from="1620642460057" duration="60000" />
-      <workItem from="1620642524366" duration="27000" />
-      <workItem from="1620642573238" duration="51000" />
-      <workItem from="1620642642476" duration="39000" />
-      <workItem from="1620642701100" duration="24000" />
-      <workItem from="1620643086077" duration="1692000" />
-      <workItem from="1620644796017" duration="33000" />
-      <workItem from="1620644844572" duration="106000" />
-      <workItem from="1620644969000" duration="407000" />
+      <updated>1620645818917</updated>
+      <workItem from="1620645822017" duration="2270000" />
     </task>
     <servers />
   </component>
@@ -141,10 +111,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

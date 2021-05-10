@@ -9,7 +9,8 @@
   "require": {
     "silex/silex": "~2.0",
     "symfony/templating": "3.4.x-dev",
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "ext-json": "*"
   },
   "minimum-stability": "dev",
   "autoload": {

@@ -19,5 +19,6 @@ $app->register(new \VOC\serviceprovider\TemplatingEngineServiceProvider());
 $app->register(new \VOC\serviceprovider\DatabaseServiceProvider());
 
 $app->mount("/", new \VOC\controllerprovider\MainControllerProvider());
+$app->mount("/api", new \VOC\controllerprovider\ApiControllerProvider());
 
 $app->run();
