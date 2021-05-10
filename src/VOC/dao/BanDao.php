@@ -4,17 +4,19 @@
 namespace VOC\dao;
 
 
-use VOC\providerhelper\PDOProviderHelper;
 use VOC\vo\Ban;
+use VOC\db\IDB;
 
 class BanDao
 {
     private static $TABLE = "voc2_ban";
+
+    /** @var IDB */
     private $pdo;
 
-    public function __construct(PDOProviderHelper $pdo)
+    public function __construct(IDB $pdo)
     {
-
+        $this->pdo = $pdo;
     }
 
     public function findByName($name)

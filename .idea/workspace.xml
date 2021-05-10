@@ -2,80 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28b594d5-bc83-4992-a0d0-969a63b9105d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/dao/ShopProductDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/db/DaoRegistry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/db/IDB.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VOC/repository/ShopProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/board/0/1.msg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/board/0/2.msg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/board/0/24.msg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/board/0/3.msg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/board/0/4.msg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/board/0/5.msg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/board/0/6.msg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/admin_2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/admin_work.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/ban_check.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/board_alerter.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/board_delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/board_get_messages.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/board_post_message.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/board_process_message.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/ignor_add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/ignor_remove.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/inc_connect.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/install.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/logout.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/messages_get_list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/messages_put.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/password_reminder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/pictures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/premoderation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/registration_add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/registration_mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/robot_get_answers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/rooms_get_list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/rooms_operations.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/stat.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/user_din_data_update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/user_info_update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/user_status.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/users_get_list.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/users_get_object.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/users_search.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/voc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/engine/mysql/voc_user_data.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/2014-06-21-private.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/2014-06-21.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-08-private.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-08.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-09-private.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-09.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-10-private.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-10.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/pvt-access" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/similar_nicks.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/similar_nicks.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/statuses/base_blank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/statuses/base_offline.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/statuses/base_online.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/statuses/disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/engine/files/users_get_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/engine/files/users_get_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/engine/files/users_similar.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/engine/files/users_similar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/logs/2021-05-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/2021-05-10.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mess_stat.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/mess_stat.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/messages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/messages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/userlist.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/0/1.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/0/2.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/0/3.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/0/4.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/0/5.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/0/6.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/users-backup.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/users-backup.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/users/users.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/users.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/0/2.user" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/0/2.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/who.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/who.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat/languages/en.php" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat/languages/en.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/dao/BanDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/dao/BanDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/dao/RoomDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/dao/RoomDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/providerhelper/PDOProviderHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/providerhelper/PDOProviderHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/vo/Item.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/vo/ShopProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/vo/userlist_Cache.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer_2.phar" interpreterId="c4e83fb6-af25-448f-90ee-9e4cd3f2f8a2" />
@@ -114,10 +68,16 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/templating" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
     </include_path>
   </component>
   <component name="ProjectId" id="1sIj6KeNd1YmEv35kBiOZdf9gHx" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -125,8 +85,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/VOC/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -145,12 +107,6 @@
       <recent name="$PROJECT_DIR$/src/VOC" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
-      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
-      <method v="2" />
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -159,7 +115,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620566830930</updated>
-      <workItem from="1620566835097" duration="30659000" />
+      <workItem from="1620566835097" duration="31430000" />
+      <workItem from="1620642460057" duration="60000" />
+      <workItem from="1620642524366" duration="27000" />
+      <workItem from="1620642573238" duration="51000" />
+      <workItem from="1620642642476" duration="39000" />
+      <workItem from="1620642701100" duration="24000" />
+      <workItem from="1620643086077" duration="1692000" />
+      <workItem from="1620644796017" duration="33000" />
+      <workItem from="1620644844572" duration="106000" />
+      <workItem from="1620644969000" duration="407000" />
     </task>
     <servers />
   </component>
@@ -176,5 +141,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

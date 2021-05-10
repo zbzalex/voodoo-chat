@@ -14,11 +14,8 @@ class MainController
 {
     public function index(Application $app, Request $request)
     {
-        $roomRepository = new RoomRepository(
-            new RoomDao($app['pdo'])
-        );
-
-        
+        $roomRepository = new RoomRepository($app['pdo']->getDao(RoomDao::class));
+        //var_dump($roomRepository->getAll());
 
 
         return new Response(

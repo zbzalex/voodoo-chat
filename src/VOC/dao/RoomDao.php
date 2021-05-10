@@ -4,16 +4,17 @@
 namespace VOC\dao;
 
 
-use VOC\providerhelper\PDOProviderHelper;
 use VOC\vo\Room;
+use VOC\db\IDB;
 
 class RoomDao
 {
     private static $TABLE = "voc2_rooms";
 
+    /** @var IDB */
     private $pdo;
 
-    public function __construct(PDOProviderHelper $pdo)
+    public function __construct(IDB $pdo)
     {
         $this->pdo = $pdo;
     }

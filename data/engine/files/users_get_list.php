@@ -24,8 +24,8 @@ if (!isset($rooms)) {
 
 unset($messages_to_show);
 $messages_to_show = array();
-$def_color = $registered_colors[$default_color][1];
-$orig_f_p = $flood_protection;
+$def_color = $registered_colors[$default_color][1]; // maroon
+$orig_f_p = $flood_protection; // 1
 $flood_protection = 1;
 $users = array();
 

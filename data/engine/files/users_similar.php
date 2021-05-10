@@ -90,4 +90,3 @@ flock($fp, LOCK_UN);
 fclose($fp);
 
 sort($similar_rez, SORT_STRING);
-?>
