@@ -1,6 +1,10 @@
 <?php
+
 define("EDIT_LIMIT", 10);
-include("../../inc_common.php");
+
+require_once __DIR__ . "/../../../../vendor/autoload.php";
+require_once __DIR__ . "/../../inc_common.php";
+
 include($engine_path . "users_get_list.php");
 
 set_variable("page");
@@ -309,7 +313,7 @@ $current_user->show_group_2 = 1;
                     <td width="200" valign="top"><br>
                         <?php
                         include_once($file_path . "designes/" . $design . "/zodiac.php");
-                        $zpic = getZodiac($current_user->b_day, $current_user->b_month);
+                        $zpic = \VOC\util\Zodiac::getZodiac($current_user->b_day, $current_user->b_month);
                         echo "<img src=\"" . $current_design . "zodiac/$zpic\" width=\"200\" height=\"150\">";
                         ?>
                     </td>
