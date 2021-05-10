@@ -9,6 +9,7 @@ use VOC\dao\RoomDao;
 class RoomRepository
 {
     private $roomDao;
+
     public function __construct(RoomDao $roomDao)
     {
         $this->roomDao = $roomDao;
@@ -17,5 +18,10 @@ class RoomRepository
     public function getAll()
     {
         return $this->roomDao->getAll();
+    }
+
+    public function getById($id)
+    {
+        return $this->roomDao->getById($id);
     }
 }

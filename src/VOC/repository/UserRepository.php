@@ -4,26 +4,19 @@
 namespace VOC\repository;
 
 
-use VOC\vo\User;
+use VOC\dao\UserDao;
 
 class UserRepository
 {
-    public function __construct()
-    {
+    private $userDao;
 
+    public function __construct(UserDao $userDao)
+    {
+        $this->userDao = $userDao;
     }
 
-    public function getAll()
+    public function getById($id)
     {
-
-    }
-
-    /**
-     * @param string $name
-     * @return User
-     */
-    public function findByName($name)
-    {
-
+        return $this->userDao->getById($id);
     }
 }

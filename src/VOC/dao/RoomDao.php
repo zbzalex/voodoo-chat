@@ -44,6 +44,15 @@ class RoomDao
         return $this->pdo->lastInsertId();
     }
 
+    public function getById($id)
+    {
+        $result = $this->pdo->executeNativeQuery("SELECT * FROM `" . self::$TABLE . "` WHERE id=?;", [
+            $id
+        ]);
+
+        return $result->rowCount() === 0 ? null : Room::fromState($result->fetch(\PDO::FETCH_ASSOC));
+    }
+
     public function getAll()
     {
         $result = $this->pdo->executeNativeQuery("SELECT * FROM `" . self::$TABLE . "`;");

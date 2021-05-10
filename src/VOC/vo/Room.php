@@ -13,18 +13,18 @@ class Room
     /** @var string */
     private $topic;
     /** @var string */
-    private $bot;
+    private $botName;
     /** @var boolean */
     private $jail;
     /** @var int */
     private $points;
 
-    public function __construct($id, $title, $topic, $bot, $jail, $points)
+    public function __construct($id, $title, $topic, $botName, $jail, $points)
     {
         $this->id = $id;
         $this->title = $title;
         $this->topic = $topic;
-        $this->bot = $bot;
+        $this->botName = $botName;
         $this->jail = $jail;
         $this->points = $points;
     }
@@ -33,9 +33,9 @@ class Room
     {
         return new Room(
             isset($data['id']) ? $data['id'] : 0,
-            isset($data['title']) ? $data['title'] : null,
+            isset($data['name']) ? $data['name'] : null,
             isset($data['topic']) ? $data['topic'] : null,
-            isset($data['bot']) ? $data['bot'] : null,
+            isset($data['bot_name']) ? $data['bot_name'] : null,
             isset($data['jail']) ? $data['jail'] : true,
             isset($data['points']) ? $data['points'] : 1
         );

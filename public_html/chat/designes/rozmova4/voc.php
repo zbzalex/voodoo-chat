@@ -47,46 +47,6 @@
         nChannelTimeout = 1;
     }
 
-    function whoAmIPopup(NickID) {
-        var tmpHandle;
-        var i = 0;
-        var IsWindowFound = false;
-
-        for (i = 0; i < arrPopupsSize; i++) {
-            if (arrPopups[i].Name == NickID) {
-                IsWindowFound = true;
-                tmpHandle = arrPopups[i].Handle;
-                arrPopups[i].Loaded = true;
-                break;
-            }
-        }
-        if (!IsWindowFound) return;
-
-        tmpHandle.loadInitialNick(arrPopups[i].Nick);
-    }
-
-    function ClosePopup(NickID) {
-        var tmpHandle;
-        var i = 0, idx = -1;
-        var IsWindowFound = false;
-
-        for (i = 0; i < arrPopupsSize; i++) {
-            if (arrPopups[i].Name == NickID) {
-                IsWindowFound = true;
-                tmpHandle = arrPopups[i].Handle;
-                arrPopups[i].Loaded = false;
-                idx = i;
-                break;
-            }
-        }
-        if (!IsWindowFound) return;
-
-        for (i = idx; i < arrPopupsSize - 1; i++) {
-            arrPopups[i] = arrPopups[i + 1];
-        }
-        arrPopupsSize--;
-    }
-
     function mringdrop() {
         nTimerRing = 0;
     }
