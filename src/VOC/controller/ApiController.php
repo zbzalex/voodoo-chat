@@ -109,4 +109,31 @@ class ApiController
             }, $whoRepository->getAll())
         ]));
     }
+
+    public function getMessages(Application $app, Request $request)
+    {
+        $room = $request->query->get("room", 0);
+        $offset = max(0, $request->query->get("offset", 0));
+        $limit = max(1, $request->query->get("limit", 10));
+
+        if ($room === 0) {
+            return new Response(new Error("Room not found"));
+        }
+
+        $messageRepository = new MessageRepository($app['pdo']->getDao(MessageDao::class));
+        return new Response(new Ok([
+            'messages' => array_map(function ($message) {
+                return [
+                    'id' => $message->getId(),
+                    'from' => $message->getFrom(),
+                    'from_without_tags' => $message->getFromWithoutTags(),
+                    'from_id' => $message->getFromId(),
+                    'to' => $message->getTo(),
+                    'to_id' => $message->getToId(),
+                    'body' => $message->getBody(),
+                    'clan_id' => $message->getClanId()
+                ];
+            }, $messageRepository->getMessagesByRoom($room, $offset, $limit))
+        ]));
+    }
 }

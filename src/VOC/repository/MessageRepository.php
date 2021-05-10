@@ -20,4 +20,9 @@ class MessageRepository
     {
         return $this->messageDao->getPrivateMessages($userId);
     }
+
+    public function getMessagesByRoom($room, $offset, $limit)
+    {
+        return $this->messageDao->getMessagesByRoomDeprecated($room, $offset, $limit);
+    }
 }

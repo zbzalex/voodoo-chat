@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db5ca34b-9304-4606-9ec4-b6c2bd1342c8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CHANGELOG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/daemon/000daemon" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/daemon/daemon" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/daemon/daemon_bsd.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/daemon/daemon_win.pl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/mess_stat.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/mess_stat.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/messages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/messages.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/userlist.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/data/userlist.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users/0/2.user" beforeDir="false" afterPath="$PROJECT_DIR$/data/users/0/2.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/who.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/who.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/controller/ApiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/controllerprovider/ApiControllerProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/controllerprovider/ApiControllerProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/dao/MessageDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/dao/MessageDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/repository/MessageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/repository/MessageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VOC/vo/Message.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/VOC/vo/Message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620645818917</updated>
-      <workItem from="1620645822017" duration="28182000" />
+      <workItem from="1620645822017" duration="31166000" />
     </task>
     <servers />
   </component>
