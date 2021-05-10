@@ -4,25 +4,17 @@
 namespace VOC\dao;
 
 
+use VOC\db\Dao;
 use VOC\vo\Ban;
-use VOC\db\IDB;
 
-class BanDao
+class BanDao extends Dao
 {
     private static $TABLE = "voc2_ban";
 
-    /** @var IDB */
-    private $pdo;
-
-    public function __construct(IDB $pdo)
+    public function getByName($nickname)
     {
-        $this->pdo = $pdo;
-    }
-
-    public function findByName($name)
-    {
-        $result = $this->pdo->executeNativeQuery("SELECT * FROM `" . self::$TABLE . "` WHERE `who`=?;", [
-            $name
+        $result = $this->db->executeNativeQuery("SELECT * FROM `" . self::$TABLE . "` WHERE `who`=?;", [
+            $nickname
         ]);
 
         if ($result->rowCount() === 0) {

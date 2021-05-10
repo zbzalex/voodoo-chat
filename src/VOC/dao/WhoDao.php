@@ -4,19 +4,11 @@
 namespace VOC\dao;
 
 
-use VOC\db\IDB;
+use VOC\db\Dao;
 use VOC\vo\Who;
 
-class WhoDao
+class WhoDao extends Dao
 {
-    /** @var IDB */
-    private $db;
-
-    public function __construct(IDB $db)
-    {
-        $this->db = $db;
-    }
-
     public function getAllDeprecated()
     {
         $entities = [];

@@ -4,20 +4,12 @@
 namespace VOC\dao;
 
 
-use VOC\db\IDB;
+use VOC\db\Dao;
 use VOC\vo\User;
 
-class UserDao
+class UserDao extends Dao
 {
     private static $TABLE = "voc2_users";
-
-    /** @var IDB */
-    private $db;
-
-    public function __construct(IDB $db)
-    {
-        $this->db = $db;
-    }
 
     public function getById($id)
     {

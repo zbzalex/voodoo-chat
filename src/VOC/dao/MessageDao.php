@@ -4,20 +4,12 @@
 namespace VOC\dao;
 
 
-use VOC\db\IDB;
+use VOC\db\Dao;
 use VOC\vo\Message;
 
-class MessageDao
+class MessageDao extends Dao
 {
     private static $TABLE = "voc2_messages";
-
-    /** @var IDB */
-    private $db;
-
-    public function __construct(IDB $db)
-    {
-        $this->db = $db;
-    }
 
     public function getPrivateMessages($userId)
     {

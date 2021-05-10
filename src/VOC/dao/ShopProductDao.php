@@ -3,16 +3,11 @@
 
 namespace VOC\dao;
 
+use VOC\db\Dao;
 use VOC\db\IDB;
 
 
-class ShopProductDao
+class ShopProductDao extends Dao
 {
-    /** @var IDB */
-    private $pdo;
-
-    public function __construct(IDB $pdo)
-    {
-        $this->pdo = $pdo;
-    }
+    private static $TABLE = "voc2_shop_products";
 }

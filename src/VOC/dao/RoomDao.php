@@ -4,20 +4,12 @@
 namespace VOC\dao;
 
 
+use VOC\db\Dao;
 use VOC\vo\Room;
-use VOC\db\IDB;
 
-class RoomDao
+class RoomDao extends Dao
 {
     private static $TABLE = "voc2_rooms";
-
-    /** @var IDB */
-    private $pdo;
-
-    public function __construct(IDB $pdo)
-    {
-        $this->pdo = $pdo;
-    }
 
     public function create(Room $o)
     {
