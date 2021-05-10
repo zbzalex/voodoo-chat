@@ -7,8 +7,8 @@ include($file_path . "designes/" . $design . "/common_browser_detect.php");
     </head>
     <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0"
           marginheight="0">
-    <SCRIPT src="<?= $current_design; ?>tabsheets.js"></SCRIPT>
-<LINK rel="stylesheet" type="text/css" href="<?= $current_design; ?>tabsheets.css"/><?
+<SCRIPT src="<?= $current_design; ?>tabsheets.js"></SCRIPT>
+<LINK rel="stylesheet" type="text/css" href="<?= $current_design; ?>tabsheets.css"/><?php
 
 if ($op == "exchange") {
     echo "<b>$w_money_exchange:</b><br>";
@@ -126,7 +126,7 @@ if ($op == "transfer") {
             <TR>
                 <TD><STRONG><?= $w_shop_actions ?>:</STRONG>
                 </TD>
-            </TR><?
+            </TR><?php
             @reset($actions);
             while (list($id, $action) = @each($actions)) {
                 ?>
@@ -163,7 +163,7 @@ if ($op == "transfer") {
                 <DIV class="reducer">
                     <table cellspacing="2" cellpadding="2" border="0">
                         <tr>
-                            <td rowspan="9"><?
+                            <td rowspan="9"><?php
                                 $pic_name = "" . floor($is_regist / 2000) . "/" . $is_regist . ".big.gif";
                                 if (!file_exists($file_path . "photos/$pic_name")) $pic_name = "";
                                 if ($pic_name == "") {
@@ -243,7 +243,8 @@ if ($op == "transfer") {
                             <td nowrap><INPUT type="text" name="city" size="15"
                                               value="<?php echo $current_user->city; ?>" class="input"></td>
                         </tr>
-                        <?
+                        <?php
+
                         echo "<tr><td nowrap>$w_gender: </td><td nowrap><select name=\"sex\" class=\"input\">";
                         $sex = $current_user->sex;
                         echo "<option value=0";
@@ -377,7 +378,8 @@ if ($op == "transfer") {
                                                         <TD colspan="2"
                                                             align="center"><?php if ($items_presents[$id] != 1 and $current_user->credits >= $tarrifs["transaction"]) {
                                                                 ?><A style="{ font-size: 8pt;}" href="#"
-                                                                     onClick="shop_submit(<?= $id ?>,'transfer'); return false;"><?= $w_shop_transfer ?></A><?
+                                                                     onClick="shop_submit(<?= $id ?>,'transfer'); return false;"><?= $w_shop_transfer ?></A>
+                                                                <?php
                                                             } ?>&nbsp;<A href="#"
                                                                          onClick="shop_submit(<?= $id ?>,'remove'); return false;"
                                                                          style="{ color: red; font-size: 8pt;}"><?= $w_shop_delete ?></A>&nbsp;
@@ -627,7 +629,7 @@ if ($op == "transfer") {
                                 </SELECT>
                             </TD>
                         </TR>
-                        <?
+                        <?php
                         if ($allow_multiply) {
                             ?>
                             <TR>
