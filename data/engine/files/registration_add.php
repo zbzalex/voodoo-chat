@@ -84,25 +84,6 @@ if ($IsUserOnFile) {
     flock($fp, LOCK_UN);
     fclose($fp);
 
-    require($ld_engine_path . "guardian.php");
-
-    $guardRez = guardChat($t_id);
-    if (!$guardRez) {
-        $error_text = "<b>VOC++ Guardian:</b> user database is corrupted. Please contact the chat administration.";
-        include($file_path . "designes/" . $design . "/error_page.php");
-        flock($fp, LOCK_UN);
-        fclose($fp);
-        exit;
-    }
-    if ($guardRez == 2) {
-        $error_text = "<b>VOC++ Guardian:</b> ����������, ���������� ��� ��� / Please Try Again.";
-        include($file_path . "designes/" . $design . "/error_page.php");
-        flock($fp, LOCK_UN);
-        fclose($fp);
-        exit;
-    }
-
-
     $fp = fopen($user_data_file, "a+");
     flock($fp, LOCK_EX);
 

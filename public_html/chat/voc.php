@@ -311,19 +311,6 @@ if (!intval($open_chat) and !($current_user->user_class & ADM_BAN_MODERATORS)) {
     exit;
 }
 
-if (disk_free_space($data_path) < 10 * 1024 * 1024 and is_file($data_path . "engine/files/guardian.php") and intval($vocplus_useguardian)) {
-    if ($vocplus_guardian_dellogs) {
-        include_once($data_path . "engine/files/guardian.php");
-        cleanUpOldLogs();
-    }
-}
-
-if (disk_free_space($data_path) < 10 * 1024 * 1024 and !($current_user->user_class & ADM_BAN_MODERATORS)) {
-    $error_text = $w_roz_chat_closed . "<br><b>" . $w_roz_out_of_space . " ($admin_mail)</b>";
-    include($file_path . "designes/" . $design . "/error_page.php");
-    exit;
-}
-
 $current_user->browser_hash = $browser_hash;
 $current_user->cookie_hash = $c_hash;
 $current_user->session = $session;

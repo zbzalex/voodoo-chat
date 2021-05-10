@@ -23,8 +23,7 @@ else if ($operation == "import") echo $adm_mysql_import.":";
 else if ($operation == "index_similar") echo $adm_gen_similar_table_pr.":";
 else if ($operation == "index_register") echo $adm_register_prog.":";
 ?>
-<script language="JavaScript1.2" type="text/javascript">
-<!--//
+<script>
 // Timer Bar - Version 1.0
 // Author: Brian Gosselin of http://scriptasylum.com
 // Script featured on http://www.dynamicdrive.com
@@ -97,8 +96,6 @@ resizeEl(PBdone, 0, blocksize*loaded, barheight-2, 0);
 function hidebar(){
 clearInterval(Pid);
 window.status='';
-//if(ns4)PBouter.visibility="hide";
-//else PBouter.style.visibility="hidden";
 action();
 }
 
@@ -145,9 +142,5 @@ window.onLoad = parent.frames['hp'].location.href= '<?php echo $chat_url;?>admin
 window.onLoad = parent.frames['hp'].location.href= '<?php echo $chat_url;?>admin/import_mysql.php?session=<? echo $session; ?>&lang=<?php echo $lang; ?>&import_mysql_server=<? echo $import_mysql_server; ?>&import_mysql_user=<? echo $import_mysql_user; ?>&import_mysql_password=<? echo $import_mysql_password; ?>&import_mysql_db=<? echo $import_mysql_db; ?>&import_mysql_table_prefix=<? echo $import_mysql_table_prefix; ?>';
 <?php } else if($operation == "index_register") { ?>
 window.onLoad = parent.frames['hp'].location.href= '<?php echo $chat_url;?>admin/register_users.php?session=<? echo $session; ?>&lang=<?php echo $lang; ?>';
-<?php } else if($operation == "guardian") { ?>
-window.onLoad = parent.frames['hp'].location.href= '<?php echo $chat_url;?>admin/calibrate_guardian.php?session=<? echo $session; ?>&lang=<?php echo $lang; ?>';
-<?php } ?>
-//-->
 </script>
 </body></html>

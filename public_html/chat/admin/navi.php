@@ -47,9 +47,6 @@
 -->
 <a href="statistic.php?session=<?php echo $session;?>&lang=<?php echo $lang; ?>" target="admin_main" class=menu>[<?php echo $adm_statistics; ?>]</a><br>
 <a href="import.php?session=<?php echo $session;?>&lang=<?php echo $lang; ?>" target="admin_main" class=menu>[<?php echo $adm_mysql_import; ?>]</a><br>
-<?php if(is_file($data_path."engine/files/guardian.php")) { ?>
-<a href="progress_frameset.php?session=<?php echo $session;?>&lang=<?php echo $lang; ?>&operation=guardian" target="admin_main" class=menu>[VOC++ Guardian]</a><br>
-<?php } ?>
 <a href="progress_frameset.php?session=<?php echo $session;?>&lang=<?php echo $lang; ?>&operation=index" target="admin_main" class=menu>[<?php echo $adm_reconstruct_idx; ?>]</a><br>
 <a href="progress_frameset.php?session=<?php echo $session;?>&lang=<?php echo $lang; ?>&operation=index_similar" target="admin_main" class=menu>[<?php echo $adm_gen_similar_table; ?>]</a><br>
 <a href="progress_frameset.php?session=<?php echo $session;?>&lang=<?php echo $lang; ?>&operation=index_register" target="admin_main" class=menu>[<?php echo $adm_register_all; ?>]</a><br>
