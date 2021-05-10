@@ -877,8 +877,6 @@
                 arrSizePriv++;
             }
 
-            if (bPlaySound && Usr != '<?=$cu_array[USER_NICKNAME]?>') pvt_sound.src = '<?=$current_design?>sound/sound.wav';
-
             DrawMessage('voc_shower_priv', nMsg);
 
             //if popup is opened?
@@ -891,7 +889,9 @@
                         break;
                     }
                 }
+
                 if (IsWindowFound) tmpHandle.AddMsgToPriv(nMsg, Usr);
+
             } else {
                 for (i = 0; i < arrPopupsSize; i++) {
                     if (arrPopups[i].Nick == UsrTo) {
@@ -911,8 +911,6 @@
     function ClearPub(Nickname, cTime) {
         var i, j = 0, a;
         var tmpArr = new Array;
-
-//if(isMaxthon) return;
 
         for (i = 0; i < arrExCmdSize; i++) {
             if (arrExCmd[i].Type == 'clear' && arrExCmd[i].timeEx == cTime) return;

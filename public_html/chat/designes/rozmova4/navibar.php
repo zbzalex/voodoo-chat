@@ -30,17 +30,12 @@
         </td>
         <td width="10%">
             <a href="/chat/board_list.php?session=<?php echo $session; ?>" target="_blank">
-                Почта
+                Offline PM
             </a>
         </td>
         <td width="10%">
             <a href="/chat/users.php?session=<?php echo $session; ?>" target="_blank">
-                Мы
-            </a>
-        </td>
-        <td width="10%">
-            <a href="/chat/pictures.php?session=<?php echo $session; ?>" target="_blank">
-                Фото
+                Мы!
             </a>
         </td>
         <td width="10%">
@@ -48,13 +43,6 @@
                 Кланы
             </a>
         </td>
-        <?php if (count($room_ids)) { ?>
-            <td width="10%">
-                <a href="/chat/rooms.php?session=<?php echo $session; ?>" target="voc_who_visible">
-                    Комнаты
-                </a>
-            </td>
-        <?php } ?>
 
         <?php if (!$is_regist_complete) { ?>
             <td width="10%">
@@ -76,13 +64,12 @@
                     </a>
                 </td>
                 <?php
-
             }
 
             if ($current_user->custom_class & CST_PRIEST) { ?>
                 <td width="10%">
                     <a href="/chat/admin_work.php?op=marry&session=<?php echo $session; ?>">
-                        Свадьбы
+                        ЗАГС :-)
                     </a>
                 </td>
             <?php }
@@ -98,7 +85,7 @@
         } ?>
         <td width="10%">
             <a href="/chat/logout.php?session=<?php echo $session; ?>" target="_parent">
-                Выйти
+                Выход
             </a>
         </td>
     </tr>
