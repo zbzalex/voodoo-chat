@@ -18,6 +18,7 @@ use VOC\repository\RoomRepository;
 use VOC\repository\UserRepository;
 use VOC\repository\WhoRepository;
 use VOC\vo\Message;
+use VOC\vo\Room;
 use VOC\vo\UserStatus;
 
 class ApiController
@@ -67,6 +68,12 @@ class ApiController
                     'id' => $room->getId(),
                     'title' => $room->getTitle(),
                     'topic' => $room->getTopic(),
+                    'bot' => $room->getBot(),
+                    'allowed_users' => $room->isAllowedUsers(),
+                    'premoder' => $room->isPremoder(),
+                    'last_action' => $room->getLastAction(),
+                    'clubonly' => $room->isClubOnly(),
+                    'jail' => $room->isJail(),
                     'points' => $room->getPoints(),
                 ];
             }, $roomRepository->getAll())

@@ -36,8 +36,11 @@ class User
     var $city = "";
     var $registered_at = 0;
     var $enable_web_indicator = 0;
+
     var $registration_mail = "";
+
     var $htmlnick = "";
+
     //DD addons
     var $married_with = "";
     var $IP = "";

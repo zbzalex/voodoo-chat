@@ -294,93 +294,9 @@ if (!defined("_COMMON_")) {
     define("MAX_PHOTO_REITING", 10);
     define("PASS_CHANGE_TIME", 14 * 24 * 3600);
 
-    function my_sem_pick($sem_id)
-    {
-        global $semaphor_acquired, $semaphor_acquired_ids;
-        global $data_path, $time_start, $_debug_array, $_debug_first;
-
-        if (($b_id = array_search($sem_id, $semaphor_acquired)) === FALSE) {
-            if (defined("DEBUG_SEM")) set_point("Before sem_get(" . get_sem_name($sem_id) . ")");
-            $users_sem_id = sem_get($sem_id, 1, 0777 | IPC_CREAT, 1);
-            if (defined("DEBUG_SEM")) set_point("After sem_get(" . get_sem_name($sem_id) . "), and befor sem_acquire(" . get_sem_name($sem_id) . ")");
-            if (!sem_acquire($users_sem_id)) {
-                trigger_error("Can't create semaphore, maybe sysvsem.so not loaded!");
-            } else {
-                if (defined("DEBUG_SEM")) set_point("After sem_acquire (" . get_sem_name($sem_id) . ")");
-                if (defined("DEBUG_SEM")) write_log("my_sem_pick(" . get_sem_name($sem_id) . ")");
-                $semaphor_acquired[count($semaphor_acquired)] = $sem_id;
-                $semaphor_acquired_ids[count($semaphor_acquired_ids)] = $users_sem_id;
-                return $users_sem_id;
-            }
-        } else {
-            $semaphor_acquired[count($semaphor_acquired)] = $sem_id;
-            $semaphor_acquired_ids[count($semaphor_acquired_ids)] = $semaphor_acquired_ids[$b_id];
-            return $semaphor_acquired_ids[$b_id];
-        }
-    }
-
-    function my_sem_clear($sem_id)
-    {
-        global $semaphor_acquired, $semaphor_acquired_ids;
-        global $data_path, $time_start, $_debug_array, $_debug_first;
-        if (defined("DEBUG_SEM")) set_point("Enter my_sem_clear(" . get_sem_name($sem_id) . ")," . print_r($semaphor_acquired, 1));
-        if (($b_id = array_search($sem_id, $semaphor_acquired)) === FALSE) return;
-        else {
-            if (defined("DEBUG_SEM")) set_point("Need remove key:" . $b_id);
-
-            $_rem_sid = $semaphor_acquired_ids[$b_id];
-
-            $semaphor_acquired_ids = my_sem_array_trim($semaphor_acquired_ids, $b_id);
-            $semaphor_acquired = my_sem_array_trim($semaphor_acquired, $b_id);
-            if (($b_id = array_search($sem_id, $semaphor_acquired, true)) === FALSE) {
-                if (defined("DEBUG_SEM")) set_point("Before sem_release($_rem_sid)");
-                sem_release($_rem_sid);
-                if (defined("DEBUG_SEM")) set_point("after sem_release($_rem_sid)");
-            }
-        }
-        if (defined("DEBUG_SEM")) {
-            set_point("Exit my_sem_clear(" . get_sem_name($sem_id) . ")," . print_r($semaphor_acquired, 1));
-            write_log("my_sem_clear(" . get_sem_name($sem_id) . ")");
-            if (defined("DEBUG_SEM")) write_all_log();
-        }
-    }
-
-    function my_sem_array_trim($array, $index)
-    {
-        $_ret = array();
-        if (is_array($array)) {
-            unset ($array[$index]);
-            @reset($array);
-            while (list($id, $value) = @each($array)) {
-                if (!empty($value) and $value != '') {
-                    $_ret[] = $value;
-                }
-            }
-            return $_ret;
-        } else {
-            return false;
-        }
-    }
-
-    function my_sem_get_res($sem_id)
-    {
-        global $semaphor_acquired, $semaphor_acquired_ids;
-
-        if (($b_id = array_search($sem_id, $semaphor_acquired)) === FALSE) return;
-        else {
-            return $semaphor_acquired_ids[$b_id];
-        }
-        return false;
-    }
-
-#loading language pack
-//require beacuse I need 'fatal error' if i cannot find the file
     if (!defined("_VOC_CONFIG_")) {
         require_once($file_path . "languages/" . $language . ".php");
 
-        //System messages -- for case user selected not default language
-        //?$w_whisper_to
-        //the same name, but with 's' before
         $sw_rob_login = $w_rob_login;
         $sw_rob_hb = $w_rob_hb;
         $sw_rob_logout = $w_rob_logout;
@@ -474,7 +390,7 @@ if (!defined("_COMMON_")) {
         }
 
     }
-//check for current language and call w_people_* from corresponding lang-file
+
     function w_people()
     {
         global $language, $user_lang;
