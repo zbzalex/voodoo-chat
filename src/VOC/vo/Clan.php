@@ -6,7 +6,11 @@ namespace VOC\vo;
 
 class Clan
 {
-    var $name = "";
+    /** @var int */
+    private $id;
+    /** @var string */
+    private $name;
+
     var $registration_time = 0;
     var $url = "";
     var $email = "";

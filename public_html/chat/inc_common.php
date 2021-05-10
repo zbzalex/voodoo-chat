@@ -216,6 +216,7 @@ if (!defined("_COMMON_")) {
     define('CLN_EDIT', 4);
     define('CLN_EDITUSER', 8);
     define('CLN_LEVELS', 4);
+
     define('CLAN_ID', 0);
     define('CLAN_NAME', 1);
     define('CLAN_TOTALFIELDS', 2);

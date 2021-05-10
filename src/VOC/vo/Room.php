@@ -13,18 +13,30 @@ class Room
     /** @var string */
     private $topic;
     /** @var string */
-    private $botName;
+    private $bot;
+
+    private $creator;
+    private $allowedUsers;
+//    private $allowPics;
+//    private $premoder;
+
+    private $lastAction;
+    /** @var boolean */
+    private $clubOnly;
+    /** @var string */
+    private $password;
+
     /** @var boolean */
     private $jail;
     /** @var int */
     private $points;
 
-    public function __construct($id, $title, $topic, $botName, $jail, $points)
+    public function __construct($id, $title, $topic, $bot, $jail, $points)
     {
         $this->id = $id;
         $this->title = $title;
         $this->topic = $topic;
-        $this->botName = $botName;
+        $this->bot = $bot;
         $this->jail = $jail;
         $this->points = $points;
     }

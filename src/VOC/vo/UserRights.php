@@ -4,7 +4,7 @@
 namespace VOC\vo;
 
 
-class Rights
+class UserRights
 {
     const ADM_BAN = 1;
     const ADM_IP_BAN = 2;
@@ -14,9 +14,9 @@ class Rights
     const ADM_CHANGE_TOPIC = 32;
     const ADM_CREATE_ROOMS = 64;
     const ADM_EDIT_USERS = 128;
-    const ADM_BAN_BY_BROWSERHASH = 256;
-    const ADM_BAN_BY_SUBNET = 512;
+//    const ADM_BAN_BY_BROWSERHASH = 256;
+//    const ADM_BAN_BY_SUBNET = 512;
     const ADM_VIEW_PRIVATE = 1024;
 
-    const VIP = -84;
+    const VIP = -1;
 }

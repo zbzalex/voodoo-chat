@@ -32,16 +32,10 @@
     var nTimerGiveMe = 0;
     var nTimerSmileys = 0;
     var smFrameOk = 0;
-
-    //popup privates
-    //introduced in Valentine Edition Pro
     var arrPopupsSize = 0;
-    var arrPopups = new Array;
-    var IsNewPM = false;
-    //anti-disconnect edition
-    //introdused in Valentine Edition Pro II
+    var arrPopups = []
+    var IsNewPM = false
     var nChannelTimeout = 0;
-    var bPlaySound = <?=intval($current_user->play_sound);?>;
 
     function ping() {
         nChannelTimeout = 1;

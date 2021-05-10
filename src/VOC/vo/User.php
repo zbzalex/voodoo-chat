@@ -5,17 +5,24 @@ namespace VOC\vo;
 
 class User
 {
+    /** @var int */
     private $id;
     var $quiz = 0;
     var $quiz_fastest_answer = 0;
     var $quiz_points = 0;
-    var $nickname = "";
-    var $password = "";
+
+    /** @var string */
+    private $nickname;
+    /** @var string */
+    private $password;
+
     var $surname = "";
     var $firstname = "";
     var $email = "";
     var $url = "";
-    var $icquin = "";
+
+    //var $icquin = "";
+
     var $photo_url = "";
     var $about = "";
     var $user_class = 0;
@@ -95,6 +102,6 @@ class User
 
     public static function fromState(array $data)
     {
-
+        return new User();
     }
 }
