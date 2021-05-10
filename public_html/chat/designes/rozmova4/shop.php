@@ -2,8 +2,6 @@
 
 include($file_path . "designes/" . $design . "/common_title.php");
 
-//include($file_path . "designes/" . $design . "/common_browser_detect.php");
-
 ?>
     <script>
         function buy(itemID, is_present) {
@@ -39,7 +37,8 @@ if (strlen($type) <= 0) $type = 0;
     </form>
     <table width="100%">
         <tr>
-            <td colspan="2" align="center"><font size=+2 color="#7E9B16"><strong> <?php echo $shop; ?></strong></font></td>
+            <td colspan="2" align="center"><font size=+2 color="#7E9B16"><strong> <?php echo $shop; ?></strong></font>
+            </td>
         </tr>
         <tr>
             <td colspan="2" align="center"><strong><?= $w_shop_you_have ?>
@@ -160,7 +159,8 @@ if (strlen($type) <= 0) $type = 0;
                             }
                             ?>
                             <td colspan="2" align="center" valign="middle"><font
-                                        color="#ff0000"><strong><?php echo $w_shop_category_empty; ?>.</strong></font></td>
+                                        color="#ff0000"><strong><?php echo $w_shop_category_empty; ?>.</strong></font>
+                            </td>
                         </tr>
                         <?php
                     }

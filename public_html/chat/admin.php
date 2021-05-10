@@ -8,11 +8,6 @@ include($engine_path . "users_get_list.php");
 
 $messages_to_show = array();
 
-if (!$exists) {
-    exit;
-}
-
-
 include($ld_engine_path . "users_get_object.php");
 
 set_variable("cause");
@@ -26,4 +21,14 @@ if ($current_user->user_class < 1) {
     exit;
 }
 
-include($file_path . "designes/" . $design . "/admin.php");
+?>
+<!doctype html>
+<html>
+<head></head>
+<frameset rows="60,*" frameborder="no" framespacing="0" border="0" borderwidth="0">
+    <frame src="<?php echo $chat_url . "admin_navi.php?session=" . $session; ?>" noresize scrolling="no" marginwidth="0"
+           marginheight="0" name="voc_admin_navibar">
+    <frame src="<?php echo $chat_url . "admin_work.php?session=" . $session; ?>" noresize scrolling="auto"
+           marginwidth="0" marginheight="0" name="voc_admin_work">
+</frameset>
+</html>

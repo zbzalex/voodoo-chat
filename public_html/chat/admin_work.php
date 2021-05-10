@@ -8,9 +8,6 @@ include($engine_path . "users_get_list.php");
 
 include($file_path . "tarrifs.php");
 
-if (!$exists) {
-    exit;
-}
 
 include_once($data_path . "engine/files/user_log.php");
 

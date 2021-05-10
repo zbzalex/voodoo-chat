@@ -32,4 +32,18 @@ if ($current_user->user_class & ADM_VIEW_PRIVATE) $admin_navi[count($admin_navi)
 if ($current_user->user_class & ADM_EDIT_USERS) $admin_navi[count($admin_navi)] = array("title" => $w_roz_marr, "link" => $chat_url . "admin_work.php?op=marry&session=" . $session);
 if ($current_user->user_class & ADM_BAN) $admin_navi[count($admin_navi)] = array("title" => $w_roz_similar, "link" => $chat_url . "admin_work.php?op=similar&session=" . $session);
 
-include($file_path . "designes/" . $design . "/admin_navi.php");
+?>
+<!doctype html>
+<html>
+<head></head>
+<body>
+<?php
+
+echo " | ";
+for ($i = 0; $i < count($admin_navi); $i++) {
+    echo "<a href=\"" . $admin_navi[$i]["link"] . "\" target=\"voc_admin_work\" class=\"jsnavi\">" . $admin_navi[$i]["title"] . "</a> | ";
+}
+
+?>
+</body>
+</html>
