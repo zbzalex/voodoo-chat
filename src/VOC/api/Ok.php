@@ -10,6 +10,6 @@ class Ok extends ApiResponse
     public $errorMessage = null;
 
     public function __construct(array $data = []) {
-        $this->data = json_encode($data);
+        $this->data = $data;
     }
 }
