@@ -21,10 +21,6 @@ class ApiController
 {
     public function getRoom(Application $app, Request $request)
     {
-        $session = $request->query->get("session");
-        if ($session === null) {
-            return new Response(new Error("Unauthorized"));
-        }
         $id = $request->query->get("id");
 
         $roomRepository = new RoomRepository($app['pdo']->getDao(RoomDao::class));
@@ -43,10 +39,6 @@ class ApiController
 
     public function getUser(Application $app, Request $request)
     {
-        $session = $request->query->get("session");
-        if ($session === null) {
-            return new Response(new Error("Unauthorized"));
-        }
         $id = $request->query->get("id");
 
         $userRepository = new UserRepository($app['pdo']->getDao(UserDao::class));
@@ -63,11 +55,6 @@ class ApiController
 
     public function getRooms(Application $app, Request $request)
     {
-        $session = $request->query->get("session");
-        if ($session === null) {
-            return new Response(new Error("Unauthorized"));
-        }
-
         $roomRepository = new RoomRepository($app['pdo']->getDao(RoomDao::class));
 
         return new Response(new Ok([
@@ -85,11 +72,6 @@ class ApiController
 
     public function getPrivateMessages(Application $app, Request $request)
     {
-        $session = $request->query->get("session");
-        if ($session === null) {
-            //return new Response(new Error("Unauthorized"));
-        }
-
         $messageRepository = new MessageRepository($app['pdo']->getDao(MessageDao::class));
 
         return new Response(new Ok([
