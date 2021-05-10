@@ -5,6 +5,8 @@ use VOC\api\Error;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
+define("ROOT_DIR", dirname(__DIR__));
+
 $app = new \Silex\Application();
 $app['debug'] = true;
 

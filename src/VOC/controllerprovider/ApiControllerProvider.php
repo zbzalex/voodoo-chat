@@ -20,6 +20,7 @@ class ApiControllerProvider implements ControllerProviderInterface
 
         $controllers->get("/getRooms", "\VOC\controller\ApiController::getRooms");
         $controllers->get("/getPrivateMessages", '\VOC\controller\ApiController::getPrivateMessages');
+        $controllers->get("/who", '\VOC\controller\ApiController::who');
 
         return $controllers;
     }

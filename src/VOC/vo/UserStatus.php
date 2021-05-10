@@ -12,4 +12,13 @@ class UserStatus
     const NA = 4;
     const DND = 8;
     const __PRIVATE = 16;
+
+    public static function convert($status) {
+        switch($status) {
+            case self::ONLINE:
+                return "Online";
+        }
+
+        return null;
+    }
 }

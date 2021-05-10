@@ -697,7 +697,6 @@
         }
     }
 
-
     function giveMeChat() {
         if (voc_channels_ok == 0) {
 

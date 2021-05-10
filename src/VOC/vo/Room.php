@@ -16,9 +16,8 @@ class Room
     private $bot;
 
     private $creator;
+
     private $allowedUsers;
-//    private $allowPics;
-//    private $premoder;
 
     private $lastAction;
     /** @var boolean */
@@ -31,12 +30,13 @@ class Room
     /** @var int */
     private $points;
 
-    public function __construct($id, $title, $topic, $bot, $jail, $points)
+    public function __construct($id, $title, $topic, $bot, $creator, $jail, $points)
     {
         $this->id = $id;
         $this->title = $title;
         $this->topic = $topic;
         $this->bot = $bot;
+        $this->creator = $creator;
         $this->jail = $jail;
         $this->points = $points;
     }
@@ -45,9 +45,10 @@ class Room
     {
         return new Room(
             isset($data['id']) ? $data['id'] : 0,
-            isset($data['name']) ? $data['name'] : null,
+            isset($data['title']) ? $data['title'] : null,
             isset($data['topic']) ? $data['topic'] : null,
-            isset($data['bot_name']) ? $data['bot_name'] : null,
+            isset($data['bot']) ? $data['bot'] : null,
+            isset($data['creator']) ? $data['creator'] : null,
             isset($data['jail']) ? $data['jail'] : true,
             isset($data['points']) ? $data['points'] : 1
         );

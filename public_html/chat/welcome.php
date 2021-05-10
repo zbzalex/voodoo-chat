@@ -3,6 +3,7 @@
 require_once __DIR__ . "/../../vendor/autoload.php";
 require_once __DIR__ . "/inc_common.php";
 
+
 set_variable("design");
 set_variable("c_design");
 set_variable("c_user_name");
@@ -37,8 +38,12 @@ for ($i = 0; $i < count($room_ids); $i++)
 
 include($engine_path . "users_get_list.php");
 
+var_dump($users);
+
 for ($i = 0; $i < count($users); $i++) {
+
     $user_array = explode("\t", $users[$i], USER_TOTALFIELDS);
+    var_dump($user_array);
     $rooms[$user_array[USER_ROOM]]["users"]++;
 }
 

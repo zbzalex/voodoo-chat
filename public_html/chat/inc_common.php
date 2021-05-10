@@ -256,6 +256,7 @@ if (!defined("_COMMON_")) {
     define("USER_REGISTERED", 28);
     define("USER_MEMBER", 29);
     define("USER_SHMID", 30);
+
     define("USER_TOTALFIELDS", 31);
 //end DD patch
 

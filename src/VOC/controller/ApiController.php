@@ -12,10 +12,13 @@ use VOC\api\Ok;
 use VOC\dao\MessageDao;
 use VOC\dao\RoomDao;
 use VOC\dao\UserDao;
+use VOC\dao\WhoDao;
 use VOC\repository\MessageRepository;
 use VOC\repository\RoomRepository;
 use VOC\repository\UserRepository;
+use VOC\repository\WhoRepository;
 use VOC\vo\Message;
+use VOC\vo\UserStatus;
 
 class ApiController
 {
@@ -81,6 +84,29 @@ class ApiController
                     'id' => $message->getId()
                 ];
             }, $messageRepository->getPrivateMessages())
+        ]));
+    }
+
+    public function who(Application $app, Request $request)
+    {
+        $whoRepository = new WhoRepository($app['pdo']->getDao(WhoDao::class));
+        return new Response(new Ok([
+            'who' => array_map(function ($user) {
+                return [
+                    'id' => $user->getId(),
+                    'nickname' => $user->getNickname(),
+                    'reg_id' => $user->getRegId(),
+                    'registered' => $user->isRegistered(),
+                    'room' => $user->getRoom(),
+                    'status' => UserStatus::convert($user->getStatus()),
+                    'last_say_time' => $user->getLastSayTime(),
+                    'time' => $user->getTime(),
+                    'gender' => $user->getGender(),
+                    'avatar' => $user->getAvatar(),
+                    'clan_id' => $user->getClanId(),
+                    'canon_nick' => $user->getCanonNick(),
+                ];
+            }, $whoRepository->getAll())
         ]));
     }
 }
