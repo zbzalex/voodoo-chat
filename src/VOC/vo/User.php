@@ -6,7 +6,6 @@ namespace VOC\vo;
 class User
 {
     private $id;
-
     var $quiz = 0;
     var $quiz_fastest_answer = 0;
     var $quiz_points = 0;
