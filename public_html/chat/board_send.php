@@ -107,9 +107,8 @@ if ($is_regist) { ?>
                 echo "<option value=\"" . $u_ids[$i] . "\">" . $u_names[$i] . "</option>\n";
             } ?>
         </select><br>
-        <?= $w_impro_enter_code ?>: &nbsp;<input type="text" name="keystring" class="input"><br>
-        <img border="1"
-             src="<?= $current_design ?>profile_captcha.php?<?php echo session_name() ?>=<?php echo session_id() ?>"></p>
+
+        </p>
         <?php echo $w_subject; ?>: <input type="text" name="subject" size="20" maxlength="50"
                                           value="<?php echo $tmp_subject; ?>" class="input"><br>
         <?php echo $w_message_text; ?>:<br>

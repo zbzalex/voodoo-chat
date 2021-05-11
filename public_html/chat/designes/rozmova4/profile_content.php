@@ -792,20 +792,7 @@ $current_user->show_group_2 = 1;
     <tr>
         <td>&nbsp;</td>
     </tr>
-    <tr>
 
-        <td align=CENTER>
-            <?php
-            if (@include($phpAdsNew_path . "phpadsnew.inc.php")) {
-                if (!isset($phpAds_context)) $phpAds_context = array();
-                $phpAds_raw = view_raw('', 0, '', '', '1', $phpAds_context);
-            }
-
-            // Assign the $phpAds_raw['html'] variable to your template
-            echo $phpAds_raw['html'];
-            ?>
-        </td>
-    </tr>
     <tr>
         <td>&nbsp;</td>
     </tr>
@@ -869,6 +856,7 @@ $current_user->show_group_2 = 1;
         <td>&nbsp;</td>
     </tr>
     <?php
+
     if (count($current_user->items) > 0) {
         ?>
         <tr>
@@ -915,116 +903,9 @@ $current_user->show_group_2 = 1;
         </tr>
         <?php
     }
+
     ?>
-    <tr>
-        <td><font color="#bf0d0d" size=+1><b><?= $w_feedback ?>:</b></font></td>
-    </tr>
-    <tr>
-        <td>
-            <blockquote>
-                <!-- con!-->
-                <?php
-                //content-messages
-                $is_regist = $user_id;
-                if (isset($board_messages)) unset($board_messages);
-                include($ld_engine_path . "board_get_messages.php");
-                echo "<b>" . $info_message . "</b>";
-                ?>
-                <form method="post" action="profile_content.php">
-                    <input type="hidden" name="session" value="<?php echo $session; ?>">
-                    <input type="hidden" name="act" value="del_posts">
-                    <input type="hidden" name="page" value="<?php echo $page; ?>">
-                    <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-                    <input type="hidden" name="send_to_id" value="<?php echo $is_regist; ?>">
-                    <?php
-                    echo "<table border=0>";
-                    if ($page == "") $page = 0;
-                    $NumRecs = count($board_messages);
-
-                    for ($i = $page * EDIT_LIMIT;
-                    $i < ($page + 1) * EDIT_LIMIT;
-                    $i++)
-                    {
-                    if ($i >= $NumRecs) break;
-                    $board_messages[$i]["body"] = fixup_contributions($board_messages[$i]["body"]);
-                    ?>
-    <tr>
-        <td width><b><a target="_top"
-                        href="<?php echo $current_design; ?>profiler.php?session=<?php echo $session ?>&user_to_search=<?php echo $board_messages[$i]["from"]; ?>"><?php echo $board_messages[$i]["from"]; ?></a></b>
-        </td>
-        <td>[ <?php echo $board_messages[$i]["subject"]; ?> ]</td>
-        <td><b><?php echo $board_messages[$i]["date"]; ?></b></td>
-        <td>
-            <?php if ($is_regist_old == $user_id or $cu_array[USER_CLASS] > 0) { ?>
-                <input type="checkbox" name="mess_to_del[]" value="<?php echo $board_messages[$i]["id"]; ?>">
-            <?php } ?>
-        </td>
-    </tr>
-    <tr>
-        <td colspan=4><?php echo $board_messages[$i]["body"]; ?></td>
-    </tr>
-    <tr>
-        <td colspan=4>&nbsp;</td>
-    </tr>
-<?php
-}
-
-if ($is_regist_old == $user_id or $cu_array[USER_CLASS] > 0) {
-    ?>
-    <tr>
-        <td colspan=4><input type="submit" value="<?php echo $w_del_checked; ?>" class="input_button"></td>
-    </tr>
-    <?php
-}
-echo "</table>";
-echo "</form>";
-/// pages
-$NumRecs = count($board_messages);
-
-echo "<p align=CENTER>";
-for ($i = 0; $i < $NumRecs / EDIT_LIMIT; $i++) {
-    if (isset($page)) {
-        if ($i != $page) {
-            echo "[<a href=\"" . $current_design . "profile_content.php?session=$session&user_id=$user_id&page=" . $i . "\">" . ($i + 1) . "</a>]&nbsp;\n";
-        } else {
-            echo "<b>[" . ($i + 1) . "]</b>&nbsp;";
-        }
-    } else {
-        if ($i > 0) {
-            echo "[<a href='" . $current_design . "profile_content.php?session=$session&user_id=$user_id&page=" . $i . "'>" . ($i + 1) . "</a>]&nbsp;\n";
-        } else {
-            echo "<b>[" . ($i + 1) . "]</b>&nbsp;\n";
-        }
-    }
-}
-echo "</p>";
-?>
-    </blockquote>
     </td></tr>
 </table>
-<table align=center border=0>
-    <?php
-    if ($exists and $session and $is_regist) {
-    echo "<tr><td colspan=\"2\" align=CENTER><font color=\"#bf0d0d\" size=+1><b>$w_send_mes:</b></font><hr width=60% height=1 noshade>";
-    echo "</td></tr>";
-    echo "<tr><td colspan=\"2\" align=CENTER>";
-    ?>
-    <form method="post" action="profile_content.php">
-        <input type="hidden" name="session" value="<?php echo $session; ?>">
-        <input type="hidden" name="act" value="add_post">
-        <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
-        <input type="hidden" name="page" value="<?php echo $page; ?>">
-        <input type="hidden" name="send_to_id" value="<?php echo $is_regist; ?>">
-        <?php echo $w_subject; ?>: <input type="text" name="subject" size="20" maxlength="50"
-                                          value="<?php echo $tmp_subject; ?>" class="input"><br>
-        <?php echo $w_message_text; ?>:<br>
-        <textarea cols="60" rows="10" name="message" class="input">
-<?php echo $tmp_body; ?>
-</textarea>
-        <br>
-        <input type="submit" value="<?php echo $w_send; ?>" class="input_button">
-    </form>
-</table>
-<?php
-} ?>
+
 </body></html>
