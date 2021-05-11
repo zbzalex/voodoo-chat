@@ -75,5 +75,5 @@ include($file_path . "designes/" . $design . "/common_title.php");
         </td>
     </tr>
 </table>
-
-</body></html>
+</body>
+</html>

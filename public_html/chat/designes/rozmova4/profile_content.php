@@ -24,8 +24,11 @@ else {
 set_variable("user_id");
 $user_id = intval($user_id);
 
-if ($user_id == $is_regist) $IsMyProfile = true;
-else $IsMyProfile = false;
+if ($user_id == $is_regist)
+    $IsMyProfile = true;
+else
+    $IsMyProfile = false;
+
 
 include($file_path . "inc_user_class.php");
 include($ld_engine_path . "users_get_object.php");
@@ -50,86 +53,6 @@ if ($is_regist) {
 set_variable("act");
 
 switch ($act) {
-
-    case "add_post":
-
-        if (!$exists or !$is_regist_complete) {
-            $error_text = "$w_no_user";
-            include($file_path . "designes/" . $design . "/error_page.php");
-            exit;
-        }
-
-        $is_regist = $is_regist_old;
-        include($ld_engine_path . "users_get_object.php");
-
-        if ($current_user->online_time < 25000) {
-            if ($current_user->credits < 5) {
-                $error_text = "$w_no_credits (25 000)";
-                include($file_path . "designes/" . $design . "/error_page.php");
-                exit;
-            }
-        }
-
-        if (intval($current_user->plugin_info["chaos_start"]) + intval($current_user->plugin_info["chaos_time"]) > my_time()) {
-            $MsgToPass = $w_user_chaos;
-            $MsgToPass = str_replace("~", date("d.m.Y H:i:s", intval($current_user->plugin_info["chaos_start"]) + intval($current_user->plugin_info["chaos_time"])), $MsgToPass);
-            $error_text = $MsgToPass;
-            include($file_path . "designes/" . $design . "/error_page.php");
-            exit;
-        }
-
-
-        if (my_time() - $current_user->plugin_info["last_comment_time"] < 200) {
-            $error_text = "$w_flood";
-            include($file_path . "designes/" . $design . "/error_page.php");
-            exit;
-        }
-
-        $current_user->plugin_info["last_comment_time"] = my_time();
-        include($ld_engine_path . "user_info_update.php");
-
-        set_variable("message");
-        set_variable("subject");
-        set_variable("user_id");
-        $user_id = intval($user_id);
-
-        set_variable("send_to_id");
-        $send_to_id = intval($send_to_id);
-
-        if (strlen($message) > 256) $message = substr($message, 0, 1024);
-        if (strlen($subject) > 50) $subject = substr($message, 0, 52);
-
-        $message = fixup_contributions($message);
-
-        $message = htmlspecialchars($message);
-        $message = str_replace("\n", "<br>", $message);
-        $message = str_replace("\r", "", $message);
-        $message = str_replace("\t", " ", $message);
-        $message = str_replace("  ", " &nbsp;", $message);
-
-        $subject = htmlspecialchars($subject);
-        $subject = str_replace("\n", "<br>", $subject);
-        $subject = str_replace("\r", "", $subject);
-        $subject = str_replace("\t", " ", $subject);
-        $subject = str_replace("  ", " &nbsp;", $subject);
-
-        $subject = str_replace("\t", " ", $subject);
-        $info_message = "";
-
-        $subject = fixup_contributions($subject);
-
-        include($ld_engine_path . "board_post_message.php");
-
-        ?>
-        <script>
-            this.location.href = '<?php echo $current_design;?>profile_content.php?session=<?php echo $session; ?>&user_id=<?php echo $send_to_id; ?>';
-        </script>
-        <?php
-        exit();
-
-        break;
-
-
     case "make_member":
         if (!$exists or !$is_regist_complete or !$IsMember) {
             $error_text = "$w_no_user";
@@ -143,30 +66,6 @@ switch ($act) {
         }
 
         include($ld_engine_path . "user_info_update.php");
-        break;
-
-    case "del_posts":
-
-        if (!$exists or !$is_regist_complete) {
-            $error_text = "$w_no_user";
-            include($file_path . "designes/" . $design . "/error_page.php");
-            exit;
-        }
-
-        set_variable("mess_to_del");
-        set_variable("user_id");
-
-        $user_id = intval($user_id);
-
-        if ($user_id != $is_regist and !$IsModer) exit;
-
-        include($ld_engine_path . "board_delete.php");
-        ?>
-        <script>
-            this.location.href = '<?php echo $current_design;?>profile_content.php?session=<?php echo $session; ?>&user_id=<?php echo $is_regist; ?>';
-        </script>
-        <?php
-        exit();
         break;
 
     case "add_personal":
@@ -232,13 +131,22 @@ $current_user->show_group_1 = 1;
 $current_user->show_group_2 = 1;
 
 ?>
-<style>
-    td {
-        font-family: Georgia, Garamond, Verdana, Tahoma, Arial;
-        font-size: 12pt;
-    }
-</style>
-<script type="text/javascript" src="<?= $current_design ?>tooltip.js"></script>
+<!doctype html>
+<html>
+<head>
+    <style>
+        * {
+            padding: 0;
+            margin : 0;
+            box-sizing: border-box;
+        }
+        td {
+            font-family: Georgia, Garamond, Verdana, Tahoma, Arial;
+            font-size: 12pt;
+        }
+    </style>
+    <script src="<?= $current_design ?>tooltip.js"></script>
+</head>
 <body onload="initToolTips('SPAN','IMG', 'DIV');">
 <table width="100%" border="0" cellpadding="0" cellspacing="0">
     <tr>
@@ -908,4 +816,5 @@ $current_user->show_group_2 = 1;
     </td></tr>
 </table>
 
-</body></html>
+</body>
+</html>
