@@ -1,4 +1,6 @@
-<?php include("../../inc_common.php");
+<?php
+
+include("../../inc_common.php");
 include($file_path . "designes/" . $design . "/common_title.php");
 include($engine_path . "users_get_list.php");
 ?>

@@ -71,5 +71,22 @@ $info_message = "";
 
 include($ld_engine_path . "hidden_board_post_message.php");
 
-include($file_path . "designes/" . $design . "/board_post.php");
 ?>
+<!doctype html>
+<html>
+<head></head>
+<body>
+<?php
+
+echo $info_message;
+
+?>
+<hr>
+
+<?php if ($is_regist) { ?>
+    <a href="board_list.php?session=<?php echo $session; ?>"><?php echo $w_back_to_userboard; ?></a><br>
+<?php } ?>
+<a href="board_send.php?session=<?php echo $session; ?>"><?php echo $w_back_to_send; ?></a>
+
+</body>
+</html>
