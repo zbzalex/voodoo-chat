@@ -4,11 +4,10 @@
 namespace VOC\vo;
 
 
-class ShopProductType
+class ShopCategory
 {
     /** @var int */
     private $id;
-
     /** @var string */
     private $title;
 
@@ -20,7 +19,7 @@ class ShopProductType
 
     public static function fromState(array $data)
     {
-        return new ShopProductType(
+        return new ShopCategory(
             isset($data['id']) ? $data['id'] : 0,
             isset($data['title']) ? $data['title'] : null
         );
@@ -37,7 +36,7 @@ class ShopProductType
     /**
      * @param int $id
      */
-    public function setId($id): void
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -53,7 +52,7 @@ class ShopProductType
     /**
      * @param string $title
      */
-    public function setTitle($title): void
+    public function setTitle($title)
     {
         $this->title = $title;
     }

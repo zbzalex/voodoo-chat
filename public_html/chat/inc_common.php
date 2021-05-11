@@ -8,14 +8,8 @@ $data_path = "/home/lex/proj/voc/data/";
 if (!defined("_COMMON_")) {
     define("_COMMON_", 1);
 
-
-    $phpAdsNew_path = "";
-
-//DD rozmova skin specific definitions
     $a_silence_id = 9;
-//end of DD DD rozmova skin specific definitions
 
-//available fonts
     $fonts_arr = array();
     $fonts_arr = array("Verdana, Tahoma, Arial",
         "Georgia, Book Antiqua, Garamond, Helvetica, Arial");
