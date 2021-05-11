@@ -3,6 +3,8 @@
 require_once __DIR__ . "/../../vendor/autoload.php";
 require_once __DIR__ . "/inc_common.php";
 
+$request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
+
 set_variable("user_name");
 set_variable("chat_type");
 set_variable("c_user_color");

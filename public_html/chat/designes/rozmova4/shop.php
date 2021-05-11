@@ -91,7 +91,7 @@ if (strlen($type) <= 0) $type = 0;
                             <tr>
                                 <td width="100" height="100" valign="top" nowrap align="center">
                                     <img
-                                            src="<?= $chat_url . "items/" . $cur_item->image; ?>" border="1"></td>
+                                            src="<?php echo $cur_item->image; ?>" border="1"></td>
                                 <td><strong><?= $shop_title ?>: <?= $cur_item->title; ?></strong><br>
                                     <strong><?= $shop_price ?>: <?= $cur_item->price . " " . $w_money; ?></strong><br>
                                     <?php if ($cur_item->vip != 1) {
