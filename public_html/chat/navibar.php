@@ -1,4 +1,5 @@
 <?php
+
 require_once("inc_common.php");
 include($engine_path . "users_get_list.php");
 
@@ -55,11 +56,6 @@ if ($is_regist) {
         <td width="10%">
             <a href="/chat/users.php?session=<?php echo $session; ?>" target="_blank">
                 Мы!
-            </a>
-        </td>
-        <td width="10%">
-            <a href="/chat/clan_view.php?session=<?php echo $session; ?>" target="_blank">
-                Кланы
             </a>
         </td>
 

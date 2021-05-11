@@ -1,9 +1,5 @@
 <?php
 
-define("GENDER_BOY", 1);
-define("GENDER_GIRL", 2);
-define("GENDER_THEY", 3);
-
 function form_message($last_id, $message, $ignored_users)
 {
     global $cu_array, $message_format, $message_fromme, $private_message, $private_message_fromme, $private_hidden, $w_whisper_to, $session, $user_name, $is_regist, $users, $w_unknown_user, $nick_highlight_before, $nick_highlight_after, $room_id, $str_w_n_before, $str_w_n_after, $chat_url;

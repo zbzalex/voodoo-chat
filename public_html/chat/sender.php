@@ -6,8 +6,6 @@ require_once __DIR__ . "/inc_common.php";
 include($engine_path . "users_get_list.php");
 include($engine_path . "rooms_get_list.php");
 
-require_once __DIR__ . "/inc_badwords_filter.php";
-
 set_variable("mesg");
 set_variable("whisper");
 set_variable("user_color");
@@ -559,9 +557,6 @@ if ($mesg != "") {
     if (!$error) {
         $mesg = " " . $mesg;
         $mesg = check_uppercase($mesg);
-        $mesg = replace_badwords($mesg);
-        // /074/076 fix
-
         $mesg = htmlspecialchars($mesg);
 
         $mesg = addURLS($mesg);

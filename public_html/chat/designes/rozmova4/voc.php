@@ -687,11 +687,6 @@
             window.frames['menu'].document.location.href = '<?php echo $chat_url;?>navibar.php?session=<?php echo $session;?>';
             window.frames['menu_public'].document.location.href = '<?php echo $chat_url;?>menu_public.php?session=<?php echo $session;?>';
             window.frames['menu_private'].document.location.href = '<?php echo $chat_url;?>menu_private.php?session=<?php echo $session;?>';
-            window.frames['voc_alerter'].document.location.href = '<?php echo $chat_url;?>alerter.php?session=<?php echo $session; ?>';
-
-            <?php if(!$cu_array[USER_REDUCETRAFFIC]) { ?>
-            //window.voc_smileys.document.location.href = '<?php echo $current_design;?>smileys.php?session=<?php echo $session;?>';
-            <?php } ?>
 
             window.setTimeout("checkConnection()", 120000);
         }
@@ -1149,7 +1144,6 @@
             </frameset>
 
             <frame name="voc_sender_hidden" src="" scrolling=no noresize frameborder="0">
-            <frame src="<?php echo $current_design; ?>blank.html" name="voc_alerter" scrolling="no" frameborder="0">
         </frameset>
         <noframes>
         </noframes>

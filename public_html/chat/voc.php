@@ -105,10 +105,12 @@ if ($session != "") {
     $shower = "messages.php?session=$session";
     $chat_type = $user_chat_type;
     if (!in_array($chat_type, $chat_types)) $chat_type = $chat_types[0];
+
     if ($chat_type == "tail") $shower = "$daemon_url?$session";
     elseif ($chat_type == "reload") $shower = "messages.php?session=$session";
     elseif ($chat_type == "php_tail") $shower = "tail.php?session=$session";
     elseif ($chat_type == "js_tail") $shower = "js_writer.php?session=$session";
+
     if ($c_user_color == "" and $user_color == "") {
         $user_color = $default_color;
     } else $user_color = $c_user_color;
