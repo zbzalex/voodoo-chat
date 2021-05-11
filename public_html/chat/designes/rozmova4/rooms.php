@@ -34,4 +34,6 @@ include($file_path . "designes/" . $design . "/common_body_start.php");
 <form method="post" action="<?php echo $chat_url; ?>voc.php" target="_parent">
     <input type="hidden" name="session" value="<?php echo $session; ?>">
     <input type="hidden" name="room" value=""></form>
+
+
 <?php include($file_path . "designes/" . $design . "/common_body_end.php"); ?>

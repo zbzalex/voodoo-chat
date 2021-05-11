@@ -580,29 +580,22 @@
                 writeln('<input type="submit"  value="OK" class="input_button">');
                 writeln('</td></tr></form>');
             }
-            if (room_ids.length > 1) {
-                writeln('<form method="post" action="<?php echo $chat_url;?>voc.php" target="_parent"><tr><td align="center">');
-                writeln('<input type="hidden" name="session" value="<?php echo $session;?>">');
-                writeln('<b><?php echo $w_select_room;?>:</b><br><select name="room" class="input_button">');
-                for (var i = 0; i < room_ids.length; i++) {
-                    write('<option value="' + room_ids[i] + '"');
-                    if (room_ids[i] == current_room) write(' selected');
-                    writeln('>' + room_names[i] + '(' + room_users[i] + ')</option>');
-                }
-                writeln('</select>&nbsp;<input type="submit" class=input_button value="OK">\n</td></tr></form>');
+
+            writeln('<form method="post" action="<?php echo $chat_url;?>voc.php" target="_parent"><tr><td align="center">');
+            writeln('<input type="hidden" name="session" value="<?php echo $session;?>">');
+            writeln('<b><?php echo $w_select_room;?>:</b><br><select name="room" class="input_button">');
+            for (var i = 0; i < room_ids.length; i++) {
+                write('<option value="' + room_ids[i] + '"');
+                if (room_ids[i] == current_room) write(' selected');
+                writeln('>' + room_names[i] + '(' + room_users[i] + ')</option>');
             }
+            writeln('</select>&nbsp;<input type="submit" class=input_button value="OK">\n</td></tr></form>');
+
 
             write('</table></body></html>');
             close();
         }
 
-    }
-
-    // End of userlist manipulation
-    function st_ini() {
-    }
-
-    function st_update() {
     }
 
     function RunSysCmd(cmdLine, cType, cTime) {

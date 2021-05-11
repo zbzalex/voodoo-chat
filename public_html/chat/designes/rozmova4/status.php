@@ -63,10 +63,12 @@ include($engine_path . "users_get_list.php");
 
 </script>
 <body bgcolor="white" marginleft="0" margintop="0" marginwith="0" marginheight="0">
+
 <!-- what instead of _top???-->
 <form method="post" action="<?php echo $chat_url; ?>voc.php" target="_top">
     <input type="hidden" name="session" value="<?php echo $session; ?>">
     <input type="hidden" name="room" value="<?php echo $room_id; ?>">
 
 </form>
+
 <?php include($file_path . "designes/" . $design . "/common_body_end.php"); ?>

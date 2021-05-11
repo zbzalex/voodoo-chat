@@ -1,9 +1,3 @@
-1231	1	1620763884	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdadsasdasd</font>	0
-1232	1	1620763884	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdadsasdasd</font>	0
-1233	1	1620763884	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdadsasdasd</font>	0
-1234	1	1620763884	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdadsasdasd</font>	0
-1235	1	1620763885	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdadsasdasd</font>	0
-1236	1	1620763987	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdasdasd</font>	0
 1237	1	1620764105	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2		SubZero	47709e963bba5adefd90a8676bd93f42	2	<font color="black">asdasdasdasdasd</font>	0
 1238	1	1620764107	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2		SubZero	47709e963bba5adefd90a8676bd93f42	2	<font color="black">asdasdasdasdasd</font>	0
 1239	1	1620764107	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2		SubZero	47709e963bba5adefd90a8676bd93f42	2	<font color="black">asdasdasdasdasd</font>	0
@@ -38,3 +32,9 @@
 1268	1	1620764333	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdsadsad</font>	0
 1269	1	1620764333	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdsadsad</font>	0
 1270	1	1620764333	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">asdsadsad</font>	0
+1271	2	1620765359	Robot	Robot		0					<font color="black">SubZero is coming from room &quot;<b>Все</b>&quot;</font>	0
+1272	1	1620765359	Robot	Robot		0					<font color="black">SubZero is going to room &quot;<b>Test</b>&quot;</font>	0
+1273	2	1620765367	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">hello</font>	0
+1274	2	1620765370	<font color="black">SubZero</font>	SubZero	47709e963bba5adefd90a8676bd93f42	2				0	<font color="black">hello</font>	0
+1275	1	1620765381	Robot	Robot		0					<font color="black">SubZero is coming from room &quot;<b>Test</b>&quot;</font>	0
+1276	2	1620765381	Robot	Robot		0					<font color="black">SubZero is going to room &quot;<b>Все</b>&quot;</font>	0

@@ -34,14 +34,6 @@ if ($chat_type == "tail") {
         document.all['board_div'].style.visibility = "visible";
         document.all['board_header'].style.visibility = "visible";
     }
-
-    function st_update() {
-        parent.st_update();
-    }
-
-    function st_ini() {
-        parent.st_ini();
-    }
 </script>
 <script>
     var drag = false;

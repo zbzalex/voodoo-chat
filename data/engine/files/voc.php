@@ -89,13 +89,6 @@ while ($line = fgets($fp, 16384)) {
             $user_array[USER_REGISTERED] = ($registered_user) ? intval($current_user->registered) : 0;
             $user_array[USER_MEMBER] = ($registered_user) ? intval($current_user->is_member) : 0;
 
-            //VOCLOVE
-            if (defined('VOCLOVE_PATH')) {
-                $user_array[USER_VOCLOVE_LOGGED] = 1;
-            } else {
-                $user_array[USER_CHAT_LOGGED] = 1;
-            }
-
             if ($registered_user) {
                 if (intval($current_user->plugin_info["silence_start"]) + intval($current_user->plugin_info["silence_time"]) > my_time()) {
                     $user_array[USER_SILENCE] = intval($current_user->plugin_info["silence_time"]);
@@ -175,13 +168,6 @@ if (!$exists && !$too_many && ($from_this_ip <= $max_from_ip)) {
 
     $user_array[USER_REGISTERED] = ($registered_user) ? intval($current_user->registered) : 0;
     $user_array[USER_MEMBER] = ($registered_user) ? intval($current_user->is_member) : 0;
-
-    //VOCLOVE
-    if (defined('VOCLOVE_PATH')) {
-        $user_array[USER_VOCLOVE_LOGGED] = 1;
-    } else {
-        $user_array[USER_CHAT_LOGGED] = 1;
-    }
 
     if ($registered_user) {
         if (intval($current_user->plugin_info["silence_start"]) + intval($current_user->plugin_info["silence_time"]) > my_time()) {
