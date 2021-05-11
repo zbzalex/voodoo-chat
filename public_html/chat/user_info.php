@@ -142,8 +142,6 @@ if ($op == "do_exchange" and $is_regist_complete) {
         $MsgToPass = str_replace("$", $oldCrd, $MsgToPass);
         $MsgToPass = str_replace("%", $current_user->credits, $MsgToPass);
 
-        WriteToUserLog($MsgToPass, $is_regist, "");
-
         if ($current_user->reffered_by > 0 and
             $current_user->ref_payment_done) {
 
@@ -165,8 +163,6 @@ if ($op == "do_exchange" and $is_regist_complete) {
             $MsgToPass = str_replace("~", $old_user->nickname . " (EX)", $MsgToPass);
             $MsgToPass = str_replace("$", $oldCrd, $MsgToPass);
             $MsgToPass = str_replace("%", $current_user->credits, $MsgToPass);
-
-            WriteToUserLog($MsgToPass, $is_regist, "");
 
             $is_regist = $old_reg;
             $current_user = $old_user;
@@ -289,16 +285,12 @@ if ($op == "do_transfer" and $is_regist_complete) {
                 $MsgToPass = str_replace("$", $oldCrd, $MsgToPass);
                 $MsgToPass = str_replace("%", $oldNCrd, $MsgToPass);
 
-                WriteToUserLog($MsgToPass, $oldOne, "");
-
                 //����� ������� � ���
                 $MsgToPass = $sw_adm_money_transfer;
                 $MsgToPass = str_replace("#", $crd_transfer, $MsgToPass);
                 $MsgToPass = str_replace("~", $oldNick . " (id: $oldOne)", $MsgToPass);
                 $MsgToPass = str_replace("$", $nCrd, $MsgToPass);
                 $MsgToPass = str_replace("%", $current_user->credits, $MsgToPass);
-
-                WriteToUserLog($MsgToPass, $is_regist, "");
 
                 $is_regist = $oldOne;
                 include($ld_engine_path . "users_get_object.php");
@@ -327,9 +319,6 @@ if ($op == "do_transfer" and $is_regist_complete) {
             $MsgToPass = str_replace("~", $w_clan_treasury . " \"" . $current_clan->name . "\"", $MsgToPass);
             $MsgToPass = str_replace("$", $oldCrd, $MsgToPass);
             $MsgToPass = str_replace("%", $current_user->credits, $MsgToPass);
-
-            WriteToUserLog($MsgToPass, $is_regist, "");
-
             //����� ����� � ���
             $MsgToPass = $sw_adm_money_transfer;
             $MsgToPass = str_replace("#", $crd_transfer, $MsgToPass);

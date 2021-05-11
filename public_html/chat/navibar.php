@@ -49,11 +49,6 @@ if ($is_regist) {
             </a>
         </td>
         <td width="10%">
-            <a href="/chat/board_list.php?session=<?php echo $session; ?>" target="_blank">
-                Offline PM
-            </a>
-        </td>
-        <td width="10%">
             <a href="/chat/users.php?session=<?php echo $session; ?>" target="_blank">
                 Мы!
             </a>

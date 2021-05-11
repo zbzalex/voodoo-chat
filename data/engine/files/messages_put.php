@@ -73,10 +73,6 @@ if (count($messages_to_show)) {
             $messages[] = $new_mess;
             $last_id++;
         }
-        if ($logging_messages) {
-            include_once($data_path . "engine/files/log_message.php");
-            log_message();
-        }
     }
     $total_messages = count($messages);
     $start_at = ($total_messages > 40) ? ($total_messages - 40) : 0;

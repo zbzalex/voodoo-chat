@@ -250,15 +250,12 @@ if ($is_regist and (strlen($whisper) == 0 or $custom_style == 1)) {
         $oldMoney = $current_user->credits;
         $current_user->credits += $tarrifs["ref_bounty"];
 
-        include_once($ld_engine_path . "/user_log.php");
-
         $MsgToPass = $sw_adm_reffered_payment;
         $MsgToPass = str_replace("#", $tarrifs["ref_bounty"], $MsgToPass);
         $MsgToPass = str_replace("~", $old_user->nickname, $MsgToPass);
         $MsgToPass = str_replace("$", $oldMoney, $MsgToPass);
         $MsgToPass = str_replace("%", $current_user->credits, $MsgToPass);
 
-        WriteToUserLog($MsgToPass, $is_regist, "");
         include($ld_engine_path . "user_info_update.php");
 
         $group = 0;

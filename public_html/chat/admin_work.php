@@ -469,13 +469,7 @@ switch ($op) {
                             MESG_TOID => "",
                             MESG_BODY => "<font color=\"$def_color\">" . str_replace("$", $sw_times[$kill_time]["name"], str_replace("#", $cause, str_replace("*", $cu_array[USER_NICKNAME], str_replace("~", $toBan, $sw_kill_text)))) . "</font>");
 
-                        if ($logging_ban) {
-                            include_once($data_path . "engine/files/log_message.php");
-                            log_ban($cu_array[USER_NICKNAME],
-                                $banuser_array[USER_CANONNICK],
-                                $banuser_array[USER_IP],
-                                $banuser_array[USER_ROOM], $cause);
-                        }
+
                         if ($action == 3 && ($tmp_admin_rights & ADM_IP_BAN)) {
                             $LBanType = "IP";
                             $to_ban[] = "ip|" . $banuser_array[USER_IP] . "\t" . $sil_author . "\t" . $cause;;
@@ -832,10 +826,7 @@ switch ($op) {
         include_once($ld_engine_path . "ban_check.php");
         set_variable("to_unban");
         unban(urldecode($to_unban));
-        if ($logging_ban) {
-            include_once($data_path . "engine/files/log_message.php");
-            log_unban($user_name, $to_unban);
-        }
+
         header("location: admin_work.php?session=$session&op=unban");
         exit;
         break;

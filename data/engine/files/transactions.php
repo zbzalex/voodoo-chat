@@ -131,8 +131,6 @@ class transaction
         //����� � ��� ��� ���� �������
         $MsgToPass = $sw_adm_user_item_removed;
         $MsgToPass = str_replace("~", $itmTitle, $MsgToPass);
-
-        WriteToUserLog($MsgToPass, $is_regist, "");
     }
 
     function refund($from_user_ID, $item_id)
@@ -201,8 +199,6 @@ class transaction
         $MsgToPass = str_replace("~", $itmTitle, $MsgToPass);
         $MsgToPass = str_replace("$", $oldCrd, $MsgToPass);
         $MsgToPass = str_replace("%", $user->credits, $MsgToPass);
-
-        WriteToUserLog($MsgToPass, $is_regist, "");
 
         return 0;
     }
@@ -276,8 +272,6 @@ class transaction
             $MsgToPass = str_replace("~", $this->items[$item_to_give]->title, $MsgToPass);
             $MsgToPass = str_replace("#", $to_user->nickname . " (id: $to_user_ID)", $MsgToPass);
 
-            WriteToUserLog($MsgToPass, $is_regist, "");
-
             $is_regist = $to_user_ID;
             $current_user = $to_user;
             include($ld_engine_path . "user_info_update.php");
@@ -287,8 +281,6 @@ class transaction
             $MsgToPass = str_replace("~", $this->items[$item_to_give]->title, $MsgToPass);
             $MsgToPass = str_replace("#", $from_user->nickname . " (id: $from_user_ID)", $MsgToPass);
 
-
-            WriteToUserLog($MsgToPass, $is_regist, "");
         } else {
             //�������, ���������� ������� ��� ���� (�����, ������������? :))
             //����� � ��� ��� �� ���� �������
@@ -296,13 +288,11 @@ class transaction
             $MsgToPass = str_replace("~", $this->items[$item_to_give]->title, $MsgToPass);
             $MsgToPass = str_replace("#", $current_user->nickname . " (id: $is_regist)", $MsgToPass);
 
-            WriteToUserLog($MsgToPass, $is_regist, "");
-
             //����� � ��� ��� ���� �������� � �������
             $MsgToPass = $sw_adm_user_present;
             $MsgToPass = str_replace("~", $this->items[$item_to_give]->title, $MsgToPass);
             $MsgToPass = str_replace("#", $current_user->nickname . " (id: $is_regist)", $MsgToPass);
-            WriteToUserLog($MsgToPass, $is_regist, "");
+
         }
         return 0;
     }

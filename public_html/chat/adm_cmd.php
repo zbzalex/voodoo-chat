@@ -1166,13 +1166,7 @@ switch ($banType) {
                 // to moder's private log
                 WriteToUserLog($MsgToPass, $is_regist, "");
             }
-            if ($logging_ban) {
-                include_once($data_path . "engine/files/log_message.php");
-                log_ban($current_user->nickname,
-                    $banuser_array[USER_CANONNICK],
-                    $banuser_array[USER_IP],
-                    $banuser_array[USER_ROOM], $cause);
-            }
+
             sleep(1);
             include($ld_engine_path . "admin.php");
         }
