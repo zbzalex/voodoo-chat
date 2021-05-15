@@ -10,8 +10,6 @@ define("ROOT_DIR", dirname(__DIR__));
 $app = new \Silex\Application();
 $app['debug'] = true;
 
-$app['templating.paths'] = dirname(__DIR__) . "/src/VOC/resources/views/%name%";
-
 $app['db.config'] = [
     'driver' => 'mysql',
     'host' => '127.0.0.1',
@@ -20,24 +18,14 @@ $app['db.config'] = [
     'dbname' => 'voodoo',
 ];
 
-$app->register(new \VOC\serviceprovider\TemplatingEngineServiceProvider());
 $app->register(new \VOC\serviceprovider\DatabaseServiceProvider());
-$app->mount("/", new \VOC\controllerprovider\MainControllerProvider());
-$app->mount("/api", new \VOC\controllerprovider\ApiControllerProvider())
-    ->before(function (\Symfony\Component\HttpFoundation\Request $request, \Silex\Application $app) {
+
+$app->mount("/api", new \VOC\controllerprovider\ApiControllerProvider());
+
+$app->before(function (\Symfony\Component\HttpFoundation\Request $request, \Silex\Application $app) {
         if (strtolower(substr($request->getPathInfo(), 0, 4)) === "/api") {
             $apiKey = $request->query->get("api_key");
-            $hostHeaders = $request->headers->get('host', null, false);
-            $host = $hostHeaders !== null && count($hostHeaders) > 0
-                ? (($pos = strpos($hostHeaders[0], ":")) !== -1
-                    ? substr($hostHeaders[0], 0, $pos)
-                    : $hostHeaders[0])
-                : null;
-
-            if ($host === null) {
-                return new Response(new Error("Unknown host"));
-            }
-
+            $host = $request->headers->get('host', "localhost", true);
             $apiUserRepository =
                 new \VOC\repository\ApiUserRepository($app['pdo']->getDao(\VOC\dao\ApiUserDao::class));
             if ($apiKey === null
@@ -56,5 +44,9 @@ $app->mount("/api", new \VOC\controllerprovider\ApiControllerProvider())
             // ...
         }
     }, \Silex\Application::EARLY_EVENT);
+
+$app->after(function (\Symfony\Component\HttpFoundation\Request $request, Response $response) {
+    $response->headers->set("Access-Control-Allow-Origin", "*");
+});
 $app->error(new \VOC\util\ErrorHandler($app));
 $app->run();
