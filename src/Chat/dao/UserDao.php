@@ -24,8 +24,8 @@ class UserDao extends Dao
     {
         /** @var \PDOStatement $result */
         $result = $this->db->executeNativeQuery(
-            "SELECT * FROM `" . UserDao::TABLE . "` WHERE `last_action`>? AND `room`=?;", [
-            \time() - 60 * 10,
+            "SELECT * FROM `" . UserDao::TABLE . "` WHERE (`last_action`>? OR `bot`=1) AND `room`=?;", [
+            \time() - 60 * 60,
             $room
         ]);
 

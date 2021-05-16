@@ -11,6 +11,7 @@ use Chat\dao\UserDao;
 use Chat\repository\RoomRepository;
 use Chat\repository\UserRepository;
 use Chat\vo\User;
+use Chat\vo\Users;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -30,12 +31,11 @@ class ApiController
 
         $count = 0;
         $users = [
-            null,
-            [], // admins
-            [], // moders (SHAMANS)
-            [], // boys
-            [], // girls
-            [], // they
+            Users::ADMINS => [],
+            Users::SHAMAN => [],
+            Users::GIRL => [],
+            Users::BOYS => [],
+            Users::THEY => [],
         ];
         /** @var User[] $entities */
         $entities = $userRepository->getOnlineUsersByRoom($room);
@@ -63,14 +63,19 @@ class ApiController
                     'silence' => $user->getSilence(),
                     'silence_start' => $user->getSilenceStart(),
                     'class' => $user->getClass(),
+                    'last_action' => $user->getLastAction(),
                 ];
 
-                if ($user->getSex() == 1) { // boys
-                    $users[3][] = $tmp;
-                } else if ($user->getSex() == 2) { // girls
-                    $users[4][] = $tmp;
-                } else if ($user->getSex() == 0) { // they
-                    $users[5][] = $tmp;
+                if (($user->getClass() & User::CLASS_EDIT_USER) != 0) {
+                    $users[Users::ADMINS][] = $tmp;
+                } else if ($user->getClass() & User::CLASS_BAN) {
+                    $users[Users::SHAMAN][] = $tmp;
+                } else if ($user->getSex() == User::SEX_MALE) {
+                    $users[Users::BOYS][] = $tmp;
+                } else if ($user->getSex() == User::SEX_FEMALE) {
+                    $users[Users::GIRL][] = $tmp;
+                } else if ($user->getSex() == User::SEX_UNKNOWN) {
+                    $users[Users::THEY][] = $tmp;
                 }
             }
         }

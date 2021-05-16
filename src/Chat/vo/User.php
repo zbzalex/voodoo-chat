@@ -5,6 +5,15 @@ namespace Chat\vo;
 
 class User
 {
+    const SEX_UNKNOWN = 0;
+    const SEX_FEMALE = 1;
+    const SEX_MALE = 2;
+
+    const CLASS_BAN = 256;
+    const CLASS_EDIT_USER = 1024;
+
+    const CLASS_VIP = -1;
+
     /** @var int */
     private $id;
     /** @var string */
@@ -86,7 +95,8 @@ class User
     /** @var bool  */
     private $bot = false;
 
-    public function __construct($id, $session, $nick, $password, $canonNick, $htmlNick, $sex)
+    public function __construct($id, $session, $nick, $password, $canonNick, $htmlNick, $sex,
+        $class)
     {
         $this->id = $id;
         $this->session = $session;
@@ -95,6 +105,7 @@ class User
         $this->canonNick = $canonNick;
         $this->htmlNick = $htmlNick;
         $this->sex = $sex;
+        $this->class = $class;
     }
 
     public static function fromState(array $data)
@@ -106,7 +117,8 @@ class User
             isset($data['password']) ? $data['password'] : null,
             isset($data['canon_nick']) ? $data['canon_nick'] : null,
             isset($data['html_nick']) ? $data['html_nick'] : null,
-            isset($data['sex']) ? $data['sex'] : 0
+            isset($data['sex']) ? intval($data['sex']) : 0,
+            isset($data['class']) ? intval($data['class']) : 0
         );
     }
 
@@ -380,5 +392,21 @@ class User
     public function setClass($class)
     {
         $this->class = $class;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLastAction()
+    {
+        return $this->lastAction;
+    }
+
+    /**
+     * @param int $lastAction
+     */
+    public function setLastAction($lastAction)
+    {
+        $this->lastAction = $lastAction;
     }
 }

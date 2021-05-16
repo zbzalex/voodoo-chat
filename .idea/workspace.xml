@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db5ca34b-9304-4606-9ec4-b6c2bd1342c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Chat/vo/Users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chat/controller/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/controller/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat/controllerprovider/ApiControllerProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/controllerprovider/ApiControllerProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chat/dao/UserDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/dao/UserDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat/repository/RoomRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/repository/RoomRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat/repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/repository/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chat/vo/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/vo/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +90,7 @@
       <workItem from="1620930956176" duration="1317000" />
       <workItem from="1621035006271" duration="1238000" />
       <workItem from="1621079149650" duration="2108000" />
-      <workItem from="1621090798218" duration="7786000" />
+      <workItem from="1621090798218" duration="12537000" />
     </task>
     <servers />
   </component>
