@@ -25,16 +25,15 @@ class UserDao extends Dao
         /** @var \PDOStatement $result */
         $result = $this->db->executeNativeQuery(
             "SELECT * FROM `" . UserDao::TABLE . "` WHERE `last_action`>? AND `room`=?;", [
-            \time() - 60 * 5,
+            \time() - 60 * 10,
             $room
         ]);
 
         if ($result->rowCount() > 0) {
             /** @var User[] $entities */
             $entities = [];
-
-            for ($i = 0; $i < $result->rowCount(); $i++) {
-                $entities[] = User::fromState($result->fetch());
+            while($row = $result->fetch(\PDO::FETCH_ASSOC)) {
+                $entities[] = User::fromState($row);
             }
 
             return $entities;

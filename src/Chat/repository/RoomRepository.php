@@ -20,7 +20,7 @@ class RoomRepository
         return $this->roomDao->getAll();
     }
 
-    public function getById($id)
+    public function getRoomById($id)
     {
         return $this->roomDao->getById($id);
     }

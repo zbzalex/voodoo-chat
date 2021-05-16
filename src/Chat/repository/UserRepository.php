@@ -15,12 +15,21 @@ class UserRepository
         $this->userDao = $userDao;
     }
 
-    public function getById($id)
+    /**
+     * @param int $id
+     * @return \Chat\vo\User|null
+     */
+    public function getRoomById($id)
     {
         return $this->userDao->getById($id);
     }
 
-    public function getOnlineUserByRoom($room) {
+    /**
+     * @param int $room
+     * @return \Chat\vo\User[]|null
+     */
+    public function getOnlineUsersByRoom($room)
+    {
         return $this->userDao->getOnlineUsersByRoom($room);
     }
 }

@@ -27,7 +27,7 @@ class User
     private $status;
 
     /** @var string */
-    private $photo;
+    private $photoUrl;
     /** @var int */
     private $photoRating = 0;
 
@@ -72,7 +72,7 @@ class User
     /** @var int */
     private $onlineTime = 0;
     /** @var boolean */
-    private $invisible = false;
+    private $invis = false;
     /** @var int */
     private $silence = 0;
     /** @var int */
@@ -83,6 +83,8 @@ class User
     private $createdAt = 0;
     /** @var int */
     private $updatedAt = 0;
+    /** @var bool  */
+    private $bot = false;
 
     public function __construct($id, $session, $nick, $password, $canonNick, $htmlNick, $sex)
     {
@@ -98,7 +100,7 @@ class User
     public static function fromState(array $data)
     {
         return new User(
-            isset($data['id']) ? $data['id'] : 0,
+            isset($data['id']) ? intval($data['id']) : 0,
             isset($data['session']) ? $data['session'] : null,
             isset($data['nick']) ? $data['nick'] : null,
             isset($data['password']) ? $data['password'] : null,
@@ -218,5 +220,165 @@ class User
     public function setSex($sex)
     {
         $this->sex = $sex;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhotoUrl()
+    {
+        return $this->photoUrl;
+    }
+
+    /**
+     * @param string $photoUrl
+     */
+    public function setPhotoUrl($photoUrl)
+    {
+        $this->photoUrl = $photoUrl;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRewards()
+    {
+        return $this->rewards;
+    }
+
+    /**
+     * @param int $rewards
+     */
+    public function setRewards($rewards)
+    {
+        $this->rewards = $rewards;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDamneds()
+    {
+        return $this->damneds;
+    }
+
+    /**
+     * @param int $damneds
+     */
+    public function setDamneds($damneds)
+    {
+        $this->damneds = $damneds;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMarriedWith()
+    {
+        return $this->marriedWith;
+    }
+
+    /**
+     * @param int $marriedWith
+     */
+    public function setMarriedWith($marriedWith)
+    {
+        $this->marriedWith = $marriedWith;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isBot()
+    {
+        return $this->bot;
+    }
+
+    /**
+     * @param bool $bot
+     */
+    public function setBot($bot)
+    {
+        $this->bot = $bot;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param int $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOnlineTime()
+    {
+        return $this->onlineTime;
+    }
+
+    /**
+     * @param int $onlineTime
+     */
+    public function setOnlineTime($onlineTime)
+    {
+        $this->onlineTime = $onlineTime;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSilence()
+    {
+        return $this->silence;
+    }
+
+    /**
+     * @param int $silence
+     */
+    public function setSilence($silence)
+    {
+        $this->silence = $silence;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSilenceStart()
+    {
+        return $this->silenceStart;
+    }
+
+    /**
+     * @param int $silenceStart
+     */
+    public function setSilenceStart($silenceStart)
+    {
+        $this->silenceStart = $silenceStart;
+    }
+
+    /**
+     * @return int
+     */
+    public function getClass()
+    {
+        return $this->class;
+    }
+
+    /**
+     * @param int $class
+     */
+    public function setClass($class)
+    {
+        $this->class = $class;
     }
 }

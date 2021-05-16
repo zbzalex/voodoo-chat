@@ -15,7 +15,7 @@ class ApiControllerProvider implements ControllerProviderInterface
         /** @var ControllerCollection $controllers */
         $controllers = $app['controllers_factory'];
 
-        $controllers->get("/getOnlineUsers", '\Chat\controller\ApiController::who');
+        $controllers->get("/getOnlineUsers", '\Chat\controller\ApiController::getOnlineUsers');
 
         return $controllers;
     }

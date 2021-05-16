@@ -4,8 +4,11 @@
 namespace Chat\controller;
 
 
+use Chat\api\Error;
 use Chat\api\Ok;
+use Chat\dao\RoomDao;
 use Chat\dao\UserDao;
+use Chat\repository\RoomRepository;
 use Chat\repository\UserRepository;
 use Chat\vo\User;
 use Silex\Application;
@@ -17,42 +20,63 @@ class ApiController
     public function getOnlineUsers(Application $app, Request $request)
     {
         /** @var int $room */
-        $room = $request->query->get("room", 0);
+        $room = abs($request->query->get("room", 0));
+        $roomRepository = new RoomRepository($app['pdo']->getDao(RoomDao::class));
+        if (($_room = $roomRepository->getRoomById($room)) === null) {
+            return new Response(new Error("Room not found."));
+        }
+
         $userRepository = new UserRepository($app['pdo']->getDao(UserDao::class));
 
+        $count = 0;
         $users = [
-            [], // ..
+            null,
             [], // admins
-            [], // shamans
+            [], // moders (SHAMANS)
             [], // boys
             [], // girls
             [], // they
         ];
-        $result = $userRepository->getOnlineUsersByRoom($room);
-        if (\count($result) > 0) {
-            for ($i = 0; $i < count($result); $i++) {
-                /** @var User $user */
-                $user = $result[$i];
+        /** @var User[] $entities */
+        $entities = $userRepository->getOnlineUsersByRoom($room);
+        if (\count($entities) > 0) {
+            /** @var int $count */
+            $count = count($entities);
+            for ($i = 0; $i < $count; $i++) {
 
-                $tmpUser = [
+                $user = $entities[$i];
+
+                // tmp object
+                $tmp = [
                     'id' => $user->getId(),
                     'nick' => $user->getNick(),
-                    'canonNick' => $user->getCanonNick(),
-                    'htmlNick' => $user->getHtmlNick(),
+                    'canon_nick' => $user->getCanonNick(),
+                    'html_nick' => $user->getHtmlNick(),
                     'sex' => $user->getSex(),
+                    'have_photo' => $user->getPhotoUrl() !== null,
+                    'rewards' => $user->getRewards(),
+                    'damneds' => $user->getDamneds(),
+                    'married_with' => $user->getMarriedWith(),
+                    'bot' => $user->isBot() ? 1 : 0,
+                    'online_time' => $user->getOnlineTime(),
+                    'status' => $user->getStatus(),
+                    'silence' => $user->getSilence(),
+                    'silence_start' => $user->getSilenceStart(),
+                    'class' => $user->getClass(),
                 ];
 
-                if ($user->getSex() === 1) { // boyd
-                    $users[3][] = $tmpUser;
-                } else if ($user->getSex() === 2) { // girls
-                    $users[4][] = $tmpUser;
-                } else if ($user->getSex() === 0) { // they
-                    $users[5][] = $tmpUser;
+                if ($user->getSex() == 1) { // boys
+                    $users[3][] = $tmp;
+                } else if ($user->getSex() == 2) { // girls
+                    $users[4][] = $tmp;
+                } else if ($user->getSex() == 0) { // they
+                    $users[5][] = $tmp;
                 }
             }
         }
 
         return new Response(new Ok([
+            'count' => $count,
             'users' => $users
         ]));
     }
