@@ -1,7 +1,7 @@
 <?php
 
 
-namespace VOC\util;
+namespace Chat\util;
 
 
 class Zodiac

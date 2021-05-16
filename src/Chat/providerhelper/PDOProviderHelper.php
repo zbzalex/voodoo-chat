@@ -1,12 +1,12 @@
 <?php
 
 
-namespace VOC\providerhelper;
+namespace Chat\providerhelper;
 
 
-use VOC\db\DaoRegisry;
-use VOC\db\IDB;
-use VOC\db\DaoRegistry;
+use Chat\db\DaoRegisry;
+use Chat\db\IDB;
+use Chat\db\DaoRegistry;
 
 
 class PDOProviderHelper extends \PDO implements IDB

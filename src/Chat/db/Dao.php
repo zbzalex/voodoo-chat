@@ -1,7 +1,7 @@
 <?php
 
 
-namespace VOC\db;
+namespace Chat\db;
 
 
 abstract class Dao

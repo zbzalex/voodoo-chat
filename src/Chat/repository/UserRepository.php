@@ -19,4 +19,8 @@ class UserRepository
     {
         return $this->userDao->getById($id);
     }
+
+    public function getOnlineUserByRoom($room) {
+        return $this->userDao->getOnlineUsersByRoom($room);
+    }
 }

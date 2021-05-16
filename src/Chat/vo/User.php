@@ -99,12 +99,12 @@ class User
     {
         return new User(
             isset($data['id']) ? $data['id'] : 0,
+            isset($data['session']) ? $data['session'] : null,
             isset($data['nick']) ? $data['nick'] : null,
             isset($data['password']) ? $data['password'] : null,
-            isset($data['session']) ? $data['session'] : null,
             isset($data['canon_nick']) ? $data['canon_nick'] : null,
             isset($data['html_nick']) ? $data['html_nick'] : null,
-            isset($data['gender']) ? $data['gender'] : 0
+            isset($data['sex']) ? $data['sex'] : 0
         );
     }
 
@@ -202,5 +202,21 @@ class User
     public function setHtmlNick($htmlNick)
     {
         $this->htmlNick = $htmlNick;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSex()
+    {
+        return $this->sex;
+    }
+
+    /**
+     * @param int $sex
+     */
+    public function setSex($sex)
+    {
+        $this->sex = $sex;
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace VOC\util;
+namespace Chat\util;
 
 
-class NicknameUtils
+class NickUtils
 {
     public static function canon($nick)
     {

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace VOC\serviceprovider;
+namespace Chat\serviceprovider;
 
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use VOC\providerhelper\PDOProviderHelper;
+use Chat\providerhelper\PDOProviderHelper;
 
 class DatabaseServiceProvider implements ServiceProviderInterface
 {

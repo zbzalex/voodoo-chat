@@ -1,7 +1,7 @@
 <?php
 
 
-namespace VOC\serviceprovider;
+namespace Chat\serviceprovider;
 
 
 use Pimple\Container;
