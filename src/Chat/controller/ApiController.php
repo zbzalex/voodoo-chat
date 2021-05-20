@@ -13,6 +13,7 @@ use Chat\repository\UserRepository;
 use Chat\vo\User;
 use Chat\vo\Users;
 use Silex\Application;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -68,7 +69,7 @@ class ApiController
 
                 if (($user->getClass() & User::CLASS_EDIT_USER) != 0) {
                     $users[Users::ADMINS][] = $tmp;
-                } else if ($user->getClass() & User::CLASS_BAN) {
+                } else if (($user->getClass() & User::CLASS_BAN) != 0) {
                     $users[Users::SHAMAN][] = $tmp;
                 } else if ($user->getSex() == User::SEX_MALE) {
                     $users[Users::BOYS][] = $tmp;
@@ -80,7 +81,7 @@ class ApiController
             }
         }
 
-        return new Response(new Ok([
+        return new JsonResponse(new Ok([
             'count' => $count,
             'users' => $users
         ]));

@@ -6,6 +6,7 @@ use Chat\repository\ApiUserRepository;
 use Chat\repository\UserRepository;
 use Chat\serviceprovider\DatabaseServiceProvider;
 use Silex\Application;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Chat\api\Error;
@@ -27,29 +28,31 @@ $app['db.config'] = [
 
 $app->register(new DatabaseServiceProvider());
 
-$app->mount("/api", new ApiControllerProvider());
+$app->mount("/", new ApiControllerProvider());
 
 $app->before(function (Request $request, Application $app) {
-    if (strtolower(substr($request->getPathInfo(), 0, 4)) === "/api") {
-        $apiKey = $request->query->get("api_key");
-        $host = $request->headers->get('host', "localhost", true);
-        $apiUserRepository =
-            new ApiUserRepository($app['pdo']->getDao(ApiUserDao::class));
-        if ($apiKey === null
-            || !ApiUserRepository::isValidApiKey($apiKey)
-            || $apiUserRepository->getByApiKeyAndHost($apiKey, $host) == 0) {
-            return new Response(new Error("Access denied"));
-        }
+    /** @var string $apiKey */
+    $apiKey = $request->query->get("api_key");
+    /** @var string|null $host */
+    $host = $request->headers->get('host', "localhost", true);
 
-        // Проверяем, чтобы пользователь был авторизован.
-        $session = $request->query->get("session");
-        if ($session === null) {
-            return new Response(new Error("Unauthorized"));
-        }
-
-        //$userRepository = new UserRepository($app['pdo']->getDao(\Chat\dao\UserDao::class));
-        // ...
+    $apiUserRepository =
+        new ApiUserRepository($app['pdo']->getDao(ApiUserDao::class));
+    if ($apiKey === null
+        || !ApiUserRepository::isValidApiKey($apiKey)
+        || $apiUserRepository->getByApiKeyAndHost($apiKey, $host) == 0) {
+        return new JsonResponse(new Error("Access denied"));
     }
+
+    // Проверяем, чтобы пользователь был авторизован.
+    $session = $request->query->get("session");
+    if ($session === null) {
+        return new JsonResponse(new Error("Unauthorized"));
+    }
+
+    //$userRepository = new UserRepository($app['pdo']->getDao(\Chat\dao\UserDao::class));
+    // ...
+
 }, Application::EARLY_EVENT);
 
 $app->after(function (Request $request, Response $response) {

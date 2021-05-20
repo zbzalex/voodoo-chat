@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-php -S localhost:80 -t ./public_html
+sudo php -S localhost:80 -t ./public_html
 

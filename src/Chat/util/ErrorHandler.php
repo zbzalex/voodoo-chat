@@ -7,7 +7,6 @@ namespace Chat\util;
 use Chat\api\Error;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
 
 class ErrorHandler
 {
@@ -21,6 +20,6 @@ class ErrorHandler
 
     public function __invoke(\Exception $e, $code)
     {
-        return new JsonResponse(new Error("Unknown error"));
+        return new JsonResponse(new Error("Server error. Please, contact with administrators."));
     }
 }
