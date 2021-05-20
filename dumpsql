@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+mysqldump -uroot -p voodoo > ./dumps/voodoo.sql
