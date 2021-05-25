@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="db5ca34b-9304-4606-9ec4-b6c2bd1342c8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chat/api/ApiResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/api/ApiResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chat/api/Error.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/api/Error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Chat/api/Ok.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/api/Ok.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +93,9 @@
       <workItem from="1621338950476" duration="713000" />
       <workItem from="1621375236914" duration="641000" />
       <workItem from="1621531969980" duration="1289000" />
-      <workItem from="1621539087315" duration="1026000" />
+      <workItem from="1621539087315" duration="1701000" />
+      <workItem from="1621546548542" duration="23000" />
+      <workItem from="1621959752371" duration="102000" />
     </task>
     <servers />
   </component>
