@@ -8,6 +8,7 @@ class Connection implements Observer
 {
     private $socket;
     private $ip;
+    private $updatedAt;
 
     public function __construct($socket)
     {
@@ -41,5 +42,21 @@ class Connection implements Observer
     public function onChanged($value)
     {
         @socket_write($this->socket, $value);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param mixed $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
     }
 }
