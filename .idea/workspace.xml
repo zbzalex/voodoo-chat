@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chat/server/Connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/server/Connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Chat/server/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/server/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chat/server/Server.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chat/server/Server.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +95,7 @@
       <workItem from="1621539087315" duration="1701000" />
       <workItem from="1621546548542" duration="23000" />
       <workItem from="1621959752371" duration="132000" />
-      <workItem from="1622477802926" duration="6703000" />
+      <workItem from="1622477802926" duration="7374000" />
     </task>
     <servers />
   </component>
